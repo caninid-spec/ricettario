@@ -237,9 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── Selettore tipo ────────────────────────────────────────────────────────
-    document.querySelectorAll('.bread-card').forEach(card => {
+    document.querySelectorAll('.type-card').forEach(card => {
         card.addEventListener('click', () => {
-            document.querySelectorAll('.bread-card').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.type-card').forEach(c => c.classList.remove('active'));
             card.classList.add('active');
             currentType = card.dataset.type;
             loadDefaults(currentType);

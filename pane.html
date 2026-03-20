@@ -23,54 +23,52 @@
     <!-- Selettore tipo pane -->
     <div class="type-selector-card">
         <h2><span class="icon">🍞</span> Tipo di Pane</h2>
-        <div class="bread-grid">
-
-            <div class="bread-card active" data-type="bianco">
-                <span class="b-icon">🍞</span>
-                <span class="b-name">Pane Bianco</span>
-                <span class="b-sub">Filone / Pagnotta</span>
+        <div class="type-grid">
+            <div class="type-card active" data-type="bianco">
+                <span class="type-icon">🍞</span>
+                <span class="type-name">Pane Bianco</span>
+                <span class="type-desc">Filone / Pagnotta</span>
             </div>
-            <div class="bread-card" data-type="semola">
-                <span class="b-icon">🌾</span>
-                <span class="b-name">Pane di Semola</span>
-                <span class="b-sub">Altamura / Matera</span>
+            <div class="type-card" data-type="semola">
+                <span class="type-icon">🌾</span>
+                <span class="type-name">Pane di Semola</span>
+                <span class="type-desc">Altamura / Matera</span>
             </div>
-            <div class="bread-card" data-type="farine-varie">
-                <span class="b-icon">🌰</span>
-                <span class="b-name">Farine Varie</span>
-                <span class="b-sub">Integrale / Segale / Farro</span>
+            <div class="type-card" data-type="farine-varie">
+                <span class="type-icon">🌰</span>
+                <span class="type-name">Farine Varie</span>
+                <span class="type-desc">Integrale / Segale / Farro</span>
             </div>
-            <div class="bread-card" data-type="rosette">
-                <span class="b-icon">🌸</span>
-                <span class="b-name">Rosette</span>
-                <span class="b-sub">Michette romane</span>
+            <div class="type-card" data-type="rosette">
+                <span class="type-icon">🌸</span>
+                <span class="type-name">Rosette</span>
+                <span class="type-desc">Michette romane</span>
             </div>
-            <div class="bread-card" data-type="baguette">
-                <span class="b-icon">🥖</span>
-                <span class="b-name">Baguette</span>
-                <span class="b-sub">Stile francese</span>
+            <div class="type-card" data-type="baguette">
+                <span class="type-icon">🥖</span>
+                <span class="type-name">Baguette</span>
+                <span class="type-desc">Stile francese</span>
             </div>
-            <div class="bread-card" data-type="panbauletto">
-                <span class="b-icon">🍫</span>
-                <span class="b-name">Pan Bauletto</span>
-                <span class="b-sub">Pane morbido in cassetta</span>
+            <div class="type-card" data-type="panbauletto">
+                <span class="type-icon">🍫</span>
+                <span class="type-name">Pan Bauletto</span>
+                <span class="type-desc">Pane morbido in cassetta</span>
             </div>
-            <div class="bread-card" data-type="pane-carre">
-                <span class="b-icon">🍥</span>
-                <span class="b-name">Pan Carré</span>
-                <span class="b-sub">Tramezzini / Tartine</span>
+            <div class="type-card" data-type="pane-carre">
+                <span class="type-icon">🍥</span>
+                <span class="type-name">Pan Carré</span>
+                <span class="type-desc">Tramezzini / Tartine</span>
             </div>
-            <div class="bread-card" data-type="burger-bun">
-                <span class="b-icon">🍔</span>
-                <span class="b-name">Burger Bun</span>
-                <span class="b-sub">Panino per hamburger</span>
+            <div class="type-card" data-type="burger-bun">
+                <span class="type-icon">🍔</span>
+                <span class="type-name">Burger Bun</span>
+                <span class="type-desc">Panino per hamburger</span>
             </div>
-            <div class="bread-card" data-type="brezel">
-                <span class="b-icon">🥨</span>
-                <span class="b-name">Brezel</span>
-                <span class="b-sub">Schwäbisch / Bavarese</span>
+            <div class="type-card" data-type="brezel">
+                <span class="type-icon">🥨</span>
+                <span class="type-name">Brezel</span>
+                <span class="type-desc">Schwäbisch / Bavarese</span>
             </div>
-
         </div>
         <p class="type-description" id="type-description"></p>
     </div>
@@ -156,7 +154,7 @@
                     </div>
                 </div>
 
-                <!-- Extra ingredienti dinamici (burger bun ecc.) -->
+                <!-- Extra ingredienti dinamici -->
                 <div id="extra-section" style="display:none"></div>
 
                 <!-- Switch variante Brezel -->
@@ -173,143 +171,87 @@
                     <p id="brezel-variante-desc" style="margin-top:8px;font-size:0.8rem;color:var(--muted);line-height:1.5;padding:8px 12px;background:var(--bg);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;"></p>
                 </div>
 
-            </div><!-- fine advanced-options -->
-        </div><!-- fine input-section -->
+            </div>
+        </div>
 
         <!-- ── Colonna risultati ── -->
         <div class="results-section">
+            <h2><span class="icon">⚖️</span> Risultati</h2>
 
-            <!-- Barra tab (visibile solo su mobile via CSS) -->
-            <nav class="mobile-tabs" id="mobile-tabs">
-                <button class="mobile-tab-btn active" data-tab="tab-risultati">
-                    <span class="tab-icon">⚖️</span>Risultati
-                </button>
-                <button class="mobile-tab-btn" data-tab="tab-processo">
-                    <span class="tab-icon">⏱️</span>Processo
-                </button>
-                <button class="mobile-tab-btn" data-tab="tab-consigli">
-                    <span class="tab-icon">💡</span>Consigli
-                </button>
-            </nav>
+            <!-- Hero totale -->
+            <div class="result-hero">
+                <span class="hero-label">Impasto Totale</span>
+                <span class="hero-value" id="out-totale">—</span>
+            </div>
 
-            <!-- ── TAB 1: Risultati ── -->
-            <div class="tab-panel tab-active" id="tab-risultati">
-                <h2><span class="icon">⚖️</span> Risultati</h2>
-
-                <!-- Hero totale -->
-                <div class="result-hero">
-                    <span class="hero-label">Impasto Totale</span>
-                    <span class="hero-value" id="out-totale">—</span>
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="label" id="farina-label">Farina</span>
+                    <span class="value" id="out-farina">—</span>
                 </div>
-
-                <div class="results-grid">
-                    <div class="result-item">
-                        <span class="label" id="farina-label">Farina</span>
-                        <span class="value" id="out-farina">—</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Acqua</span>
-                        <span class="value" id="out-acqua">—</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Sale</span>
-                        <span class="value" id="out-sale">—</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Grassi</span>
-                        <span class="value" id="out-grassi">—</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Lievito Madre</span>
-                        <span class="value" id="out-lm">—</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">LDB Fresco</span>
-                        <span class="value" id="out-ldb">—</span>
-                    </div>
+                <div class="result-item">
+                    <span class="label">Acqua</span>
+                    <span class="value" id="out-acqua">—</span>
                 </div>
-
-                <!-- Biga detail -->
-                <div id="out-biga-box" class="biga-detail" style="display:none">
-                    <h3><span class="icon">🥣</span> Dettaglio Biga (18°C / 18h)</h3>
-                    <div class="biga-grid">
-                        <div class="biga-item"><span class="b-label">Farina biga</span><span class="b-value" id="out-biga-farina">—</span></div>
-                        <div class="biga-item"><span class="b-label">Acqua biga</span><span class="b-value" id="out-biga-acqua">—</span></div>
-                        <div class="biga-item biga-item--full"><span class="b-label">LDB nella biga (1%)</span><span class="b-value" id="out-biga-ldb">—</span></div>
-                    </div>
+                <div class="result-item">
+                    <span class="label">Sale</span>
+                    <span class="value" id="out-sale">—</span>
                 </div>
-
-                <!-- Extra ingredienti risultati -->
-                <div class="extra-results" id="extra-results"></div>
-
-                <!-- Note farina -->
-                <div class="extra-results">
-                    <div class="result-item-extra">
-                        <span class="label">Forza Farina Consigliata:</span>
-                        <span class="value" id="out-forza">—</span>
-                    </div>
-                    <div class="result-item-extra">
-                        <span class="label" id="out-farina-label-note">Farina:</span>
-                        <span class="value note-value" id="out-farina-note">—</span>
-                    </div>
+                <div class="result-item">
+                    <span class="label">Grassi</span>
+                    <span class="value" id="out-grassi">—</span>
                 </div>
+                <div class="result-item">
+                    <span class="label">Lievito Madre</span>
+                    <span class="value" id="out-lm">—</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">LDB Fresco</span>
+                    <span class="value" id="out-ldb">—</span>
+                </div>
+            </div>
 
-                <div id="error-message" class="error-msg"></div>
-            </div><!-- fine tab-risultati -->
+            <!-- Biga detail -->
+            <div id="out-biga-box" class="biga-detail" style="display:none">
+                <h3><span class="icon">🥣</span> Dettaglio Biga (18°C / 18h)</h3>
+                <div class="biga-grid">
+                    <div class="biga-item"><span class="b-label">Farina biga</span><span class="b-value" id="out-biga-farina">—</span></div>
+                    <div class="biga-item"><span class="b-label">Acqua biga</span><span class="b-value" id="out-biga-acqua">—</span></div>
+                    <div class="biga-item biga-item--full"><span class="b-label">LDB nella biga (1%)</span><span class="b-value" id="out-biga-ldb">—</span></div>
+                </div>
+            </div>
 
-            <!-- ── TAB 2: Processo ── -->
-            <div class="tab-panel" id="tab-processo">
-                <h2><span class="icon">⏱️</span> Processo</h2>
+            <!-- Extra ingredienti risultati -->
+            <div class="extra-results" id="extra-results"></div>
+
+            <!-- Note farina -->
+            <div class="extra-results">
+                <div class="result-item-extra">
+                    <span class="label">Forza Farina Consigliata:</span>
+                    <span class="value" id="out-forza">—</span>
+                </div>
+                <div class="result-item-extra">
+                    <span class="label" id="out-farina-label-note">Farina:</span>
+                    <span class="value note-value" id="out-farina-note">—</span>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-msg"></div>
+
+            <!-- Processo -->
+            <div class="times-section">
+                <h3><span class="icon">⏱️</span> Processo</h3>
                 <div class="timeline" id="timeline"></div>
-            </div><!-- fine tab-processo -->
+            </div>
 
-            <!-- ── TAB 3: Consigli ── -->
-            <div class="tab-panel" id="tab-consigli">
-                <h2><span class="icon">💡</span> Consigli</h2>
-                <div id="tips-section"></div>
-            </div><!-- fine tab-consigli -->
+            <!-- Consigli -->
+            <div class="tips-section" id="tips-section"></div>
 
-        </div><!-- fine results-section -->
+        </div>
 
-    </div><!-- fine calculator-body -->
-</div><!-- fine container -->
+    </div>
+</div>
+
 <script src="script_pane.js"></script>
-<script>
-/* ── Mobile tab switching ── */
-(function() {
-    var tabNav = document.getElementById('mobile-tabs');
-    if (!tabNav) return;
-
-    tabNav.addEventListener('click', function(e) {
-        var btn = e.target.closest('.mobile-tab-btn');
-        if (!btn) return;
-
-        var targetId = btn.dataset.tab;
-
-        // Aggiorna pulsanti
-        tabNav.querySelectorAll('.mobile-tab-btn').forEach(function(b) {
-            b.classList.toggle('active', b === btn);
-        });
-
-        // Aggiorna pannelli
-        document.querySelectorAll('.tab-panel').forEach(function(panel) {
-            panel.classList.toggle('tab-active', panel.id === targetId);
-        });
-    });
-
-    /* Se il calcolo aggiorna la timeline, passa automaticamente al tab
-       Processo solo su mobile (larghezza ≤ 768px) */
-    var origScript = window.aggiornaRisultati || null;
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(m) {
-            if (m.target.id === 'timeline' && m.target.children.length > 0) {
-                /* non cambiare tab automaticamente – l'utente decide */
-            }
-        });
-    });
-    var tl = document.getElementById('timeline');
-    if (tl) observer.observe(tl, { childList: true });
-})();
-</script>
 </body>
 </html>
