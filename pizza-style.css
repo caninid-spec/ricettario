@@ -1,0 +1,18 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   pizza-style.css  –  Stili specifici SOLO per pizza.html
+   Richiede: core.css → components.css → pizza-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/* ── ID specifici per i gruppi di opzioni avanzate pizza ── */
+#pdrp-group {
+    display: none;
+}
+
+#pdrp-group small {
+    font-size: 0.76rem;
+    color: var(--muted);
+}
+
+#solo-lm-group {
+    display: none;
+}

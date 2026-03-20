@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolalievitati Professionali - RICETTE CORRETTE</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="lievitati-style.css">
+</head>
+<body class="calc-page">
+<div class="container">
+
+    <nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+    <header>
+        <h1>🎄 Calcolalievitati</h1>
+        <p class="subtitle">Ricette professionali italiane verificate: Massari, Morandin, Giorilli</p>
+        <div class="divider"></div>
+    </header>
+
+    <!-- Selettore prodotto -->
+    <div class="product-selector-card">
+        <div class="product-tabs product-tabs--three">
+            <label class="product-tab active" id="tab-panettone">
+                <input type="radio" name="tipo-prodotto" value="panettone" checked>
+                <span class="tab-icon">🍊</span>
+                <div>
+                    <span class="tab-name">Panettone</span>
+                    <span class="tab-desc">Uvetta, canditi, scorze</span>
+                </div>
+            </label>
+            <label class="product-tab" id="tab-pandoro">
+                <input type="radio" name="tipo-prodotto" value="pandoro">
+                <span class="tab-icon">⭐</span>
+                <div>
+                    <span class="tab-name">Pandoro</span>
+                    <span class="tab-desc">Vaniglia, burro</span>
+                </div>
+            </label>
+            <label class="product-tab" id="tab-colomba">
+                <input type="radio" name="tipo-prodotto" value="colomba">
+                <span class="tab-icon">🕊️</span>
+                <div>
+                    <span class="tab-name">Colomba</span>
+                    <span class="tab-desc">Glassa mandorlata</span>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="calculator-body">
+
+        <!-- ── Colonna sinistra: input ── -->
+        <div class="input-column">
+
+            <!-- Parametri base -->
+            <div class="card">
+                <h2><span class="icon">📝</span> Parametri Base</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="num-stampi">Numero di Stampi</label>
+                        <input type="number" id="num-stampi" value="2" min="1" max="20">
+                    </div>
+                    <div class="input-group">
+                        <label for="peso-stampo">Peso Stampo (g)</label>
+                        <input type="number" id="peso-stampo" value="1000" min="100" step="50">
+                        <small>Peso del prodotto finito (es. 500, 750, 1000 g)</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipo lievitazione -->
+            <div class="card">
+                <h2><span class="icon">🦠</span> Metodo di Lievitazione</h2>
+                <div class="input-group radio-group">
+                    <div class="radio-buttons radio-buttons--vertical">
+                        <input type="radio" id="liev-lm" name="tipo-liev" value="lm" checked>
+                        <label for="liev-lm">
+                            <span class="rl-name">Solo Lievito Madre</span>
+                            <span class="rl-desc">Tradizionale. Massima complessità aromatica.</span>
+                        </label>
+                        <input type="radio" id="liev-ldb" name="tipo-liev" value="ldb">
+                        <label for="liev-ldb">
+                            <span class="rl-name">Solo LDB (Lievito di Birra)</span>
+                            <span class="rl-desc">Più rapido, risultato meno articolato.</span>
+                        </label>
+                        <input type="radio" id="liev-biga" name="tipo-liev" value="biga">
+                        <label for="liev-biga">
+                            <span class="rl-name">Biga Giorilli</span>
+                            <span class="rl-desc">Pre-fermento indiretto a 18°C per 18 h.</span>
+                        </label>
+                        <input type="radio" id="liev-misto-lm" name="tipo-liev" value="misto-lm">
+                        <label for="liev-misto-lm">
+                            <span class="rl-name">Misto: LM + LDB</span>
+                            <span class="rl-desc">LM per aroma, LDB come rinforzo.</span>
+                        </label>
+                        <input type="radio" id="liev-misto-biga" name="tipo-liev" value="misto-biga">
+                        <label for="liev-misto-biga">
+                            <span class="rl-name">Misto: Biga + LDB</span>
+                            <span class="rl-desc">Pre-fermento indiretto + rinforzo LDB.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Dettagli LM -->
+                <div id="lm-group" class="sub-card">
+                    <h3><span class="icon">🌾</span> Lievito Madre Solido</h3>
+                    <div class="form-grid form-grid--single">
+                        <div class="input-group">
+                            <label for="perc-lm">% LM sulla Farina</label>
+                            <input type="number" id="perc-lm" value="20" min="18" max="25" step="0.5">
+                            <small>Standard grandi lievitati: 18–25 % (default 20 %)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dettagli Biga -->
+                <div id="biga-group" class="sub-card" style="display:none">
+                    <h3><span class="icon">🥣</span> Biga Giorilli</h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="perc-biga">% Farina in Biga</label>
+                            <input type="number" id="perc-biga" value="40" min="30" max="60">
+                            <small>30–60 % sulla farina totale (default 40 %)</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="idro-biga">Idratazione Biga (%)</label>
+                            <input type="number" id="idro-biga" value="45" min="44" max="50" step="0.5">
+                            <small>44–50 % (Giorilli: 45 %)</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="temp-biga">T° Fermentazione (°C)</label>
+                            <input type="number" id="temp-biga" value="18" min="14" max="22">
+                            <small>18°C per ~18 h</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="temp-ambiente">T° Ambiente (°C)</label>
+                            <input type="number" id="temp-ambiente" value="20" min="15" max="30">
+                            <small>Per calcolo T° acqua biga</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info LDB -->
+                <div id="ldb-group" class="sub-card sub-card--info" style="display:none">
+                    <p>⚡ Il lievito di birra verrà calcolato automaticamente in base al metodo scelto.</p>
+                </div>
+            </div>
+
+            <!-- Percentuali Panettone -->
+            <div class="card" id="panettone-group">
+                <h2><span class="icon">🍊</span> Ricetta Panettone (Morandin)</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="perc-burro-panettone">Burro (%)</label>
+                        <input type="number" id="perc-burro-panettone" value="50" min="48" max="55" step="0.5">
+                        <small>48–55 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-tuorli-panettone">Tuorli (%)</label>
+                        <input type="number" id="perc-tuorli-panettone" value="30" min="28" max="35" step="0.5">
+                        <small>28–35 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-zucchero-panettone">Zucchero (%)</label>
+                        <input type="number" id="perc-zucchero-panettone" value="30" min="28" max="35" step="0.5">
+                        <small>28–35 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-acqua-panettone">Acqua (%)</label>
+                        <input type="number" id="perc-acqua-panettone" value="35" min="32" max="40" step="0.5">
+                        <small>32–40 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-sale-panettone">Sale (%)</label>
+                        <input type="number" id="perc-sale-panettone" value="1" min="0.8" max="1.2" step="0.1">
+                        <small>0,8–1,2 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-miele-panettone">Miele (%)</label>
+                        <input type="number" id="perc-miele-panettone" value="3" min="2" max="4" step="0.5">
+                        <small>2–4 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-uvetta-panettone">Uvetta (%)</label>
+                        <input type="number" id="perc-uvetta-panettone" value="35" min="30" max="40" step="1">
+                        <small>30–40 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-canditi-panettone">Canditi (%)</label>
+                        <input type="number" id="perc-canditi-panettone" value="40" min="35" max="45" step="1">
+                        <small>35–45 % (arancia+cedro)</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Percentuali Pandoro -->
+            <div class="card" id="pandoro-group" style="display:none">
+                <h2><span class="icon">⭐</span> Ricetta Pandoro (Massari)</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="perc-burro-pandoro">Burro (%)</label>
+                        <input type="number" id="perc-burro-pandoro" value="55" min="52" max="60" step="0.5">
+                        <small>52–60 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-uova-pandoro">Uova intere (%)</label>
+                        <input type="number" id="perc-uova-pandoro" value="80" min="75" max="85" step="1">
+                        <small>75–85 % (UNICO LIQUIDO)</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-zucchero-pandoro">Zucchero (%)</label>
+                        <input type="number" id="perc-zucchero-pandoro" value="30" min="28" max="35" step="0.5">
+                        <small>28–35 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-sale-pandoro">Sale (%)</label>
+                        <input type="number" id="perc-sale-pandoro" value="1" min="0.8" max="1.2" step="0.1">
+                        <small>0,8–1,2 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-miele-pandoro">Miele (%)</label>
+                        <input type="number" id="perc-miele-pandoro" value="2" min="1" max="3" step="0.5">
+                        <small>1–3 %</small>
+                    </div>
+                </div>
+                <div class="sub-card sub-card--info" style="margin-top: 12px;">
+                    <p><strong>Nota:</strong> Il pandoro professionale Massari NON contiene latte o acqua - solo uova come liquido!</p>
+                </div>
+            </div>
+
+            <!-- Percentuali Colomba -->
+            <div class="card" id="colomba-group" style="display:none">
+                <h2><span class="icon">🕊️</span> Ricetta Colomba (Giorilli)</h2>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="perc-burro-colomba">Burro (%)</label>
+                        <input type="number" id="perc-burro-colomba" value="48" min="46" max="52" step="0.5">
+                        <small>46–52 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-tuorli-colomba">Tuorli (%)</label>
+                        <input type="number" id="perc-tuorli-colomba" value="28" min="26" max="32" step="0.5">
+                        <small>26–32 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-zucchero-colomba">Zucchero (%)</label>
+                        <input type="number" id="perc-zucchero-colomba" value="28" min="26" max="32" step="0.5">
+                        <small>26–32 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-acqua-colomba">Acqua (%)</label>
+                        <input type="number" id="perc-acqua-colomba" value="30" min="28" max="32" step="0.5">
+                        <small>28–32 % (meno del panettone!)</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-sale-colomba">Sale (%)</label>
+                        <input type="number" id="perc-sale-colomba" value="1" min="0.8" max="1.2" step="0.1">
+                        <small>0,8–1,2 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-miele-colomba">Miele (%)</label>
+                        <input type="number" id="perc-miele-colomba" value="3" min="2" max="4" step="0.5">
+                        <small>2–4 %</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="perc-canditi-colomba">Canditi arancia (%)</label>
+                        <input type="number" id="perc-canditi-colomba" value="20" min="18" max="25" step="1">
+                        <small>18–25 %</small>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- fine input-column -->
+
+        <!-- ── Colonna destra: risultati ── -->
+        <div class="results-column">
+
+            <!-- Primo Impasto -->
+            <div class="card">
+                <h2><span class="icon">1️⃣</span> Primo Impasto (80% farina)</h2>
+                
+                <div class="result-hero">
+                    <span class="hero-label">Peso Primo Impasto</span>
+                    <span class="hero-value" id="primo-impasto-totale">—</span>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label">Farina (80%)</span>
+                        <span class="value" id="primo-farina">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label" id="primo-liev-label">Lievitazione</span>
+                        <span class="value" id="primo-lievitazione">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Zucchero (50%)</span>
+                        <span class="value" id="primo-zucchero">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label" id="primo-uova-label">Tuorli/Uova (40%)</span>
+                        <span class="value" id="primo-uova">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label" id="primo-liquidi-label">Acqua/Latte</span>
+                        <span class="value" id="primo-liquidi">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Miele (50%)</span>
+                        <span class="value" id="primo-miele">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Burro (40%)</span>
+                        <span class="value" id="primo-burro">—</span>
+                    </div>
+                </div>
+
+                <!-- Dettaglio biga -->
+                <div id="biga-detail" class="biga-detail" style="display:none">
+                    <h3><span class="icon">📋</span> Dettaglio Biga</h3>
+                    <div class="biga-grid">
+                        <div class="biga-item">
+                            <span class="b-label">Farina biga</span>
+                            <span class="b-value" id="out-biga-farina">—</span>
+                        </div>
+                        <div class="biga-item">
+                            <span class="b-label">Acqua biga</span>
+                            <span class="b-value" id="out-biga-acqua">—</span>
+                        </div>
+                        <div class="biga-item">
+                            <span class="b-label">LDB biga</span>
+                            <span class="b-value" id="out-biga-ldb">—</span>
+                        </div>
+                        <div class="biga-item">
+                            <span class="b-label">T° acqua</span>
+                            <span class="b-value" id="out-biga-tacqua">—</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Tempo lievitazione:</span>
+                        <span class="value">10–14 h a 26–28 °C</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">Segnale di pronto:</span>
+                        <span class="value">Triplicazione volume</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondo Impasto -->
+            <div class="card">
+                <h2><span class="icon">2️⃣</span> Secondo Impasto (20% farina)</h2>
+                
+                <div class="result-hero">
+                    <span class="hero-label">Peso Secondo Impasto</span>
+                    <span class="hero-value" id="secondo-impasto-totale">—</span>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label">Farina (20%)</span>
+                        <span class="value" id="secondo-farina">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Burro (60%)</span>
+                        <span class="value" id="secondo-burro">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Zucchero (50%)</span>
+                        <span class="value" id="secondo-zucchero">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label" id="secondo-uova-label">Tuorli/Uova (60%)</span>
+                        <span class="value" id="secondo-uova">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sale</span>
+                        <span class="value" id="secondo-sale">—</span>
+                    </div>
+                    <div class="result-item" id="secondo-ldb-item" style="display:none">
+                        <span class="label">LDB rinforzo</span>
+                        <span class="value" id="secondo-ldb">—</span>
+                    </div>
+                </div>
+
+                <!-- Aromi e inerti -->
+                <div class="aromi-section">
+                    <h3><span class="icon">🌿</span> Aromi e Inerti</h3>
+                    <div class="aromi-grid" id="aromi-grid">
+                        <!-- Dinamico per prodotto -->
+                    </div>
+                </div>
+
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Riposo in massa:</span>
+                        <span class="value">30–45 min a 26–28 °C</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">Lievitazione in stampo:</span>
+                        <span class="value">5–6 h a 28–30 °C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glassatura Colomba -->
+            <div class="card" id="glassa-colomba-section" style="display:none">
+                <h2><span class="icon">🍯</span> Glassatura Colomba</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label">Albumi</span>
+                        <span class="value" id="glassa-albumi">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Zucchero</span>
+                        <span class="value" id="glassa-zucchero">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Mandorle grana</span>
+                        <span class="value" id="glassa-mandorle">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Granella zucchero</span>
+                        <span class="value" id="glassa-granella">—</span>
+                    </div>
+                </div>
+                <div class="extra-results">
+                    <p style="font-size: 0.82rem; color: var(--muted); margin-top: 8px;">
+                        Applicare a metà cottura (25 min), tornare in forno fino a doratura.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Totale Impasto -->
+            <div class="card">
+                <h2><span class="icon">⚖️</span> Riepilogo Totale</h2>
+                
+                <div class="result-hero">
+                    <span class="hero-label">Impasto Totale (crudo)</span>
+                    <span class="hero-value" id="impasto-totale">—</span>
+                </div>
+
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Farina Totale:</span>
+                        <span class="value" id="out-farina-totale">—</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">Forza Farina Consigliata:</span>
+                        <span class="value" id="out-forza">—</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">Peso per Stampo (con 10% eccedenza):</span>
+                        <span class="value" id="peso-per-stampo">—</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rinfreschi LM -->
+            <div class="card" id="rinfreschi-section" style="display:none">
+                <h2><span class="icon">🔄</span> Rinfreschi Lievito Madre</h2>
+                <p class="section-note">LM maturo necessario per iniziare: <strong id="out-lm-start">—</strong></p>
+                <div class="rinfreschi-list">
+                    <div class="rinfresco-item" id="out-rinfresco-1"></div>
+                    <div class="rinfresco-item" id="out-rinfresco-2"></div>
+                    <div class="rinfresco-item" id="out-rinfresco-3"></div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card" id="timeline-section">
+                <h2><span class="icon">⏱️</span> Programma di Lavoro</h2>
+                <ol class="timeline-list" id="out-timeline"></ol>
+            </div>
+
+            <div id="error-message" class="error-message"></div>
+
+        </div><!-- fine results-column -->
+    </div><!-- fine calculator-body -->
+</div><!-- fine container -->
+
+<script src="script_lievitati.js"></script>
+<script>
+    // Sincronizzazione UI
+    (function() {
+        function syncBigaDetail() {
+            const val = document.querySelector('input[name="tipo-liev"]:checked')?.value || '';
+            const hasBiga = val === 'biga' || val === 'misto-biga';
+            document.getElementById('biga-detail').style.display = hasBiga ? 'block' : 'none';
+        }
+        document.querySelectorAll('input[name="tipo-liev"]').forEach(r =>
+            r.addEventListener('change', syncBigaDetail));
+        
+        document.querySelectorAll('input[name="tipo-prodotto"]').forEach(r => {
+            r.addEventListener('change', () => {
+                document.querySelectorAll('.product-tab').forEach(t => t.classList.remove('active'));
+                r.closest('.product-tab').classList.add('active');
+            });
+        });
+        syncBigaDetail();
+    })();
+</script>
+</body>
+</html>

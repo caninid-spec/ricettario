@@ -1,0 +1,17 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   brioche-style.css  –  Stili specifici SOLO per brioche.html
+   Richiede: core.css → components.css → brioche-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/*
+   Tutti gli stili della brioche (form, results, type-selector, timeline,
+   tips, filling) sono già definiti in components.css.
+   Questo file contiene solo le personalizzazioni specifiche della pagina.
+*/
+
+/* Griglia tipo a 3 colonne (default, come da components.css) — nessun override necessario */
+
+/* Sezione filling: padding extra sul mobile */
+@media (max-width: 480px) {
+    .type-icon { font-size: 1.4rem; }
+}

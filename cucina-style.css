@@ -1,0 +1,25 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   cucina-style.css  –  Stili specifici SOLO per le pagine cucina
+   Richiede: core.css → components.css → ricettario-style.css → cucina-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/*
+   Tutti i componenti cucina (hub-nav, scale-bar-cucina, filter-bar,
+   card-portion, hub-card, subsection-label, wine-badge, badge stile/regione,
+   recipe-timing) sono ora in components.css.
+   Questo file conserva solo le colorazioni per categoria ricetta.
+*/
+
+/* ── Accenti bordo superiore per categoria (data-category) ── */
+.recipe-card[data-category="pasta-fresca"]  { border-top: 3px solid #c9922a; }
+.recipe-card[data-category="pasta-secca"]   { border-top: 3px solid #c96a10; }
+.recipe-card[data-category="pasta-ripiena"] { border-top: 3px solid #b8560a; }
+.recipe-card[data-category="condimento"]    { border-top: 3px solid #9b2335; }
+.recipe-card[data-category="risotto"]       { border-top: 3px solid #c9922a; }
+.recipe-card[data-category="gnocchi"]       { border-top: 3px solid #4a7c59; }
+.recipe-card[data-category="zuppa"]         { border-top: 3px solid #4a7c59; }
+.recipe-card[data-category="cereali"]       { border-top: 3px solid #c9922a; }
+.recipe-card[data-category="carne"]         { border-top: 3px solid #9b2335; }
+.recipe-card[data-category="pesce"]         { border-top: 3px solid #2a5c8a; }
+.recipe-card[data-category="veg"]           { border-top: 3px solid #4a7c59; }
+.recipe-card[data-category="bbq"]           { border-top: 3px solid #9b2335; }

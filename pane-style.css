@@ -1,0 +1,182 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   pane-style.css  –  Stili specifici SOLO per pane.html
+   Richiede: core.css → components.css → pane-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/*
+   Pane usa una type-grid con 4 colonne (bread-grid) e le classi
+   .bread-card / .b-icon / .b-name / .b-sub, ora standardizzate in
+   components.css come .type-card / .type-icon / .type-name / .type-desc.
+   Le classi .bread-* rimangono come alias per retrocompatibilità HTML.
+*/
+
+/* Alias retrocompatibilità: .bread-card → usa stessi stili di .type-card */
+.bread-card {
+    background: var(--surface2);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.bread-card:hover { border-color: var(--accent2); background: #fff; }
+
+.bread-card.active {
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(201,106,16,0.13);
+}
+
+/* Griglia tipo pane: 4 colonne */
+.bread-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0 14px;
+}
+
+/* Container pane */
+.container { max-width: 1100px; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TAB MOBILE – Sistema di navigazione tra sezioni su schermi stretti
+   Su desktop (>768px) i tab sono nascosti e il layout a due colonne
+   rimane invariato. Su mobile i tab sostituiscono lo scroll verticale
+   infinito dividendo Risultati / Processo / Consigli in pannelli.
+══════════════════════════════════════════════════════════════════════════ */
+
+.mobile-tabs {
+    display: none; /* nascosti su desktop */
+}
+
+/* ── Responsive pane ── */
+@media (max-width: 860px) {
+    .bread-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .bread-grid { gap: 8px; }
+    .bread-card { padding: 10px 6px; }
+    .b-icon { font-size: 1.5rem; }
+    .b-name { font-size: 0.78rem; }
+    .b-sub  { font-size: 0.64rem; }
+    .input-section, .results-section { padding: 18px 14px; }
+    .hero-value { font-size: 1.5rem; }
+    .result-item .value { font-size: 1.1rem; }
+
+    /* ── Attiva il sistema a tab su mobile ── */
+
+    /* Barra tab sticky sotto il selettore tipo */
+    .mobile-tabs {
+        display: flex;
+        gap: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+    }
+
+    .mobile-tab-btn {
+        flex: 1;
+        padding: 11px 8px;
+        background: none;
+        border: none;
+        border-right: 1px solid var(--border);
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--muted);
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        line-height: 1.2;
+    }
+
+    .mobile-tab-btn:last-child { border-right: none; }
+
+    .mobile-tab-btn .tab-icon { font-size: 1.1rem; }
+
+    .mobile-tab-btn.active {
+        background: var(--accent);
+        color: #fff;
+    }
+
+    /* Il layout a due colonne collassa a una colonna */
+    .calculator-body {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Input section: sempre visibile sopra i tab */
+    .input-section {
+        margin-bottom: 16px;
+    }
+
+    /* Results section: diventa il contenitore dei pannelli tab */
+    .results-section {
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+
+    /* Pannelli tab: nascosti di default, mostrati se .tab-active */
+    .tab-panel {
+        display: none;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px 16px;
+        box-shadow: var(--shadow);
+    }
+
+    .tab-panel.tab-active {
+        display: block;
+    }
+
+    /* H2 dentro il pannello attivo */
+    .tab-panel h2 {
+        font-size: 1rem;
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+    }
+
+    /* Hero result più compatto */
+    .result-hero {
+        padding: 12px 14px;
+        margin-bottom: 12px;
+    }
+
+    .hero-value { font-size: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+    .bread-grid   { grid-template-columns: repeat(3, 1fr); }
+    .form-grid    { grid-template-columns: 1fr; gap: 10px; }
+    .results-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .biga-grid    { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .result-item  { padding: 10px 8px; }
+}
+
+@media (max-width: 420px) {
+    .bread-grid  { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .bread-card  { padding: 8px 4px; border-radius: 8px; }
+    .b-icon      { font-size: 1.25rem; }
+    .b-sub       { display: block; font-size: 0.64rem; }
+    .results-grid { grid-template-columns: 1fr; }
+    .biga-grid    { grid-template-columns: 1fr; }
+    .biga-item--full { grid-column: auto; }
+
+    .mobile-tab-btn { font-size: 0.68rem; padding: 10px 4px; }
+}

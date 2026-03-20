@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creme Base — Ricettario</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="ricettario-style.css">
+</head>
+<body>
+
+<nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+<header class="page-header">
+    <p class="page-header-eyebrow">Ricettario · Pasticceria</p>
+    <h1>Creme <em>Base</em></h1>
+    <p class="page-header-desc">Le creme fondamentali della pasticceria classica e moderna. Dosi scalabili per grammi o porzioni.</p>
+    <div class="header-divider"></div>
+</header>
+
+<div class="scale-bar">
+    <span class="scale-bar-label">Scala tutte le creme</span>
+    <div class="scale-group">
+        <label>Porzioni</label>
+        <input type="number" class="scale-input" id="global-port" placeholder="8" min="1" max="200">
+        <span class="scale-unit">pz</span>
+    </div>
+    <button class="scale-reset">↺ Reset</button>
+</div>
+
+<main class="ricettario-main">
+
+    <div class="section-heading">
+        <h2>Creme Base</h2>
+        <span class="section-count">13 ricette</span>
+    </div>
+
+    <div class="recipes-grid">
+
+        <!-- CREMA PASTICCERA -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍮</div>
+                <span class="recipe-photo-label">Base per tutto</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema cotta</p>
+                <h3>Crema <em>Pasticcera</em></h3>
+                <p class="recipe-desc">La madre di tutte le creme. Ricetta classica con amido di mais per la setosità e maizena per la stabilità. Versatile, da usare sola o come base per diplomatica, chantilly e altri derivati.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">8 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Porzioni</span>
+                    <div class="card-scale-group">
+                        <input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100">
+                        <label>pz</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte intero"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="130" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">130</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Amido di mais"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Amido di mais</span></li>
+                            <li class="ingredient-row" data-base="1" data-unit="g" data-name="Bacca di vaniglia"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Bacca di vaniglia (o scorza limone)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta il latte quasi a bollore con la vaniglia. In una ciotola, sbatti tuorli + zucchero + amido fino a un composto liscio e senza grumi.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Tempera:</strong> Versa 1/3 del latte caldo sui tuorli mescolando, poi riporta tutto nella casseruola. Cuoci a fuoco medio mescolando continuamente con frusta.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Appena la crema addensa e fa le prime bolle, cuoci ancora <strong>1 minuto</strong> mescolando energicamente. Versa in contenitore, copri con pellicola a contatto, abbatti in frigo.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CHANTILLY FRANCESE -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">☁️</div>
+                <span class="recipe-photo-label">Decorazione · Coppette</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Panna montata</p>
+                <h3>Chantilly <em>Francese</em></h3>
+                <p class="recipe-desc">Semplicemente panna montata zuccherata con vaniglia. Nessuna gelatina, nessun addensante. Leggera, instabile — si prepara al momento. La purezza del gusto è il punto.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 g montata</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Usa subito</span><span class="ref-value">max 2h in frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="250" data-unit="g" data-name="Panna fresca 35% m.g."><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35% m.g. (freddissima)</span></li>
+                            <li class="ingredient-row" data-base="25" data-unit="g" data-name="Zucchero a velo"><span class="ing-qty">25</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Estratto di vaniglia"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Estratto di vaniglia</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Raffredda ciotola e fruste in freezer per 15 min. La panna deve essere a 4°C. Monta a velocità media aggiungendo zucchero a velo e vaniglia a metà processo.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Fermati a <strong>punte morbide</strong> per decorazioni con sac-à-poche, a <strong>punte ferme</strong> per strati in torte. Non montare troppo — si separa in burro e siero.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CHANTILLY ALL'ITALIANA -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🌸</div>
+                <span class="recipe-photo-label">Farciture · Torte</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema composta</p>
+                <h3>Chantilly <em>all'Italiana</em></h3>
+                <p class="recipe-desc">Pasticcera + panna montata in proporzioni bilanciate. Più strutturata della chantilly francese, non eccessivamente ricca. La crema da farcitura per eccellenza.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~700 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">24h in frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍮</span><span class="component-title">Crema pasticcera (base)</span><a href="creme-base.html#pasticcera" class="component-link">↗ vedi ricetta</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="400" data-unit="g" data-name="Crema pasticcera (fredda)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Crema pasticcera (fredda, lisciata)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☁️</span><span class="component-title">Panna</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Panna fresca 35% m.g."><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35% m.g.</span></li>
+                            <li class="ingredient-row" data-base="20" data-unit="g" data-name="Zucchero a velo"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Liscia la pasticcera fredda con una spatola fino a renderla setosa e senza grumi. Se necessario, passala al setaccio.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta la panna con lo zucchero a velo a punte semiferme. Incorpora 1/3 della panna alla pasticcera mescolando con frusta, poi il resto delicatamente con spatola dal basso verso l'alto.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA DIPLOMATICA -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">✨</div>
+                <span class="recipe-photo-label">Millefoglie · Diplomatica</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema composta</p>
+                <h3>Crema <em>Diplomatica</em></h3>
+                <p class="recipe-desc">Chantilly all'italiana stabilizzata con gelatina. Tiene la forma in taglio, perfetta per la torta diplomatica, millefoglie e Saint-Honoré. Più soda della chantilly semplice.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~750 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">48h in frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍮</span><span class="component-title">Base</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="400" data-unit="g" data-name="Crema pasticcera"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Crema pasticcera (tiepida, 40°C)</span></li>
+                            <li class="ingredient-row" data-base="4" data-unit="g" data-name="Gelatina in fogli"><span class="ing-qty">4</span><span class="ing-unit">g</span><span class="ing-name">Gelatina in fogli (oro)</span></li>
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Panna fresca 35% m.g."><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35% m.g.</span></li>
+                            <li class="ingredient-row" data-base="20" data-unit="g" data-name="Zucchero a velo"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Ammolla la gelatina in acqua fredda per 10 min. Strizzala e scioglila nella crema pasticcera <strong>tiepida (40°C)</strong>. Mescola bene e lascia scendere a temperatura ambiente (non in frigo).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta la panna con lo zucchero a velo a punte semiferme. Incorpora alla pasticcera con gelatina come per la chantilly. Usa subito per farcire — la gelatina inizia a solidificare.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA PASTICCERA AL CIOCCOLATO -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍫</div>
+                <span class="recipe-photo-label">Bignè · Torte al cacao</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema cotta</p>
+                <h3>Pasticcera al <em>Cioccolato</em></h3>
+                <p class="recipe-desc">Variante della classica con cioccolato fondente sciolto a fine cottura. Intensa, lucida, senza cacao in polvere (che darebbe amarezza). Perfetta per bignè al cioccolato e profiteroles.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~600 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte intero"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Amido di mais"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Amido di mais</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Cioccolato fondente 70%"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente 70%</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Prepara la pasticcera base (latte + tuorli + zucchero + amido) come da procedimento standard.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Appena cotta, togli dal fuoco e aggiungi il <strong>cioccolato spezzettato</strong>. Mescola con spatola finché completamente sciolto e la crema è lucida e omogenea. Copri a contatto e abbatti.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA DI RICOTTA -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🕯️</div>
+                <span class="recipe-photo-label">Cannoli · Cassata</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema fredda</p>
+                <h3>Crema di <em>Ricotta</em></h3>
+                <p class="recipe-desc">La crema della tradizione siciliana. Ricotta di pecora setacciata, zucchero, gocce di cioccolato e canditi. Per cannoli, cassata e cassatine. La setacciatura è il passaggio che fa la differenza.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~600 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">2 giorni frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🐑</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Ricotta di pecora (sgocciolata)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Ricotta di pecora (sgocciolata 24h)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero a velo"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Gocce di cioccolato fondente"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Gocce di cioccolato fondente</span></li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Canditi (cedro e arancia)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Cedro e arancia canditi (a cubetti)</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Cannella in polvere"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Cannella in polvere</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Setaccia</strong> la ricotta attraverso un colino a maglie fini. Questo passaggio elimina i grumi e rende la crema setosa. Non frullarla — perderebbe consistenza.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Unisci zucchero a velo e cannella. Mescola delicatamente con spatola. Aggiungi gocce e canditi solo all'ultimo, mescolando il minimo indispensabile. Frigo 1 ora prima dell'uso.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+                <div class="recipe-notes">
+                    <p class="recipe-notes-title">💡 Note</p>
+                    <p>Per cassata: ometti le gocce di cioccolato (vedi ricetta cassata per le proporzioni finali). Per cannoli: la crema deve essere molto soda — sgocciola la ricotta almeno 24h in frigorifero in un colino.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- GANACHE AL CIOCCOLATO -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍫</div>
+                <span class="recipe-photo-label">Glassa · Tartufi · Farciture</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Ganache</p>
+                <h3>Ganache al <em>Cioccolato</em></h3>
+                <p class="recipe-desc">Emulsione di cioccolato e panna. Il rapporto cambia tutto: 1:1 per una ganache da glassa fluida, 2:1 cioccolato/panna per tartufi e farciture dense. Ricetta per farcitura equilibrata.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Rapporto</span><span class="ref-value">3:2 choc/panna</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">5 giorni frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍫</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Cioccolato fondente 60–70%"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente 60–70%</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Panna fresca 35%"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro (opzionale)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro (per lucentezza, opzionale)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Trita finemente il cioccolato. Porta la panna quasi a bollore. Versala sul cioccolato in 3 riprese, aspettando 30 secondi tra una e l'altra. Mescola partendo dal centro con spatola in cerchi concentrici — non con frusta (incorpora aria).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Quando l'emulsione è liscia e lucida (si vede il "punto di emulsione"), aggiungi il burro a cubetti se desiderato. Per ganache da glassa: usa calda. Per farcitura: lascia cristallizzare a temperatura ambiente o frigo.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CARAMELLO SALATO -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍯</div>
+                <span class="recipe-photo-label">Salse · Farciture · Glasse</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Salsa/Crema</p>
+                <h3>Caramello <em>Salato</em></h3>
+                <p class="recipe-desc">Caramello a secco con panna calda e burro. Il sale esalta la dolcezza e aggiunge profondità. Versatile: da salsa fluida a crema densa per tartellette e farciture.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">2 settimane frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🔥</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Panna fresca 35% (calda)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35% (calda)</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Burro salato"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Burro salato (o burro + 4g sale)</span></li>
+                            <li class="ingredient-row" data-base="3" data-unit="g" data-name="Fleur de sel"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Fleur de sel</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Caramello a secco:</strong> Versa lo zucchero in casseruola a fondo spesso. Fuoco medio-alto. Non mescolare: lascia sciogliere i bordi e poi inclina la casseruola per distribuire il calore. Quando è ambra scura (175°C), togli dal fuoco.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Decottura:</strong> Aggiungi la panna calda in 3 riprese (attenzione agli schizzi!). Rimetti sul fuoco, mescola e porta a 107°C per una salsa fluida, o a 115°C per una crema più densa. Fuori dal fuoco, aggiungi burro a cubetti e fleur de sel.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA AL MASCARPONE -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">☕</div>
+                <span class="recipe-photo-label">Tiramisù · Farciture</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema fredda</p>
+                <h3>Crema al <em>Mascarpone</em></h3>
+                <p class="recipe-desc">La base del tiramisù classico. Mascarpone, tuorli e zucchero montati, con albumi a neve per leggerezza. Senza uova pastorizzate: la tradizione napoletana non le prevede.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~700 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">24h frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Montata tuorli</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Mascarpone"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Mascarpone (temperatura ambiente)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☁️</span><span class="component-title">Albumi a neve</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="180" data-unit="g" data-name="Albumi (6 albumi)"><span class="ing-qty">180</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~6 albumi)</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Zucchero semolato (per albumi)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Monta tuorli e zucchero finché il composto è chiaro, spumoso e "scrive". Aggiungi il mascarpone a temperatura ambiente in 3 riprese, mescolando con spatola.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta gli albumi con lo zucchero rimanente a neve soda. Incorpora alla base di mascarpone in 2 riprese, con movimenti delicati dal basso verso l'alto.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+                <div class="recipe-notes">
+                    <p class="recipe-notes-title">💡 Versione pastorizzata</p>
+                    <p>Per pastorizzare tuorli: scalda zucchero con 40 g acqua a 121°C e versalo a filo sui tuorli in montatura. Continua a montare fino a raffreddamento. Per albumi: stessa tecnica con sciroppo a 118°C.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ZABAIONE -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🥂</div>
+                <span class="recipe-photo-label">Coppette · Pandoro</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema cotta</p>
+                <h3><em>Zabaione</em></h3>
+                <p class="recipe-desc">Crema piemontese di tuorli, zucchero e Marsala montati a bagnomaria. Leggero e schiumoso. Servito caldo come dessert o freddo come farcitura per il pandoro delle feste.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">6 coppette</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">T° cottura</span><span class="ref-value">82°C massimo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="50"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="90" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">90</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Marsala secco (o Moscato)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Marsala secco (o Moscato)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Mescola tuorli, zucchero e Marsala in una ciotola. Posiziona su bagnomaria a fuoco medio (l'acqua non deve bollire).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta continuamente con fruste elettriche finché la crema triplica di volume, è chiara e lascia il segno per 3 secondi. La temperatura deve raggiungere <strong>82°C</strong> — non di più o si straccia.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- LEMON CURD -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍋</div>
+                <span class="recipe-photo-label">Tartellette · Crostate</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema cotta</p>
+                <h3>Lemon <em>Curd</em></h3>
+                <p class="recipe-desc">Crema di limone britannica, intensa e brillante. Uova, zucchero, succo e scorza di limone, burro. Spalmabile, da crostata, da tartellette. Si prepara in 10 minuti.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~450 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">2 settimane frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍋</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Succo limone fresco (3 limoni)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone fresco (~3 limoni)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="165" data-unit="g" data-name="Uova intere (3 uova)"><span class="ing-qty">165</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~3 uova)</span></li>
+                            <li class="ingredient-row" data-base="10" data-unit="g" data-name="Scorza limone grattugiata"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Scorza di limone grattugiata</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Burro freddo a cubetti"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo a cubetti</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Mescola succo, zucchero, uova e scorza in una casseruola. Cuoci a fuoco medio mescolando continuamente fino a raggiungere <strong>82°C</strong> (la crema si addensa e copre il cucchiaio).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Togli dal fuoco, lascia scendere a 60°C, poi aggiungi il burro freddo a cubetti uno alla volta emulsionando con frullatore a immersione. Filtra, copri a contatto, frigo.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA INGLESE -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🫙</div>
+                <span class="recipe-photo-label">Salsa per dessert · Base per gelato</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Salsa/Crema</p>
+                <h3>Crema <em>Inglese</em></h3>
+                <p class="recipe-desc">Salsa vellutata di tuorli, zucchero e latte. Non addensata con amido — si cuoce a 82°C senza mai bollire. Base per gelati, mousse al cioccolato e bavaresi.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">T° cottura</span><span class="ref-value">82°C esatti</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="50"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte intero"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Tuorli (5 tuorli)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~5 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="1" data-unit="g" data-name="Vaniglia"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Bacca di vaniglia</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta il latte quasi a bollore con la vaniglia. Sbatti tuorli e zucchero. Tempera versando metà del latte caldo sui tuorli, poi riporta tutto nella casseruola.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Cuoci a fuoco basso mescolando continuamente. Fermati <strong>esattamente a 82°C</strong> (la crema "vela il cucchiaio" — traccia un dito e il segno resta). Filtra e abbatti immediatamente.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CREMA AL BURRO -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="12">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🌸</div>
+                <span class="recipe-photo-label">Decorazioni · Farciture Sacher</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Crema da decorazione</p>
+                <h3>Crema al <em>Burro</em></h3>
+                <p class="recipe-desc">Versione italiana con meringa italiana (base pastorizzata). Stabile a temperatura ambiente, si presta a decorazioni con sac-à-poche. Molto meno stucchevole della buttercream americana.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~600 g</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">1 settimana frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="12" min="1" max="100"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☁️</span><span class="component-title">Meringa italiana</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Albumi"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~4 albumi)</span></li>
+                            <li class="ingredient-row" data-base="240" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">240</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Acqua (per lo sciroppo)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧈</span><span class="component-title">Burro</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="360" data-unit="g" data-name="Burro pomato (20°C)"><span class="ing-qty">360</span><span class="ing-unit">g</span><span class="ing-name">Burro pomato (esattamente a 20°C)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta zucchero + acqua a <strong>121°C</strong>. Simultaneamente monta gli albumi a neve morbida. Versaci lo sciroppo a filo montando a velocità alta finché la ciotola è tiepida (~40°C).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi il burro pomato a pezzetti uno alla volta con la planetaria in marcia. L'impasto sembrerà "rotto" a metà processo — continua: torna liscio. Aromatizza con vaniglia, caffè o pasta pralinata.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+    </div>
+</main>
+
+<script src="ricettario-engine.js"></script>
+</body>
+</html>

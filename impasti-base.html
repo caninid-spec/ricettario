@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impasti Base — Ricettario</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="ricettario-style.css">
+</head>
+<body>
+
+<nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+<header class="page-header">
+    <p class="page-header-eyebrow">Ricettario · Pasticceria</p>
+    <h1>Impasti <em>Base</em></h1>
+    <p class="page-header-desc">Le fondamenta della pasticceria — frolle, biscuit, montate e lievitati da pasticceria. Dosi scalabili per la tua teglia.</p>
+    <div class="header-divider"></div>
+</header>
+
+<!-- Barra scala globale -->
+<div class="scale-bar">
+    <span class="scale-bar-label">Scala tutte le ricette</span>
+    <div class="scale-group">
+        <label>⌀ teglie tonde</label>
+        <input type="number" class="scale-input" id="global-diam" placeholder="24" min="10" max="60">
+        <span class="scale-unit">cm</span>
+    </div>
+    <div class="scale-divider"></div>
+    <div class="scale-group">
+        <label>Porzioni</label>
+        <input type="number" class="scale-input" id="global-port" placeholder="8" min="1" max="100">
+        <span class="scale-unit">pz</span>
+    </div>
+    <button class="scale-reset">↺ Reset</button>
+</div>
+
+<main class="ricettario-main">
+
+    <div class="section-heading">
+        <h2>Impasti Base</h2>
+        <span class="section-count">7 ricette</span>
+    </div>
+
+    <div class="recipes-grid">
+
+        <!-- ══════════════════════════════════════════════════════════════════
+             PASTA FROLLA CLASSICA
+        ═══════════════════════════════════════════════════════════════════ -->
+        <article class="recipe-card"
+                 data-ref-type="tonda"
+                 data-ref-val="24">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🥧</div>
+                <span class="recipe-photo-label">Crostata · Biscotti</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Frolla</p>
+                <h3>Pasta Frolla <em>Classica</em></h3>
+                <p class="recipe-desc">La frolla di riferimento per crostate e fondi. Metodo sabbiatura per una consistenza friabile e uniforme. Valida anche per biscotti da taglio.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item">
+                        <span class="ref-label">Riferimento</span>
+                        <span class="ref-value">⌀ 24 cm</span>
+                    </div>
+                    <div class="recipe-ref-item">
+                        <span class="ref-label">Spessore</span>
+                        <span class="ref-value">3–4 mm</span>
+                    </div>
+                    <div class="recipe-ref-item">
+                        <span class="ref-label">Riposo</span>
+                        <span class="ref-value">30 min frigo</span>
+                    </div>
+                    <div class="recipe-ref-item">
+                        <span class="ref-label">Cottura</span>
+                        <span class="ref-value">175°C · 20–25 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="10" max="60">
+                        <label>cm</label>
+                    </div>
+                </div>
+
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header">
+                            <span class="component-icon">🧱</span>
+                            <span class="component-title">Impasto</span>
+                        </div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="250" data-unit="g" data-name="Farina 00 (debole, W 130–160)">
+                                <span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Farina 00 (debole, W 130–160)</span>
+                            </li>
+                            <li class="ingredient-row" data-base="125" data-unit="g" data-name="Burro freddo a cubetti">
+                                <span class="ing-qty">125</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo a cubetti</span>
+                            </li>
+                            <li class="ingredient-row" data-base="90" data-unit="g" data-name="Zucchero a velo">
+                                <span class="ing-qty">90</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span>
+                            </li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Tuorli (2 tuorli)">
+                                <span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~2 tuorli)</span>
+                            </li>
+                            <li class="ingredient-row" data-base="1" data-unit="g" data-name="Sale fino">
+                                <span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Sale fino</span>
+                            </li>
+                            <li class="ingredient-row" data-base="3" data-unit="g" data-name="Scorza limone grattugiata">
+                                <span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Scorza limone grattugiata</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Sabbiatura:</strong> Nella ciotola o sul piano, lavora farina e burro freddo a cubetti con la punta delle dita (o in planetaria con foglia a bassa velocità) fino a ottenere un composto sabbioso, senza pezzi di burro visibili.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Legatura:</strong> Aggiungi zucchero a velo e sale. Mescola brevemente, poi unisci i tuorli e la scorza. Compatta velocemente in un panetto senza lavorare troppo — il calore delle mani scioglie il burro.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Riposo:</strong> Appiattisci il panetto tra due fogli di carta forno e fai riposare in frigo <strong>almeno 30 minuti</strong> (meglio 1 ora). Stendi a 3–4 mm e fondi la teglia imburrata.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Cottura in bianco:</strong> Bucherella il fondo, copri con carta forno e pesi ceramici, cuoci 15 min a 175°C. Togli i pesi e cuoci altri 8–10 min fino a doratura uniforme.</p></div>
+                </div>
+
+                <div class="shopping-summary">
+                    <div class="shopping-header">
+                        <span>🛒 Lista della spesa</span>
+                        <button class="shopping-copy">Copia</button>
+                    </div>
+                    <div class="shopping-list"></div>
+                </div>
+
+                <div class="recipe-notes">
+                    <p class="recipe-notes-title">💡 Note</p>
+                    <p>Per frolla da biscotti: sostituisci tuorli con 1 uovo intero (55 g) e riduci lo zucchero a velo a 70 g. Per frolla montata (da sac-à-poche): burro a temperatura ambiente, montatelo con lo zucchero prima di aggiungere la farina.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- PASTA BRISÉE -->
+        <article class="recipe-card"
+                 data-ref-type="tonda"
+                 data-ref-val="24">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🥧</div>
+                <span class="recipe-photo-label">Crostate salate · Quiche</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Frolla Salata</p>
+                <h3>Pasta <em>Brisée</em></h3>
+                <p class="recipe-desc">La pasta frolla salata d'origine francese, ideale per quiche, torte salate e gusci neutri. Croccante, friabile, senza zucchero.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">180°C · 20–25 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">30 min frigo</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="10" max="60">
+                        <label>cm</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧱</span><span class="component-title">Impasto</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Farina 00"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Burro freddo a cubetti"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo a cubetti</span></li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Acqua ghiacciata"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Acqua ghiacciata</span></li>
+                            <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale fino"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale fino</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Sabbiatura:</strong> Lavora farina, sale e burro freddo fino a ottenere briciole fini. L'obiettivo è incorporare il burro senza scioglierlo.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Idratazione:</strong> Aggiungi l'acqua ghiacciata un cucchiaio alla volta, lavorando velocemente. Smetti appena l'impasto si compatta — non deve essere liscio.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Riposo e stesura:</strong> Frigo 30 min, poi stendi a 3–4 mm. Cuoci in bianco con pesi: 15 min coperti + 8 min scoperti a 180°C.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PAN DI SPAGNA -->
+        <article class="recipe-card"
+                 data-ref-type="tonda"
+                 data-ref-val="24">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🎂</div>
+                <span class="recipe-photo-label">Torte farcite · Basi</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Montata</p>
+                <h3>Pan di <em>Spagna</em></h3>
+                <p class="recipe-desc">La base italiana per eccellenza. Montata intera a caldo (metodo Genoise) per massima stabilità. Leggero, alveolato, assorbe perfettamente le bagne.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Altezza</span><span class="ref-value">h 5–6 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">170°C · 30–35 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">12h prima di tagliare</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="10" max="60">
+                        <label>cm</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Montata</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Uova intere (4 uova)"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~4 uova)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="110" data-unit="g" data-name="Farina 00 (debole)"><span class="ing-qty">110</span><span class="ing-unit">g</span><span class="ing-name">Farina 00 (debole, W 130)</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Fecola di patate"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Fecola di patate</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Scorza limone"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Scorza limone o vaniglia</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Montata a caldo (Genoise):</strong> Metti uova e zucchero in una ciotola su bagnomaria a 45°C. Monta con fruste elettriche fino a raggiungere i 45°C, poi togli dal calore e monta a velocità alta finché il composto è triplicato, bianco e "scrive" (cadendo fa un nastro che dura 3 secondi).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Incorporate le polveri:</strong> Setaccia farina e fecola. Incorpora in 3 riprese con movimenti dal basso verso l'alto, ruotando la ciotola. Non smontare la massa — lavora veloce ma delicato.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Cottura:</strong> Versa in teglia foderata (non imburrare i bordi: il PdS deve "aggrapparsi" per crescere). Cuoci a <strong>170°C statico</strong> senza aprire il forno per i primi 25 min. Prova stecchino.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Raffreddamento:</strong> Capovolgi su griglia appena sfornato. Lascia riposare <strong>almeno 12 ore</strong> prima di tagliare i dischi — la struttura si asciuga e non si sbriciola.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+                <div class="recipe-notes">
+                    <p class="recipe-notes-title">💡 Note</p>
+                    <p>Per un PdS al cacao: sostituisci 20 g di farina con 20 g di cacao amaro setacciato. Per un PdS senza glutine: sostituisci tutta la farina con fecola di patate.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- BISCUIT DA ROTOLO -->
+        <article class="recipe-card"
+                 data-ref-type="rettangolare"
+                 data-ref-val="40"
+                 data-ref-val2="30">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍥</div>
+                <span class="recipe-photo-label">Rotoli · Tronchetti</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Biscuit</p>
+                <h3>Biscuit <em>da Rotolo</em></h3>
+                <p class="recipe-desc">Base elastica e umida per rotoli farciti. Montata separata di albumi e tuorli, con farina minima. Si arrotola ancora tiepido senza rompersi.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">40 × 30 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">220°C · 8–10 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Spessore</span><span class="ref-value">~6–8 mm</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia (cm)</span>
+                    <div class="card-scale-group">
+                        <label>L</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="40" min="20" max="80">
+                    </div>
+                    <div class="card-scale-group">
+                        <label>×  H</label>
+                        <input type="number" class="card-scale-input" data-dim="2" value="30" min="20" max="60">
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Montata tuorli</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="90" data-unit="g" data-name="Tuorli"><span class="ing-qty">90</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~5 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="70" data-unit="g" data-name="Zucchero semolato (per tuorli)"><span class="ing-qty">70</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☁️</span><span class="component-title">Meringa (albumi)</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Albumi"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~5 albumi)</span></li>
+                            <li class="ingredient-row" data-base="50" data-unit="g" data-name="Zucchero semolato (per albumi)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🌾</span><span class="component-title">Polveri</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="90" data-unit="g" data-name="Farina 00 (debole)"><span class="ing-qty">90</span><span class="ing-unit">g</span><span class="ing-name">Farina 00 (debole)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Monta i <strong>tuorli con lo zucchero</strong> fino a un composto chiaro e spumoso. A parte, monta gli <strong>albumi a neve ferma</strong> aggiungendo lo zucchero in 3 volte.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Incorpora 1/3 degli albumi ai tuorli per ammorbidire la massa, poi il resto delicatamente. Aggiungi la farina setacciata in un'unica soluzione, mescolando dal basso verso l'alto.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Stendi su carta forno a <strong>spessore uniforme</strong> con una spatola. Cuoci a <strong>220°C per 8–10 min</strong>: deve restare leggermente umido dentro.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Arrotola subito</strong> ancora caldo su un foglio di carta forno spolverato di zucchero a velo. Lascia raffreddare arrotolato, poi svolgi, farcisci e riavvolgi.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PATE A CHOUX -->
+        <article class="recipe-card"
+                 data-ref-type="porzioni"
+                 data-ref-val="20">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍮</div>
+                <span class="recipe-photo-label">Bignè · Éclairs · Paris-Brest</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Lievitazione fisica</p>
+                <h3>Pâte à <em>Choux</em></h3>
+                <p class="recipe-desc">L'impasto per bignè, éclairs e paris-brest. Lievitazione totalmente fisica per l'azione del vapore. La consistenza finale dell'impasto è tutto.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">~20 bignè</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">200°C → 170°C</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Dimensione</span><span class="ref-value">⌀ 4–5 cm</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Numero bignè</span>
+                    <div class="card-scale-group">
+                        <input type="number" class="card-scale-input" data-dim="1" value="20" min="5" max="200">
+                        <label>pz</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">💧</span><span class="component-title">Panade (fase 1)</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="125" data-unit="g" data-name="Acqua"><span class="ing-qty">125</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                            <li class="ingredient-row" data-base="50" data-unit="g" data-name="Burro"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale fino"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale fino</span></li>
+                            <li class="ingredient-row" data-base="5" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="75" data-unit="g" data-name="Farina 00"><span class="ing-qty">75</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Incorporazione uova (fase 2)</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="130" data-unit="g" data-name="Uova intere (sbattute)"><span class="ing-qty">130</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (sbattute, ~2–3 uova)</span><span class="ing-note">da aggiungere gradualmente</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Panade:</strong> Porta a bollore acqua, burro, sale e zucchero. Togli dal fuoco, aggiungi tutta la farina in una volta e mescola energicamente fino a che si stacca dalle pareti. Rimetti sul fuoco 1 min mescolando.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Incorpora le uova:</strong> Fai intiepidire la panade (sotto 60°C). Aggiungi le uova sbattute in 4–5 riprese, mescolando dopo ogni aggiunta. <strong>Fermati quando l'impasto "fa il nastro"</strong> — cade dalla spatola formando un triangolo che si richiude lentamente.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Formare:</strong> Sac-à-poche con bocchetta liscia n.12. Spremi forme rotonde su teglia con carta forno. Appiattisci la punta con un dito bagnato. Spennella con uovo sbattuto.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Cottura bifase:</strong> 200°C per 15 min (sviluppo), poi <strong>abbassa a 170°C</strong> e cuoci altri 15–20 min (asciugatura). Non aprire il forno nella prima fase. Sfora la valvola del forno (o metti un cucchiaio di legno nello sportello) negli ultimi 10 min.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+                <div class="recipe-notes">
+                    <p class="recipe-notes-title">💡 Note</p>
+                    <p>La quantità di uova è indicativa: dipende dalla consistenza della panade. L'impasto finito deve avere consistenza "a V rovesciata" sulla spatola. Troppo liquido → non mantiene la forma. Troppo sodo → non si gonfia.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- BABA -->
+        <article class="recipe-card"
+                 data-ref-type="porzioni"
+                 data-ref-val="8">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍰</div>
+                <span class="recipe-photo-label">Babà · Savarin</span>
+                <span class="recipe-difficulty difficulty-avanzato">Avanzato</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Lievitato da pasticceria</p>
+                <h3>Babà <em>Napoletano</em></h3>
+                <p class="recipe-desc">Impasto semiliquido lavorato a lungo fino all'incordatura totale. La quantità di uova è elevata (≈110% sulla farina) — è fondamentale per la struttura alveolata e l'assorbimento della bagna. Inzuppato nel bagna al rum dopo la cottura. Tecnica napoletana con due fasi di impastamento.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">8 babà medi</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Stampi</span><span class="ref-value">⌀ 8 cm h. 5 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">180°C · 18–22 min</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Numero babà</span>
+                    <div class="card-scale-group">
+                        <input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="50">
+                        <label>pz</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧱</span><span class="component-title">Impasto</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="250" data-unit="g" data-name="Farina Manitoba (W 360+)"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Farina Manitoba (W 360+)</span></li>
+                            <li class="ingredient-row" data-base="275" data-unit="g" data-name="Uova intere (5 uova)"><span class="ing-qty">275</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~5 uova)</span></li>
+                            <li class="ingredient-row" data-base="50" data-unit="g" data-name="Burro pomata"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Burro pomata</span></li>
+                            <li class="ingredient-row" data-base="20" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="5" data-unit="g" data-name="Sale fino"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Sale fino</span></li>
+                            <li class="ingredient-row" data-base="10" data-unit="g" data-name="Lievito di birra fresco"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Lievito di birra fresco</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥃</span><span class="component-title">Bagna al rum</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Acqua"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Rum (o liquore al limone)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Rum (o limoncello)</span></li>
+                            <li class="ingredient-row" data-base="5" data-unit="g" data-name="Scorza limone"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Scorza di limone</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>1° impasto:</strong> Planetaria con gancio. Versa farina, lievito sbriciolato, 3 uova (non tutte). Lavora 10 min a velocità media finché incorda.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>2° impasto:</strong> Aggiungi zucchero, sale, e le 2 uova rimanenti a cucchiaiate. Quando tutto è assorbito, aggiungi il <strong>burro pomata a pezzetti</strong> uno alla volta. L'impasto deve diventare lucido, elastico e staccarsi dal gancio.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Lievitazione + cottura:</strong> Riempi gli stampi imburrati per metà. Lievita fino a raddoppio (~1,5h). Cuoci a <strong>180°C statico</strong> per 18–22 min, finché il babà è ben dorato e si stacca dagli stampi.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Bagna:</strong> Prepara uno sciroppo (acqua + zucchero a 105°C), aggiungi rum da freddo. Immergi i babà tiepidi nella bagna calda, premendoli delicatamente. Devono assorbire almeno il doppio del loro peso.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CHIFFON CAKE -->
+        <article class="recipe-card"
+                 data-ref-type="tonda"
+                 data-ref-val="24">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🎂</div>
+                <span class="recipe-photo-label">Chiffon · Angel food</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Montata con olio</p>
+                <h3>Chiffon <em>Cake</em></h3>
+                <p class="recipe-desc">La torta americana ultra-soffice con olio al posto del burro. Altissima, leggera come una nuvola, si cuoce nell'apposito stampo con il tubo centrale e si raffredda capovolta.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Stampo</span><span class="ref-value">⌀ 24 cm (con tubo)</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">160°C · 55–60 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Raffreddamento</span><span class="ref-value">Capovolta 2h</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Stampo</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="18" max="30">
+                        <label>cm</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧪</span><span class="component-title">Base liquida</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Farina 00"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero semolato (per base)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Olio di semi (girasole)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Olio di semi di girasole</span></li>
+                            <li class="ingredient-row" data-base="160" data-unit="g" data-name="Acqua (o latte)"><span class="ing-qty">160</span><span class="ing-unit">g</span><span class="ing-name">Acqua (o latte)</span></li>
+                            <li class="ingredient-row" data-base="110" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">110</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="8" data-unit="g" data-name="Lievito per dolci"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Lievito per dolci</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Vaniglia"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Vaniglia o scorza limone</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☁️</span><span class="component-title">Meringa</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="240" data-unit="g" data-name="Albumi (6 albumi)"><span class="ing-qty">240</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~6 albumi)</span></li>
+                            <li class="ingredient-row" data-base="3" data-unit="g" data-name="Cremor tartaro"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Cremor tartaro (o 1 pizzico sale)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Setaccia farina, lievito e metà dello zucchero in una ciotola grande. Crea un buco al centro, aggiungi olio, acqua, tuorli e vaniglia. Mescola con frusta finché liscio.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta gli albumi con cremor tartaro. Quando schiumano, aggiungi la metà dello zucchero rimasto a cucchiaiate. Monta a neve soda e lucida (non eccessiva).</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Incorpora gli albumi alla base in 3 riprese, mescolando dal basso verso l'alto. Versa nello stampo <strong>non imburrato</strong> (il dolce deve appoggiarsi alle pareti per crescere).</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text">Cuoci a <strong>160°C statico</strong> per 55–60 min. <strong>Capovolgi subito</strong> sul collo di una bottiglia (lo stampo ha piedini) e lascia raffreddare completamente prima di sformare.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- PASTA FROLLA PER BISCOTTI -->
+        <article class="recipe-card"
+                 data-ref-type="porzioni"
+                 data-ref-val="30">
+
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍪</div>
+                <span class="recipe-photo-label">Biscotti da taglio</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Frolla — Biscotti</p>
+                <h3>Frolla <em>da Biscotti</em></h3>
+                <p class="recipe-desc">Frolla bilanciata per biscotti da taglio con stampi. Uovo intero (non solo tuorli) per un risultato più neutro e resistente. Mantiene la forma perfettamente in cottura.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Riferimento</span><span class="ref-value">~30 biscotti</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Spessore</span><span class="ref-value">4–5 mm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">170°C · 12–15 min</span></div>
+                </div>
+            </div>
+
+            <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Numero biscotti</span>
+                    <div class="card-scale-group">
+                        <input type="number" class="card-scale-input" data-dim="1" value="30" min="10" max="200">
+                        <label>pz</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧱</span><span class="component-title">Impasto</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Farina 00 debole"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Farina 00 (debole)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Burro freddo"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Zucchero a velo"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                            <li class="ingredient-row" data-base="55" data-unit="g" data-name="Uovo intero (1 uovo)"><span class="ing-qty">55</span><span class="ing-unit">g</span><span class="ing-name">Uovo intero (~1 uovo)</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Vaniglia"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Vaniglia o limone</span></li>
+                            <li class="ingredient-row" data-base="1" data-unit="g" data-name="Sale"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Sabbia farina e burro freddo. Unisci zucchero a velo, poi l'uovo e gli aromi. Compatta rapidamente in panetto e frigo <strong>1 ora minima</strong> (meglio una notte).</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Stendi tra due fogli a 4–5 mm. Taglia con stampini. Rimetti in frigo 15 min prima di infornare: i biscotti freddi mantengono meglio la forma.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Cuoci a <strong>170°C</strong> per 12–15 min, finché i bordi sono dorati. Il centro può sembrare ancora morbido: si solidifica raffreddando.</p></div>
+                </div>
+                <div class="shopping-summary">
+                    <div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div>
+                    <div class="shopping-list"></div>
+                </div>
+            </div>
+        </article>
+
+    </div><!-- fine recipes-grid -->
+</main>
+
+<script src="ricettario-engine.js"></script>
+</body>
+</html>

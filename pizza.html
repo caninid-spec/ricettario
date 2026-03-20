@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolapizza</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pizza-style.css">
+</head>
+<body class="calc-page">
+
+    <div class="container">
+        <nav class="back-nav"><a href="index.html">← Home</a></nav>
+        <header>
+            <h1>🍕 Calcolapizza</h1>
+            <p class="subtitle">Inserisci i parametri per calcolare le dosi del tuo impasto perfetto.</p>
+            <div class="divider"></div>
+        </header>
+
+        <div class="calculator-body">
+            <!-- Colonna Input -->
+            <div class="input-section">
+                <h2><span class="icon">📝</span> Dati Impasto</h2>
+                
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="panielli">Numero Panetti</label>
+                        <input type="number" id="panielli" value="4">
+                    </div>
+                    <div class="input-group">
+                        <label for="peso">Peso per Panetto (g)</label>
+                        <input type="number" id="peso" value="250">
+                    </div>
+                    <div class="input-group">
+                        <label for="idro">Idratazione (%)</label>
+                        <input type="number" id="idro" value="65" min="50" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label for="salePerc">Sale (% sulla Farina)</label>
+                        <input type="number" id="salePerc" value="2.5" min="0" max="4" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="grassiPerc">Grassi (% sulla Farina)</label>
+                        <input type="number" id="grassiPerc" value="3" min="0" max="15" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label for="liev">Ore di Lievitazione Totali</label>
+                        <input type="number" id="liev" value="24" min="3" max="96">
+                    </div>
+                    <div class="input-group">
+                        <label for="frigo">Ore di Frigo</label>
+                        <input type="number" id="frigo" value="18" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="gradi">Temperatura Ambiente (°C)</label>
+                        <input type="number" id="gradi" value="20" min="15" max="35">
+                    </div>
+                </div>
+
+                <div class="advanced-options">
+                    <div class="input-group checkbox-group">
+                        <input type="checkbox" id="teglia">
+                        <label for="teglia">È un impasto per teglia?</label>
+                    </div>
+
+                    <div class="input-group radio-group">
+                        <label>Tipo di Lievito Madre (se usato)</label>
+                        <div class="radio-buttons">
+                           <input type="radio" id="pdrt0" name="pdrt" value="0" checked><label for="pdrt0">Nessuno</label>
+                           <input type="radio" id="pdrt1" name="pdrt" value="1"><label for="pdrt1">Liquido</label>
+                           <input type="radio" id="pdrt2" name="pdrt" value="2"><label for="pdrt2">Solido</label>
+                           <input type="radio" id="pdrt3" name="pdrt" value="3"><label for="pdrt3">Altro</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group" id="pdrp-group">
+                        <label for="pdrp">% Lievito Madre sulla Farina</label>
+                        <input type="number" id="pdrp" value="0" min="0" max="50">
+                        <small id="pdrp-hint">Percentuale del lievito madre rispetto al peso della farina.</small>
+                    </div>
+                    
+                    <div class="input-group checkbox-group" id="solo-lm-group">
+                        <input type="checkbox" id="solo-lm">
+                        <label for="solo-lm">Usa solo Lievito Madre (azzera Lievito di Birra)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonna Risultati -->
+            <div class="results-section">
+                <h2><span class="icon">⚖️</span> Risultati</h2>
+                <div class="results-grid">
+                    <div class="result-item" id="result-farina">
+                        <span class="label">Farina</span>
+                        <span class="value" id="farina">-</span>
+                    </div>
+                    <div class="result-item" id="result-aqua">
+                        <span class="label">Acqua</span>
+                        <span class="value" id="aqua">-</span>
+                    </div>
+                    <div class="result-item" id="result-sale">
+                        <span class="label">Sale</span>
+                        <span class="value" id="sale">-</span>
+                    </div>
+                    <div class="result-item" id="result-grassi">
+                        <span class="label">Grassi</span>
+                        <span class="value" id="grassi">-</span>
+                    </div>
+                    <div class="result-item" id="result-pdr">
+                        <span class="label">Lievito Madre</span>
+                        <span class="value" id="pdr">-</span>
+                    </div>
+                    <div class="result-item" id="result-lievito">
+                        <span class="label">Lievito di Birra Fresco</span>
+                        <span class="value" id="lievito">-</span>
+                    </div>
+                </div>
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Impasto Totale:</span>
+                        <span class="value" id="impasto-totale">-</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">Forza Farina (W) Consigliata:</span>
+                        <span class="value" id="forza">-</span>
+                    </div>
+                </div>
+                <div id="error-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_pizza.js"></script>
+</body>
+</html>

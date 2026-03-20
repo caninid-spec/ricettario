@@ -1,0 +1,48 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   lievitati-style.css  –  Stili specifici SOLO per lievitati.html
+   Richiede: core.css → components.css → lievitati-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/*
+   Lievitati usa il layout a colonne (input-column / results-column)
+   e i product-tabs (pane/focaccia/panino) già definiti in components.css.
+   Questo file contiene solo le personalizzazioni specifiche della pagina.
+*/
+
+/* Container più largo per lievitati */
+.container { max-width: 1200px; }
+
+/* Header leggermente più compatto */
+header { padding: 36px 0 28px; }
+
+/* Il gold usato in lievitati ha una tonalità diversa */
+:root {
+    --gold: #b8860b;
+}
+
+/* Responsive aggiuntivo tablet */
+@media (max-width: 768px) {
+    header { padding: 24px 0 20px; }
+    .timeline-step { padding: 8px 0; }
+    .step-dot { width: 28px; height: 28px; font-size: 0.8rem; }
+    .timeline-step:not(:last-child)::after { left: 13px; top: 34px; }
+    .step-label { font-size: 0.82rem; }
+    .step-note  { font-size: 0.73rem; }
+}
+
+@media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; gap: 10px; }
+    .result-hero { padding: 12px 14px; }
+    .hero-value  { font-size: 1.35rem; }
+    .sub-options { padding: 11px 12px; }
+    .biga-detail { padding: 11px 12px; }
+}
+
+@media (max-width: 420px) {
+    .type-grid  { grid-template-columns: repeat(2, 1fr); }
+    .type-card  { padding: 8px 4px; border-radius: 8px; }
+    .b-icon     { font-size: 1.25rem; }
+    .b-name     { font-size: 0.78rem; }
+    .results-grid { grid-template-columns: 1fr; }
+    .biga-item--full { grid-column: auto; }
+}

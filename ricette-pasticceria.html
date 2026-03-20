@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricette di Pasticceria — Ricettario</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="ricettario-style.css">
+</head>
+<body>
+
+<nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+<header class="page-header">
+    <p class="page-header-eyebrow">Ricettario · Pasticceria</p>
+    <h1>Ricette di <em>Pasticceria</em></h1>
+    <p class="page-header-desc">Torte composte della tradizione italiana. Ogni ricetta è suddivisa per componenti con lista della spesa unificata.</p>
+    <div class="header-divider"></div>
+</header>
+
+<div class="scale-bar">
+    <span class="scale-bar-label">Scala tutte le ricette</span>
+    <div class="scale-group">
+        <label>⌀ teglie tonde</label>
+        <input type="number" class="scale-input" id="global-diam" placeholder="24" min="10" max="60">
+        <span class="scale-unit">cm</span>
+    </div>
+    <div class="scale-divider"></div>
+    <div class="scale-group">
+        <label>Porzioni</label>
+        <input type="number" class="scale-input" id="global-port" placeholder="8" min="1" max="100">
+        <span class="scale-unit">pz</span>
+    </div>
+    <button class="scale-reset">↺ Reset</button>
+</div>
+
+<main class="ricettario-main">
+
+    <div class="section-heading">
+        <h2>Ricette Composte</h2>
+        <span class="section-count">8 ricette</span>
+    </div>
+
+    <div class="recipes-grid">
+
+        <!-- TIRAMISÙ -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">☕</div>
+                <span class="recipe-photo-label">Tiramisù</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Dolce al cucchiaio</p>
+                <h3><em>Tiramisù</em></h3>
+                <p class="recipe-desc">Il più amato dei dolci italiani. Savoiardi inzuppati nel caffè, crema al mascarpone con uova pastorizzate, cacao amaro in abbondanza. Ricetta classica senza panna.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">8 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">20×30 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">6h frigo (meglio 12h)</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Difficoltà</span><span class="ref-value">Facile</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Porzioni</span>
+                    <div class="card-scale-group">
+                        <input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="100">
+                        <label>persone</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍮</span><span class="component-title">Crema al mascarpone</span><a href="creme-base.html" class="component-link">↗ vedi creme base</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Mascarpone"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Mascarpone</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="180" data-unit="g" data-name="Albumi (6 albumi)"><span class="ing-qty">180</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~6 albumi)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">☕</span><span class="component-title">Bagna al caffè</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Caffè espresso forte (freddo)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Caffè espresso forte (freddo)</span></li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Marsala (o rum, opzionale)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Marsala o rum (opzionale)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍪</span><span class="component-title">Base e finitura</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Savoiardi"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Savoiardi</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Cacao amaro in polvere"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Cacao amaro in polvere</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Crema:</strong> Pastorizza tuorli + zucchero (sciroppo a 121°C versato a filo) montando in planetaria. Aggiungi il mascarpone a temperatura ambiente. A parte, monta albumi a neve con lo zucchero rimasto e incorpora alla crema.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Montaggio:</strong> Inzuppa velocemente i savoiardi nel caffè freddo (2 secondi per lato — non inzuppare troppo). Disponi uno strato nella teglia, copri con metà crema. Ripeti. Livella la superficie.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Riposo:</strong> Frigo almeno 6 ore (meglio 12h o tutta la notte). Setaccia abbondante cacao amaro solo prima di servire.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CASSATA SICILIANA -->
+        <article class="recipe-card" data-ref-type="tonda" data-ref-val="24">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🌸</div>
+                <span class="recipe-photo-label">Cassata Siciliana</span>
+                <span class="recipe-difficulty difficulty-avanzato">Avanzato</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Torta siciliana</p>
+                <h3>Cassata <em>Siciliana</em></h3>
+                <p class="recipe-desc">La regina della pasticceria palermitana. Pan di spagna imbevuto di rosolio, crema di ricotta con canditi, marzapane verde, glassa reale e decorazioni in pasta di zucchero. Un capolavoro artigianale.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">10–12 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">12h frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="18" max="36">
+                        <label>cm</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🎂</span><span class="component-title">Pan di Spagna</span><a href="impasti-base.html" class="component-link">↗ vedi impasti</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Uova intere"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~4 uova)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero semolato (PdS)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="110" data-unit="g" data-name="Farina 00 (PdS)"><span class="ing-qty">110</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Fecola di patate"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Fecola di patate</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🕯️</span><span class="component-title">Crema di ricotta</span><a href="creme-base.html" class="component-link">↗ vedi creme</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="700" data-unit="g" data-name="Ricotta di pecora sgocciolata"><span class="ing-qty">700</span><span class="ing-unit">g</span><span class="ing-name">Ricotta di pecora (sgocciolata 24h)</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero a velo (ricotta)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Gocce di cioccolato fondente"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Gocce di cioccolato fondente</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Zuccata (cedro candito)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Zuccata / cedro candito</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">💚</span><span class="component-title">Marzapane e glassa</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Pasta di mandorle (marzapane verde)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Pasta di mandorle (colorata verde)</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero a velo (glassa)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo (per glassa reale)</span></li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Albume (per glassa)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Albume (per glassa reale)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥃</span><span class="component-title">Bagna</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Acqua"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Zucchero semolato (bagna)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="50" data-unit="g" data-name="Rosolio o maraschino"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Rosolio o Maraschino</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Pan di spagna</strong> (il giorno prima): prepara e lascia riposare 12h prima di tagliarlo in 3 dischi. Taglia striscioline per il bordo della teglia rivestita di carta forno.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Crema ricotta:</strong> Setaccia, zucchera, aggiungi gocce e canditi. Frigo 1h.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Montaggio:</strong> Fodera il bordo della teglia con le strisce di PdS. Disponi il disco base inzuppato. Versa la crema. Copri con il disco superiore inzuppato. Frigo 4h con peso sopra.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Marzapane:</strong> Stendi il marzapane verde a 3mm, taglia strisce per il bordo laterale. <strong>Glassa reale:</strong> copri la superficie superiore e decora con frutta candita.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- SACHER -->
+        <article class="recipe-card" data-ref-type="tonda" data-ref-val="24">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🎂</div>
+                <span class="recipe-photo-label">Torta Sacher</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Torta viennese</p>
+                <h3>Torta <em>Sacher</em></h3>
+                <p class="recipe-desc">La torta viennese per eccellenza. Pan di spagna al cioccolato, confettura di albicocche, glassa a specchio al fondente. La ricetta originale dell'Hotel Sacher con il metodo della montata di burro.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">165°C · 50–60 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">12h prima della glassa</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale">
+                    <span class="card-scale-label">Teglia</span>
+                    <div class="card-scale-group">
+                        <label>⌀</label>
+                        <input type="number" class="card-scale-input" data-dim="1" value="24" min="18" max="32">
+                        <label>cm</label>
+                    </div>
+                </div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🎂</span><span class="component-title">Base al cioccolato</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Cioccolato fondente 70%"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente 70%</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Burro pomato"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Burro pomato</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Zucchero a velo (base)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (6 tuorli)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6 tuorli)</span></li>
+                            <li class="ingredient-row" data-base="110" data-unit="g" data-name="Farina 00"><span class="ing-qty">110</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="180" data-unit="g" data-name="Albumi (6 albumi)"><span class="ing-qty">180</span><span class="ing-unit">g</span><span class="ing-name">Albumi (~6 albumi)</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Zucchero semolato (per albumi)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato (per albumi)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍑</span><span class="component-title">Farcitura</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="250" data-unit="g" data-name="Confettura di albicocche (setacciata)"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Confettura di albicocche (setacciata)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">✨</span><span class="component-title">Glassa a specchio</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Cioccolato fondente (glassa)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente 60%</span></li>
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Zucchero semolato (glassa)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="125" data-unit="g" data-name="Acqua (glassa)"><span class="ing-qty">125</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Base:</strong> Fondi il cioccolato. Monta burro + zucchero a velo finché spumoso. Aggiungi tuorli uno alla volta, poi il cioccolato fuso tiepido. Monta albumi a neve con zucchero semolato e incorpora in 3 riprese alternando con la farina setacciata.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Cottura:</strong> Teglia imburrata e infarinata. 165°C statico per 50–60 min. Stecchino asciutto. Capovolgi subito, lascia raffreddare 12h.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Farcitura:</strong> Taglia a metà, spalma generosamente la confettura calda (scaldata e setacciata). Chiudi e spalma anche tutta la superficie esterna. Lascia asciugare 30 min.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Glassa:</strong> Cuoci acqua + zucchero a 103°C. Versa sul cioccolato tritato, emulsiona. Tempera a 32°C. Posiziona la torta su griglia e versa la glassa in un'unica colata dal centro verso i bordi. Non stendere con spatola.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- TORTA MIMOSA -->
+        <article class="recipe-card" data-ref-type="tonda" data-ref-val="24">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🌼</div>
+                <span class="recipe-photo-label">Torta Mimosa</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Torta italiana</p>
+                <h3>Torta <em>Mimosa</em></h3>
+                <p class="recipe-desc">La torta dell'8 marzo. Pan di spagna inzuppato, crema diplomatica profumata all'arancia, cubetti di PdS sbriciolati sulla superficie a imitare i fiori di mimosa. Elegante e semplice.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">10 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">4h frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Teglia</span><div class="card-scale-group"><label>⌀</label><input type="number" class="card-scale-input" data-dim="1" value="24" min="18" max="32"><label>cm</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🎂</span><span class="component-title">Pan di Spagna (× 2)</span><a href="impasti-base.html" class="component-link">↗ vedi impasti</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="440" data-unit="g" data-name="Uova intere (PdS)"><span class="ing-qty">440</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~8 uova)</span><span class="ing-note">per 2 PdS</span></li>
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Zucchero semolato (PdS)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Farina 00 (PdS)"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Fecola di patate (PdS)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Fecola di patate</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">✨</span><span class="component-title">Crema Diplomatica</span><a href="creme-base.html" class="component-link">↗ vedi creme</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte intero (crema)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (crema)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6)</span></li>
+                            <li class="ingredient-row" data-base="130" data-unit="g" data-name="Zucchero semolato (crema)"><span class="ing-qty">130</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="35" data-unit="g" data-name="Amido di mais (crema)"><span class="ing-qty">35</span><span class="ing-unit">g</span><span class="ing-name">Amido di mais</span></li>
+                            <li class="ingredient-row" data-base="8" data-unit="g" data-name="Gelatina in fogli"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Gelatina in fogli</span></li>
+                            <li class="ingredient-row" data-base="350" data-unit="g" data-name="Panna fresca 35% (crema)"><span class="ing-qty">350</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥃</span><span class="component-title">Bagna all'arancia</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Succo d'arancia fresco"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Succo d'arancia fresco</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Acqua"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Zucchero semolato (bagna)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Cointreau o Grand Marnier"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Cointreau / Grand Marnier</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Prepara <strong>2 pan di spagna</strong> (⌀ 24 cm). Uno servirà come base (2 dischi), l'altro verrà sbriciolato in cubetti piccoli per la mimosa superficiale.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Prepara la <strong>crema diplomatica</strong> con gelatina. Inzuppa i dischi con la bagna all'arancia.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Montaggio:</strong> Disco base inzuppato → strato di crema → disco superiore inzuppato → copri tutta la torta (bordi compresi) con la crema rimanente.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text">Sbriciola il secondo PdS in cubetti irregolari da 1 cm. <strong>Ricopri tutta la superficie</strong> pressando leggermente i cubetti. Frigo 4h. Non spolverare zucchero a velo.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- PASTIERA NAPOLETANA -->
+        <article class="recipe-card" data-ref-type="tonda" data-ref-val="26">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🌸</div>
+                <span class="recipe-photo-label">Pastiera Napoletana</span>
+                <span class="recipe-difficulty difficulty-avanzato">Avanzato</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Dolce pasquale</p>
+                <h3>Pastiera <em>Napoletana</em></h3>
+                <p class="recipe-desc">Il dolce di Pasqua per eccellenza. Frolla arricchita, ripieno di ricotta, grano cotto, uova, acqua di fiori d'arancio e canditi. Necessita di almeno 2 giorni di riposo per esprimere tutti i profumi.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">⌀ 26 cm (h 5 cm)</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">170°C · 60–70 min</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">2 giorni temperatura ambiente</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Teglia</span><div class="card-scale-group"><label>⌀</label><input type="number" class="card-scale-input" data-dim="1" value="26" min="20" max="36"><label>cm</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🧱</span><span class="component-title">Frolla napoletana (con strutto)</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="400" data-unit="g" data-name="Farina 00"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                            <li class="ingredient-row" data-base="160" data-unit="g" data-name="Strutto (o metà burro)"><span class="ing-qty">160</span><span class="ing-unit">g</span><span class="ing-name">Strutto (o 80g strutto + 80g burro)</span></li>
+                            <li class="ingredient-row" data-base="160" data-unit="g" data-name="Zucchero semolato (frolla)"><span class="ing-qty">160</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Uova intere (frolla)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~1,5 uova)</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Cannella (frolla)"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Cannella in polvere</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🌾</span><span class="component-title">Ripieno</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Grano cotto (in barattolo)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Grano cotto (in barattolo)</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Latte intero (per grano)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Ricotta di pecora sgocciolata"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Ricotta di pecora (sgocciolata)</span></li>
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Zucchero semolato (ripieno)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Uova intere (ripieno)"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~4 uova)</span></li>
+                            <li class="ingredient-row" data-base="30" data-unit="g" data-name="Acqua di fiori d'arancio"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Acqua di fiori d'arancio</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cedro e arancia canditi"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cedro e arancia canditi (a cubetti)</span></li>
+                            <li class="ingredient-row" data-base="3" data-unit="g" data-name="Cannella in polvere (ripieno)"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Cannella in polvere</span></li>
+                            <li class="ingredient-row" data-base="1" data-unit="g" data-name="Vaniglia"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Vaniglia</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Grano:</strong> Cuoci il grano cotto nel latte con 10g di burro e la scorza di 1 limone per 10 min, finché cremoso. Lascia raffreddare. Tieni qualche cucchiaio di grano intero per texture, frulla il resto grossolanamente.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Ripieno:</strong> Setaccia la ricotta. Aggiungi zucchero, uova una alla volta, acqua di fiori d'arancio, cannella, vaniglia. Unisci il grano e i canditi. Il composto deve essere fluido ma non liquido.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Frolla e montaggio:</strong> Fondi la teglia alta con la frolla (3mm). Versa il ripieno a 1 cm dal bordo. Decora con le striscioline di frolla incrociate (le classiche 7 striscie). Cuoci a 170°C per 60–70 min.</p></div>
+                    <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Riposo obbligatorio:</strong> La pastiera va preparata <strong>almeno 2 giorni prima</strong> — i profumi si sviluppano e amalgamano solo col tempo. Si conserva 5–7 giorni a temperatura ambiente coperta.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+                <div class="recipe-notes"><p class="recipe-notes-title">💡 Nota</p><p>Le 7 strisce di frolla sulla superficie sono tradizionali e simboliche. Non coprire completamente: il ripieno deve "respirare" in cottura e si gonfierà leggermente per poi assestarsi raffreddando.</p></div>
+            </div>
+        </article>
+
+        <!-- ZUPPA INGLESE -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍮</div>
+                <span class="recipe-photo-label">Zuppa Inglese</span>
+                <span class="recipe-difficulty difficulty-facile">Facile</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Dolce al cucchiaio</p>
+                <h3>Zuppa <em>Inglese</em></h3>
+                <p class="recipe-desc">Il dolce al cucchiaio dell'Italia centrale. Alchermes rosso, savoiardi, crema pasticcera classica e al cioccolato alternati. Due varianti: emiliana (in coppette) e toscana (come torta).</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">8 coppette</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">4h frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="50"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍮</span><span class="component-title">Crema pasticcera classica</span><a href="creme-base.html" class="component-link">↗ vedi creme</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte (crema classica)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Tuorli (crema classica)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~6)</span></li>
+                            <li class="ingredient-row" data-base="130" data-unit="g" data-name="Zucchero (crema classica)"><span class="ing-qty">130</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="32" data-unit="g" data-name="Amido di mais (crema classica)"><span class="ing-qty">32</span><span class="ing-unit">g</span><span class="ing-name">Amido di mais</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍫</span><span class="component-title">Crema al cioccolato</span><a href="creme-base.html" class="component-link">↗ vedi creme</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Cioccolato fondente (zuppa)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente 70%</span><span class="ing-note">da aggiungere a 200g crema base</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍪</span><span class="component-title">Base e bagna</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="250" data-unit="g" data-name="Savoiardi"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Savoiardi</span></li>
+                            <li class="ingredient-row" data-base="120" data-unit="g" data-name="Alchermes"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Alchermes</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Rum (o cognac)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Rum o cognac</span></li>
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Acqua (bagna)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Prepara entrambe le creme. Dividi la crema classica: 2/3 restano "bianca", 1/3 diventa al cioccolato aggiungendo il fondente fuso.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Mescola alchermes + rum + acqua. Inzuppa velocemente i savoiardi nella bagna rossa.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Nelle coppette (o in una pirofila): strato savoiardi rossi → crema bianca → savoiardi rossi → crema al cioccolato. Spolverare con cacao o riccioli di cioccolato. Frigo 4h.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- TORTA DIPLOMATICA -->
+        <article class="recipe-card" data-ref-type="tonda" data-ref-val="24">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">✨</div>
+                <span class="recipe-photo-label">Torta Diplomatica</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Torta italiana</p>
+                <h3>Torta <em>Diplomatica</em></h3>
+                <p class="recipe-desc">Torta italiana a tre strati: sfoglia sottile, pan di spagna, crema diplomatica. Una delle torte da pasticceria più diffuse in Italia. Croccante, cremosa e soffice nello stesso morso.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Teglia</span><span class="ref-value">⌀ 24 cm</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">10 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">4h frigo</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Teglia</span><div class="card-scale-group"><label>⌀</label><input type="number" class="card-scale-input" data-dim="1" value="24" min="18" max="32"><label>cm</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">📄</span><span class="component-title">Sfoglia (2 dischi)</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="200" data-unit="g" data-name="Pasta sfoglia pronta (o détrempe)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Pasta sfoglia (comprata o fatta)</span></li>
+                            <li class="ingredient-row" data-base="20" data-unit="g" data-name="Zucchero a velo (per sfoglia)"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Zucchero a velo (per caramellare)</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🎂</span><span class="component-title">Pan di Spagna</span><a href="impasti-base.html" class="component-link">↗ vedi impasti</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="220" data-unit="g" data-name="Uova (PdS diplomatica)"><span class="ing-qty">220</span><span class="ing-unit">g</span><span class="ing-name">Uova intere (~4)</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero (PdS diplomatica)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="110" data-unit="g" data-name="Farina 00 (PdS diplomatica)"><span class="ing-qty">110</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">✨</span><span class="component-title">Crema Diplomatica</span><a href="creme-base.html" class="component-link">↗ vedi creme</a></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="400" data-unit="g" data-name="Crema pasticcera base"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Crema pasticcera (base)</span></li>
+                            <li class="ingredient-row" data-base="4" data-unit="g" data-name="Gelatina in fogli (diplomatica)"><span class="ing-qty">4</span><span class="ing-unit">g</span><span class="ing-name">Gelatina in fogli</span></li>
+                            <li class="ingredient-row" data-base="300" data-unit="g" data-name="Panna fresca (diplomatica)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🥃</span><span class="component-title">Bagna</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Acqua bagna diplomatica"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Acqua</span></li>
+                            <li class="ingredient-row" data-base="60" data-unit="g" data-name="Zucchero bagna diplomatica"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Zucchero</span></li>
+                            <li class="ingredient-row" data-base="40" data-unit="g" data-name="Rum o alchermes"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Rum o liquore a scelta</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Sfoglia:</strong> Stendi 2 dischi da ⌀ 25 cm, spessore 2mm. Buca con forchetta. Cuoci a 200°C per 15 min, spolverizza con zucchero a velo e caramella sotto il grill 2 min per lato. Ritaglia a ⌀ 24 cm.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Montaggio:</strong> Disco di sfoglia → strato crema diplomatica (1 cm) → disco di PdS inzuppato → strato crema diplomatica (1 cm) → disco di sfoglia caramellato in cima.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Frigo 4h. Prima di servire, spolverizza con zucchero a velo il disco di sfoglia superiore. I bordi si pareggiano e si decorano con panna montata.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+        <!-- CASSATA NAPOLETANA -->
+        <article class="recipe-card" data-ref-type="porzioni" data-ref-val="10">
+            <div class="recipe-photo">
+                <div class="recipe-photo-inner">🍦</div>
+                <span class="recipe-photo-label">Cassata Napoletana</span>
+                <span class="recipe-difficulty difficulty-medio">Medio</span>
+            </div>
+            <div class="recipe-card-body">
+                <p class="recipe-category-tag">Semifreddo napoletano</p>
+                <h3>Cassata <em>Napoletana</em></h3>
+                <p class="recipe-desc">Non ha nulla a che fare con la cassata siciliana: è un semifreddo a strati alternati di gelato al fiordilatte, al cioccolato e alla frutta candita. Tipica tradizione napoletana natalizia e pasquale.</p>
+                <div class="recipe-ref">
+                    <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">10 persone</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Stampo</span><span class="ref-value">30×10 cm (plumcake)</span></div>
+                    <div class="recipe-ref-item"><span class="ref-label">Riposo</span><span class="ref-value">6h freezer</span></div>
+                </div>
+            </div>
+            <button class="recipe-toggle">Componenti e procedimento <span class="toggle-icon">▼</span></button>
+            <div class="recipe-detail">
+                <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="10" min="4" max="30"><label>pz</label></div></div>
+                <div class="recipe-components">
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍦</span><span class="component-title">Base semifreddo fiordilatte</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="500" data-unit="g" data-name="Panna fresca (semifreddo)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                            <li class="ingredient-row" data-base="150" data-unit="g" data-name="Zucchero semolato (semifreddo)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                            <li class="ingredient-row" data-base="90" data-unit="g" data-name="Albumi (meringa italiana semifreddo)"><span class="ing-qty">90</span><span class="ing-unit">g</span><span class="ing-name">Albumi (per meringa italiana)</span></li>
+                            <li class="ingredient-row" data-base="2" data-unit="g" data-name="Vaniglia (semifreddo)"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Vaniglia</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍫</span><span class="component-title">Strato al cioccolato</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cioccolato fondente (cassata nap.)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente tritato</span><span class="ing-note">da aggiungere a 1/3 del semifreddo base</span></li>
+                        </ul>
+                    </div>
+                    <div class="component">
+                        <div class="component-header"><span class="component-icon">🍑</span><span class="component-title">Farcitura e decorazione</span></div>
+                        <ul class="ingredient-list">
+                            <li class="ingredient-row" data-base="100" data-unit="g" data-name="Frutta candita mista"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Frutta candita mista</span></li>
+                            <li class="ingredient-row" data-base="50" data-unit="g" data-name="Pistacchi tritati"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Pistacchi tritati</span></li>
+                            <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cioccolato fondente (copertura)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cioccolato fondente (copertura finale)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="method-steps" style="padding: 0 20px 16px;">
+                    <div class="method-step"><div class="step-num">1</div><p class="step-text">Prepara la <strong>meringa italiana</strong> (sciroppo 121°C + albumi). Monta la panna a punte semiferme. Incorpora meringa + vaniglia alla panna. Dividi: 2/3 base bianca, 1/3 aggiungi cioccolato fondente tritato.</p></div>
+                    <div class="method-step"><div class="step-num">2</div><p class="step-text">Fodera lo stampo da plumcake con carta forno. Strato semifreddo bianco, poi aggiungi canditi e pistacchi, poi strato cioccolato, poi ancora bianco. Livella e congela 6h.</p></div>
+                    <div class="method-step"><div class="step-num">3</div><p class="step-text">Sforma su vassoio, versa il cioccolato fondente fuso e temperato sulla superficie. Decora con canditi interi e pistacchi. Ricongela 30 min. Servi tagliato a fette con spatola.</p></div>
+                </div>
+                <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa completa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            </div>
+        </article>
+
+    </div>
+</main>
+
+<script src="ricettario-engine.js"></script>
+</body>
+</html>

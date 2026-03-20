@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolabrioche</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="brioche-style.css">
+</head>
+<body class="calc-page">
+    <div class="container">
+        <nav class="back-nav"><a href="index.html">← Home</a></nav>
+        <header>
+            <h1>🥐 Calcolabrioche</h1>
+            <p class="subtitle">Calcola le dosi perfette per il tuo impasto brioche.</p>
+            <div class="divider"></div>
+        </header>
+
+        <!-- Selettore tipo impasto -->
+        <div class="type-selector-card">
+            <h2><span class="icon">🍞</span> Tipo di Impasto</h2>
+            <div class="type-grid">
+                <div class="type-card active" data-type="classica">
+                    <span class="type-icon">🥐</span>
+                    <span class="type-name">Brioche Classica</span>
+                    <span class="type-desc">Francesa, ricca di burro</span>
+                </div>
+                <div class="type-card" data-type="siciliana">
+                    <span class="type-icon">🍋</span>
+                    <span class="type-name">Brioche Siciliana</span>
+                    <span class="type-desc">Col tuppo, sofficissima</span>
+                </div>
+                <div class="type-card" data-type="col-nodo">
+                    <span class="type-icon">🌀</span>
+                    <span class="type-name">Brioche col Nodo</span>
+                    <span class="type-desc">Leggera, per toast e pan bauletto</span>
+                </div>
+                <div class="type-card" data-type="veneziana">
+                    <span class="type-icon">✨</span>
+                    <span class="type-name">Veneziana</span>
+                    <span class="type-desc">Grande lievitato, simile al pandoro</span>
+                </div>
+                <div class="type-card" data-type="pangoccioli">
+                    <span class="type-icon">🍫</span>
+                    <span class="type-name">Pangoccioli</span>
+                    <span class="type-desc">Soffici panini con gocce di cioccolato</span>
+                </div>
+                <div class="type-card" data-type="kardamom">
+                    <span class="type-icon">🌿</span>
+                    <span class="type-name">Kardemummabullar</span>
+                    <span class="type-desc">Nodi svedesi al cardamomo</span>
+                </div>
+                <div class="type-card" data-type="burgerbun">
+                    <span class="type-icon">🍔</span>
+                    <span class="type-name">Brioche Burger Bun</span>
+                    <span class="type-desc">Soffice, lucido, regge le farciture</span>
+                </div>
+                <div class="type-card" data-type="potatobun">
+                    <span class="type-icon">🥔</span>
+                    <span class="type-name">Potato Bun</span>
+                    <span class="type-desc">Tipo Martin's, ultra-morbido</span>
+                </div>
+                <div class="type-card" data-type="bauletto">
+                    <span class="type-icon">🍞</span>
+                    <span class="type-name">Pan Bauletto / Pancarré</span>
+                    <span class="type-desc">Pane in cassetta, mollica compatta</span>
+                </div>
+            </div>
+            <p class="type-description" id="type-description"></p>
+        </div>
+
+        <div class="calculator-body">
+            <!-- Colonna Input -->
+            <div class="input-section">
+                <h2><span class="icon">📝</span> Parametri Impasto</h2>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="pezzi">Numero di Pezzi</label>
+                        <input type="number" id="pezzi" value="8" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="peso-pezzo">Peso per Pezzo (g)</label>
+                        <input type="number" id="peso-pezzo" value="80" min="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="burro-perc">Burro (% sulla farina)</label>
+                        <input type="number" id="burro-perc" value="30" min="0" max="80" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="uova-perc">Uova (% sulla farina)</label>
+                        <input type="number" id="uova-perc" value="20" min="0" max="60" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="zucchero-perc">Zucchero (% sulla farina)</label>
+                        <input type="number" id="zucchero-perc" value="12" min="0" max="30" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label for="sale-perc">Sale (% sulla farina)</label>
+                        <input type="number" id="sale-perc" value="1.5" min="0" max="3" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="latte-perc">Latte/Liquidi (% sulla farina)</label>
+                        <input type="number" id="latte-perc" value="30" min="0" max="80" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="temp-amb">Temperatura Ambiente (°C)</label>
+                        <input type="number" id="temp-amb" value="22" min="15" max="32">
+                    </div>
+                </div>
+
+                <div class="advanced-options">
+                    <div class="input-group radio-group">
+                        <label>Tipo di Lievito</label>
+                        <div class="radio-buttons">
+                            <input type="radio" id="liev-fresco" name="liev-tipo" value="fresco" checked>
+                            <label for="liev-fresco">Fresco</label>
+                            <input type="radio" id="liev-secco" name="liev-tipo" value="secco">
+                            <label for="liev-secco">Secco</label>
+                            <input type="radio" id="liev-madre" name="liev-tipo" value="madre">
+                            <label for="liev-madre">Madre</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group" id="lm-perc-group" style="display:none">
+                        <label for="lm-perc">Lievito Madre (% sulla farina)</label>
+                        <input type="number" id="lm-perc" value="20" min="5" max="50">
+                        <small>Usa lievito madre rinfrescato e maturo.</small>
+                    </div>
+
+                    <div class="input-group radio-group">
+                        <label>Metodo di Lievitazione</label>
+                        <div class="radio-buttons">
+                            <input type="radio" id="met-diretto" name="metodo" value="diretto" checked>
+                            <label for="met-diretto">Diretto</label>
+                            <input type="radio" id="met-frigo" name="metodo" value="frigo">
+                            <label for="met-frigo">Frigo (notte)</label>
+                            <input type="radio" id="met-poolish" name="metodo" value="poolish">
+                            <label for="met-poolish">Con Poolish</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group checkbox-group">
+                        <input type="checkbox" id="aromi">
+                        <label for="aromi">Aggiungi aromi (scorza, vaniglia, miele)</label>
+                    </div>
+
+                    <div class="input-group" id="extra-perc-group" style="display:none">
+                        <label for="extra-perc" id="extra-perc-label">Extra (%)</label>
+                        <input type="number" id="extra-perc" value="25" min="0" max="60" step="1">
+                        <small id="extra-perc-hint"></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonna Risultati -->
+            <div class="results-section">
+                <h2><span class="icon">⚖️</span> Risultati</h2>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label">Farina</span>
+                        <span class="value" id="res-farina">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Burro</span>
+                        <span class="value" id="res-burro">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Uova</span>
+                        <span class="value" id="res-uova">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Zucchero</span>
+                        <span class="value" id="res-zucchero">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sale</span>
+                        <span class="value" id="res-sale">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Latte / Liquidi</span>
+                        <span class="value" id="res-latte">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Lievito</span>
+                        <span class="value" id="res-lievito">-</span>
+                    </div>
+                    <div class="result-item" id="res-lm-box" style="display:none">
+                        <span class="label">Lievito Madre</span>
+                        <span class="value" id="res-lm">-</span>
+                    </div>
+                </div>
+
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Impasto Totale:</span>
+                        <span class="value" id="res-totale">-</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label">N° Uova Intere (~55g):</span>
+                        <span class="value" id="res-uova-num">-</span>
+                    </div>
+                    <div class="result-item-extra" id="aromi-row" style="display:none">
+                        <span class="label">Scorza limone + arancia + vaniglia:</span>
+                        <span class="value" id="res-aromi">-</span>
+                    </div>
+                    <div class="result-item-extra" id="extra-row" style="display:none">
+                        <span class="label" id="extra-label">Extra:</span>
+                        <span class="value" id="res-extra">-</span>
+                    </div>
+                </div>
+
+                <!-- Ripieno (kardamom knots) -->
+                <div id="filling-box" style="display:none" class="filling-section"></div>
+
+                <!-- Tempi -->
+                <div class="times-section">
+                    <h3><span class="icon">⏱️</span> Tempi Stimati</h3>
+                    <div class="timeline" id="timeline"></div>
+                </div>
+
+                <!-- Consigli -->
+                <div class="tips-section" id="tips-section"></div>
+
+                <div id="error-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_brioche.js"></script>
+</body>
+</html>

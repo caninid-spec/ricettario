@@ -1,0 +1,21 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   ricettario-style.css  –  Stili specifici per le pagine ricettario
+   (ricette-pasticceria.html, impasti-base.html, creme-base.html, ecc.)
+   Richiede: core.css → components.css → ricettario-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+/*
+   La maggior parte dei componenti del ricettario (page-header, scale-bar,
+   recipes-grid, recipe-card, ingredient-list, method-steps, ecc.) è ora
+   definita in components.css.
+   Questo file contiene solo le varianti di colore/comportamento specifiche.
+*/
+
+/* ── Body ricettario (nessun padding calc-page, layout pieno) ── */
+body {
+    background: var(--bg);
+}
+
+/* ── Difficoltà badge già in components.css ── */
+
+/* ── Nessun override aggiuntivo necessario ── */

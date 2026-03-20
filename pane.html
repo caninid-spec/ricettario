@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolapane</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pane-style.css">
+</head>
+<body class="calc-page">
+
+<nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+<div class="container">
+
+    <header>
+        <h1>🍞 Calcolapane</h1>
+        <p class="subtitle">Dosi precise per pane, baguette, rosette, pan carré e burger bun.</p>
+        <div class="divider"></div>
+    </header>
+
+    <!-- Selettore tipo pane -->
+    <div class="type-selector-card">
+        <h2><span class="icon">🍞</span> Tipo di Pane</h2>
+        <div class="bread-grid">
+
+            <div class="bread-card active" data-type="bianco">
+                <span class="b-icon">🍞</span>
+                <span class="b-name">Pane Bianco</span>
+                <span class="b-sub">Filone / Pagnotta</span>
+            </div>
+            <div class="bread-card" data-type="semola">
+                <span class="b-icon">🌾</span>
+                <span class="b-name">Pane di Semola</span>
+                <span class="b-sub">Altamura / Matera</span>
+            </div>
+            <div class="bread-card" data-type="farine-varie">
+                <span class="b-icon">🌰</span>
+                <span class="b-name">Farine Varie</span>
+                <span class="b-sub">Integrale / Segale / Farro</span>
+            </div>
+            <div class="bread-card" data-type="rosette">
+                <span class="b-icon">🌸</span>
+                <span class="b-name">Rosette</span>
+                <span class="b-sub">Michette romane</span>
+            </div>
+            <div class="bread-card" data-type="baguette">
+                <span class="b-icon">🥖</span>
+                <span class="b-name">Baguette</span>
+                <span class="b-sub">Stile francese</span>
+            </div>
+            <div class="bread-card" data-type="panbauletto">
+                <span class="b-icon">🍫</span>
+                <span class="b-name">Pan Bauletto</span>
+                <span class="b-sub">Pane morbido in cassetta</span>
+            </div>
+            <div class="bread-card" data-type="pane-carre">
+                <span class="b-icon">🍥</span>
+                <span class="b-name">Pan Carré</span>
+                <span class="b-sub">Tramezzini / Tartine</span>
+            </div>
+            <div class="bread-card" data-type="burger-bun">
+                <span class="b-icon">🍔</span>
+                <span class="b-name">Burger Bun</span>
+                <span class="b-sub">Panino per hamburger</span>
+            </div>
+            <div class="bread-card" data-type="brezel">
+                <span class="b-icon">🥨</span>
+                <span class="b-name">Brezel</span>
+                <span class="b-sub">Schwäbisch / Bavarese</span>
+            </div>
+
+        </div>
+        <p class="type-description" id="type-description"></p>
+    </div>
+
+    <div class="calculator-body">
+
+        <!-- ── Colonna input ── -->
+        <div class="input-section">
+            <h2><span class="icon">📝</span> Parametri</h2>
+
+            <div class="form-grid">
+                <div class="input-group">
+                    <label for="pezzi">Numero di Pezzi</label>
+                    <input type="number" id="pezzi" value="2" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="peso">Peso per Pezzo (g)</label>
+                    <input type="number" id="peso" value="500" min="50">
+                </div>
+                <div class="input-group">
+                    <label for="idro">Idratazione (%)</label>
+                    <input type="number" id="idro" value="68" min="50" max="90" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="sale-perc">Sale (% farina)</label>
+                    <input type="number" id="sale-perc" value="2" min="0" max="3" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="grassi-perc">Grassi (% farina)</label>
+                    <input type="number" id="grassi-perc" value="0" min="0" max="15" step="0.5">
+                    <small>Olio o burro. 0 per pani tradizionali.</small>
+                </div>
+                <div class="input-group">
+                    <label for="temp-amb">Temperatura Ambiente (°C)</label>
+                    <input type="number" id="temp-amb" value="22" min="15" max="32">
+                </div>
+                <div class="input-group">
+                    <label for="ore-liev">Ore Lievitazione Totali</label>
+                    <input type="number" id="ore-liev" value="24" min="3" max="72">
+                </div>
+                <div class="input-group">
+                    <label for="ore-frigo">di cui Ore in Frigo</label>
+                    <input type="number" id="ore-frigo" value="12" min="0" max="60">
+                </div>
+            </div>
+
+            <!-- Tipo lievitante -->
+            <div class="advanced-options">
+                <div class="input-group radio-group" id="liev-tipo-group">
+                    <label>Tipo di Lievitante</label>
+                    <div class="radio-buttons">
+                        <input type="radio" id="liev-ldb" name="liev-tipo" value="ldb" checked>
+                        <label for="liev-ldb">LDB (Lievito di Birra)</label>
+                        <input type="radio" id="liev-lm" name="liev-tipo" value="lm">
+                        <label for="liev-lm">Lievito Madre</label>
+                        <input type="radio" id="liev-biga" name="liev-tipo" value="biga">
+                        <label for="liev-biga">Biga</label>
+                    </div>
+                </div>
+
+                <!-- Opzioni LM -->
+                <div id="lm-options" class="sub-options" style="display:none">
+                    <div class="input-group">
+                        <label for="lm-perc">% Lievito Madre sulla Farina</label>
+                        <input type="number" id="lm-perc" value="20" min="10" max="35" step="1">
+                        <small>Pane: tipicamente 15–25%</small>
+                    </div>
+                </div>
+
+                <!-- Opzioni Biga -->
+                <div id="biga-options" class="sub-options" style="display:none">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="biga-perc">% Farina in Biga</label>
+                            <input type="number" id="biga-perc" value="35" min="20" max="60" step="5">
+                            <small>Tipicamente 30–50%</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="idro-biga">Idratazione Biga (%)</label>
+                            <input type="number" id="idro-biga" value="45" min="44" max="50" step="0.5">
+                            <small>Giorilli: 44–50%</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra ingredienti dinamici (burger bun ecc.) -->
+                <div id="extra-section" style="display:none"></div>
+
+                <!-- Switch variante Brezel -->
+                <div id="brezel-options" class="sub-options" style="display:none">
+                    <div class="input-group radio-group">
+                        <label>Variante Regionale</label>
+                        <div class="radio-buttons">
+                            <input type="radio" id="brezel-schwabisch" name="brezel-variante" value="schwabisch" checked>
+                            <label for="brezel-schwabisch">🥨 Schwäbisch</label>
+                            <input type="radio" id="brezel-bavarese" name="brezel-variante" value="bavarese">
+                            <label for="brezel-bavarese">🍺 Bavarese</label>
+                        </div>
+                    </div>
+                    <p id="brezel-variante-desc" style="margin-top:8px;font-size:0.8rem;color:var(--muted);line-height:1.5;padding:8px 12px;background:var(--bg);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;"></p>
+                </div>
+
+            </div><!-- fine advanced-options -->
+        </div><!-- fine input-section -->
+
+        <!-- ── Colonna risultati ── -->
+        <div class="results-section">
+
+            <!-- Barra tab (visibile solo su mobile via CSS) -->
+            <nav class="mobile-tabs" id="mobile-tabs">
+                <button class="mobile-tab-btn active" data-tab="tab-risultati">
+                    <span class="tab-icon">⚖️</span>Risultati
+                </button>
+                <button class="mobile-tab-btn" data-tab="tab-processo">
+                    <span class="tab-icon">⏱️</span>Processo
+                </button>
+                <button class="mobile-tab-btn" data-tab="tab-consigli">
+                    <span class="tab-icon">💡</span>Consigli
+                </button>
+            </nav>
+
+            <!-- ── TAB 1: Risultati ── -->
+            <div class="tab-panel tab-active" id="tab-risultati">
+                <h2><span class="icon">⚖️</span> Risultati</h2>
+
+                <!-- Hero totale -->
+                <div class="result-hero">
+                    <span class="hero-label">Impasto Totale</span>
+                    <span class="hero-value" id="out-totale">—</span>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label" id="farina-label">Farina</span>
+                        <span class="value" id="out-farina">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Acqua</span>
+                        <span class="value" id="out-acqua">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sale</span>
+                        <span class="value" id="out-sale">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Grassi</span>
+                        <span class="value" id="out-grassi">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Lievito Madre</span>
+                        <span class="value" id="out-lm">—</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">LDB Fresco</span>
+                        <span class="value" id="out-ldb">—</span>
+                    </div>
+                </div>
+
+                <!-- Biga detail -->
+                <div id="out-biga-box" class="biga-detail" style="display:none">
+                    <h3><span class="icon">🥣</span> Dettaglio Biga (18°C / 18h)</h3>
+                    <div class="biga-grid">
+                        <div class="biga-item"><span class="b-label">Farina biga</span><span class="b-value" id="out-biga-farina">—</span></div>
+                        <div class="biga-item"><span class="b-label">Acqua biga</span><span class="b-value" id="out-biga-acqua">—</span></div>
+                        <div class="biga-item biga-item--full"><span class="b-label">LDB nella biga (1%)</span><span class="b-value" id="out-biga-ldb">—</span></div>
+                    </div>
+                </div>
+
+                <!-- Extra ingredienti risultati -->
+                <div class="extra-results" id="extra-results"></div>
+
+                <!-- Note farina -->
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Forza Farina Consigliata:</span>
+                        <span class="value" id="out-forza">—</span>
+                    </div>
+                    <div class="result-item-extra">
+                        <span class="label" id="out-farina-label-note">Farina:</span>
+                        <span class="value note-value" id="out-farina-note">—</span>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-msg"></div>
+            </div><!-- fine tab-risultati -->
+
+            <!-- ── TAB 2: Processo ── -->
+            <div class="tab-panel" id="tab-processo">
+                <h2><span class="icon">⏱️</span> Processo</h2>
+                <div class="timeline" id="timeline"></div>
+            </div><!-- fine tab-processo -->
+
+            <!-- ── TAB 3: Consigli ── -->
+            <div class="tab-panel" id="tab-consigli">
+                <h2><span class="icon">💡</span> Consigli</h2>
+                <div id="tips-section"></div>
+            </div><!-- fine tab-consigli -->
+
+        </div><!-- fine results-section -->
+
+    </div><!-- fine calculator-body -->
+</div><!-- fine container -->
+<script src="script_pane.js"></script>
+<script>
+/* ── Mobile tab switching ── */
+(function() {
+    var tabNav = document.getElementById('mobile-tabs');
+    if (!tabNav) return;
+
+    tabNav.addEventListener('click', function(e) {
+        var btn = e.target.closest('.mobile-tab-btn');
+        if (!btn) return;
+
+        var targetId = btn.dataset.tab;
+
+        // Aggiorna pulsanti
+        tabNav.querySelectorAll('.mobile-tab-btn').forEach(function(b) {
+            b.classList.toggle('active', b === btn);
+        });
+
+        // Aggiorna pannelli
+        document.querySelectorAll('.tab-panel').forEach(function(panel) {
+            panel.classList.toggle('tab-active', panel.id === targetId);
+        });
+    });
+
+    /* Se il calcolo aggiorna la timeline, passa automaticamente al tab
+       Processo solo su mobile (larghezza ≤ 768px) */
+    var origScript = window.aggiornaRisultati || null;
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+            if (m.target.id === 'timeline' && m.target.children.length > 0) {
+                /* non cambiare tab automaticamente – l'utente decide */
+            }
+        });
+    });
+    var tl = document.getElementById('timeline');
+    if (tl) observer.observe(tl, { childList: true });
+})();
+</script>
+</body>
+</html>
