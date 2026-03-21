@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salse — Ricettario</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="ricettario-style.css">
+</head>
+<body>
+
+<nav class="back-nav"><a href="index.html">← Home</a></nav>
+
+<header class="page-header">
+    <p class="page-header-eyebrow">Ricettario · Cucina</p>
+    <h1>Salse <em>di Cucina</em></h1>
+    <p class="page-header-desc">Dalle cinque salse madri della cucina classica alle emulsionate fredde e calde. Struttura gerarchica completa: madri, derivate e composte.</p>
+    <div class="header-divider"></div>
+</header>
+
+<div class="scale-bar">
+    <span class="scale-bar-label">Scala tutte le salse</span>
+    <div class="scale-group">
+        <label>Porzioni</label>
+        <input type="number" class="scale-input" id="global-port" placeholder="4" min="1" max="200">
+        <span class="scale-unit">pz</span>
+    </div>
+    <button class="scale-reset">↺ Reset</button>
+</div>
+
+<main class="ricettario-main">
+
+<!-- ══════════════════════════════════════════════════════════
+     1. SALSE MADRI
+══════════════════════════════════════════════════════════ -->
+<div class="section-heading">
+    <h2>Salse Madri</h2>
+    <span class="section-count">Le 5 basi fondamentali da cui derivano tutte le altre</span>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- VELLUTATA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍵</div>
+            <span class="recipe-photo-label">Salsa Madre</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Salsa Madre · Bianca</p>
+            <h3>Salsa <em>Vellutata</em></h3>
+            <p class="recipe-desc">Fondo bianco (pollo, vitello o pesce) legato con roux biondo. Texture setosa e neutra — la base per alemanna, suprema e decine di derivate. Il fondo usato ne determina il carattere: di pollo, di vitello o di pesce (velouté de poisson).</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Porzioni</span><span class="ref-value">4 persone</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="50"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍗</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="500" data-unit="g" data-name="Fondo bianco di pollo (o vitello o pesce)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Fondo bianco (pollo, vitello o pesce)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Farina 00"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Pepe bianco"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Roux biondo:</strong> Sciogli il burro a fuoco medio. Aggiungi la farina tutta in una volta, mescola con frusta per 2–3 minuti finché il roux è dorato chiaro e profuma di nocciola. Non deve scurire.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Versa il fondo caldo sul roux freddo (o viceversa — l'importante è che uno dei due sia freddo per evitare grumi). Porta a bollore mescolando continuamente.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Cuoci a fuoco basso per 15–20 minuti, mescolando spesso. La salsa deve velare il cucchiaio. Aggiusta di sale e pepe bianco. Filtra con colino fine se necessario.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            <div class="recipe-notes">
+                <p class="recipe-notes-title">💡 Varianti per fondo</p>
+                <p><strong>Vellutata di pollo</strong>: fondo di pollo → base per salsa suprema e alemanna. <strong>Vellutata di vitello</strong>: fondo di vitello → più strutturata, per secondi di carne. <strong>Vellutata di pesce</strong> (velouté de poisson): fumetto di pesce → base per salse da servire con pesci e crostacei.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- OLANDESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥚</div>
+            <span class="recipe-photo-label">Salsa Madre · Emulsionata</span>
+            <span class="recipe-difficulty difficulty-difficile">Difficile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Salsa Madre · Emulsionata calda</p>
+            <h3>Salsa <em>Olandese</em></h3>
+            <p class="recipe-desc">Emulsione calda di tuorli, burro chiarificato e aceto. La più tecnica delle salse madri: richiede controllo della temperatura (60–65°C) e pazienza. Instabile — si prepara al momento. Base per maltese, mousseline e bernese.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">T° max</span><span class="ref-value">65°C</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Usa subito</span><span class="ref-value">Entro 1h</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Riduzione aromatica</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Aceto di vino bianco"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino bianco</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Scalogno tritato"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato finemente</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Pepe in grani schiacciati"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Pepe in grani schiacciati</span></li>
+                    </ul>
+                </div>
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🧈</span><span class="component-title">Emulsione</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Tuorli (4 tuorli)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~4 tuorli)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Burro chiarificato tiepido"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Burro chiarificato (tiepido, ~45°C)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Succo di limone"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Riduzione:</strong> Porta a bollore aceto, vino, scalogno e pepe. Riduci a 2/3. Filtra e lascia intiepidire.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Metti i tuorli e la riduzione filtrata in una ciotola su bagnomaria a fuoco basso (l'acqua non deve bollire — max 60°C nella ciotola). Monta con frusta finché la sabayon è spumosa, triplicata e "scrive".</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Togli dal fuoco. Aggiungi il burro chiarificato tiepido a filo sottilissimo montando continuamente — esattamente come per la maionese. La salsa monta e si addensa. Aggiusta di sale e limone.</p></div>
+                <div class="method-step"><div class="step-num">4</div><p class="step-text"><strong>Temperatura critica:</strong> se supera 65°C i tuorli stracciano. Se si raffredda troppo il burro solidifica. Mantieni a bagnomaria tiepido (non caldo) fino al servizio.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BESCIAMELLA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥛</div>
+            <span class="recipe-photo-label">Salsa Madre</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Salsa Madre · Bianca</p>
+            <h3>Salsa <em>Besciamella</em></h3>
+            <p class="recipe-desc">Latte intero legato con roux bianco. La più versatile delle salse madri: dalla lasagna alla Mornay, dalla Nantua alla Villeroy. La densità si regola variando il rapporto roux/latte. Tre consistenze: fluida (lasagna), media (gratin), densa (crocchette).</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="50"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti (consistenza media)</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="500" data-unit="g" data-name="Latte intero"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Latte intero</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Burro"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Farina 00"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Farina 00</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Noce moscata grattugiata"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Noce moscata (grattugiata al momento)</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Pepe bianco"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Roux bianco:</strong> Sciogli il burro a fuoco medio. Aggiungi la farina tutta insieme e mescola con frusta per 1–2 minuti senza colorire. Il roux deve rimanere bianco o al massimo crema pallido.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi il latte caldo in 3–4 riprese, mescolando bene dopo ogni aggiunta per evitare grumi. Porta a bollore lento mescolando continuamente.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Cuoci a fuoco basso per 8–10 minuti mescolando. Aggiusta di sale, pepe e noce moscata abbondante. Copri a contatto con pellicola per evitare la pellicina.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            <div class="recipe-notes">
+                <p class="recipe-notes-title">💡 Tre densità</p>
+                <p><strong>Fluida</strong> (lasagna, gratin leggero): 30 g burro + 30 g farina per 500 ml latte. <strong>Media</strong> (standard, cannelloni): 40+40 per 500 ml. <strong>Densa</strong> (crocchette, base per Villeroy): 60+60 per 500 ml.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- SPAGNOLA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍖</div>
+            <span class="recipe-photo-label">Salsa Madre</span>
+            <span class="recipe-difficulty difficulty-difficile">Difficile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Salsa Madre · Bruno</p>
+            <h3>Salsa <em>Spagnola</em></h3>
+            <p class="recipe-desc">Fondo bruno di vitello legato con roux bruno e arricchito con mirepoix, concentrato di pomodoro e bouquet garni. La madre di tutte le salse brune: da essa nasce la demi-glace, poi bordolese, barolo, cacciatora. Lunga da preparare, straordinaria.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~600 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Tempo</span><span class="ref-value">2–3 ore</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">5 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥩</span><span class="component-title">Base</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="1000" data-unit="g" data-name="Fondo bruno di vitello"><span class="ing-qty">1000</span><span class="ing-unit">g</span><span class="ing-name">Fondo bruno di vitello (o manzo)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Burro (roux)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Burro chiarificato (per il roux)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Farina (roux)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Farina (per il roux bruno)</span></li>
+                    </ul>
+                </div>
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥕</span><span class="component-title">Mirepoix e aromi</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cipolla"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cipolla (taglio brunoise)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Carota"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Carota</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Sedano"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Sedano</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Concentrato di pomodoro"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Concentrato di pomodoro</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Vino rosso secco"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Vino rosso secco</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Bouquet garni (alloro, timo, prezzemolo)"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Bouquet garni (alloro, timo, gambi prezzemolo)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Lardo o pancetta"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Lardo o pancetta (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Roux bruno:</strong> In casseruola a fondo spesso, cuoci burro e farina a fuoco medio-basso mescolando fino a che il roux diventa color nocciola scura (10–12 min). Attenzione: brucia facilmente.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Rosola la mirepoix nel grasso fino a doratura. Aggiungi il concentrato di pomodoro e cuoci 2 minuti (pinçage). Sfuma con il vino rosso, riduci a metà.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Aggiungi il fondo bruno caldo al roux in 2–3 riprese, mescolando bene. Unisci il bouquet garni. Porta a bollore, poi abbassa il fuoco al minimo.</p></div>
+                <div class="method-step"><div class="step-num">4</div><p class="step-text">Cuoci a fuoco lentissimo per 1,5–2 ore, schiumando spesso. La salsa deve ridursi di circa 1/3. Filtra con colino fine premendo bene le verdure. Aggiusta di sale.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- SALSA DI POMODORO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍅</div>
+            <span class="recipe-photo-label">Salsa Madre</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Salsa Madre · Rossa</p>
+            <h3>Salsa di <em>Pomodoro</em></h3>
+            <p class="recipe-desc">La salsa di pomodoro classica della cucina italiana. Passata di San Marzano, soffritto leggero, basilico. Semplice ma tecnica: la differenza sta nella qualità del pomodoro, nel tempo di cottura e nel non coprire troppo. Base per amatriciana, arrabbiata, puttanesca e decine di derivate.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">5 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="50"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍅</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="800" data-unit="g" data-name="Pomodori San Marzano pelati (o passata densa)"><span class="ing-qty">800</span><span class="ing-unit">g</span><span class="ing-name">Pomodori San Marzano pelati (o passata densa)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Cipolla"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Cipolla dorata</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Olio EVO"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (1 spicchio, opzionale)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Basilico fresco"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Basilico fresco (aggiunto a fine cottura)</span></li>
+                        <li class="ingredient-row" data-base="4" data-unit="g" data-name="Sale"><span class="ing-qty">4</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Zucchero (se il pomodoro è acido)"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Zucchero (solo se il pomodoro è acido)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Soffriggi cipolla (e aglio se usi) in olio EVO a fuoco basso per 8–10 minuti fino a che sono morbidi e traslucidi. Non devono dorare.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi i pomodori schiacciati a mano (non frullati — i pezzi grossolani danno corpo). Porta a bollore, poi abbassa il fuoco.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Cuoci senza coperchio a fuoco medio-basso per 20–30 minuti, mescolando ogni tanto. La salsa deve addensarsi e perdere l'acidità cruda. Aggiusta di sale e zucchero se serve. Basilico a fine cottura.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- /recipes-grid salse madri -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     2. SALSE BASE (DERIVATE DALLE MADRI)
+══════════════════════════════════════════════════════════ -->
+<div class="section-heading">
+    <h2>Salse Base</h2>
+    <span class="section-count">Derivate dalle Madri — prima generazione</span>
+</div>
+
+<!-- Sottosezione: dalla Vellutata -->
+<div class="section-heading" style="margin-top: 1.5rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Dalla Vellutata</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- ALEMANNA / PARIGINA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍵</div>
+            <span class="recipe-photo-label">Da Vellutata</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Vellutata</p>
+            <h3>Salsa <em>Alemanna</em> (Parigina)</h3>
+            <p class="recipe-desc">Vellutata di vitello arricchita con liaison di tuorli e panna. Più ricca e corposa della vellutata base. Tradizionalmente usata per carni bianche, vol-au-vent e timballi. Il legante finale (liaison) la rende cremosa e lucida.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di vitello</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~450 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍵</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Vellutata di vitello (già preparata)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di vitello (già preparata)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Tuorli (2 tuorli)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~2 tuorli)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Panna fresca"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Succo di limone"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale e pepe bianco"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale e pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta la vellutata quasi a bollore. In una ciotola mescola tuorli e panna (liaison). Tempera versando una mestolata di vellutata calda sulla liaison, mescolando.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Versa la liaison temperata nella vellutata rimescolando continuamente. Cuoci a fuoco basso per 3–4 minuti senza bollire (max 82°C). Aggiungi limone, aggiusta di sale. Filtra.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- SUPREMA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🐔</div>
+            <span class="recipe-photo-label">Da Vellutata di pollo</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Vellutata</p>
+            <h3>Salsa <em>Suprema</em></h3>
+            <p class="recipe-desc">Vellutata di pollo ridotta con panna. Bianchissima, delicata, lussuosa. La salsa per eccellenza da servire con petti di pollo e carni bianche. Differisce dall'alemanna per la base (pollo invece di vitello) e la semplicità del legante (solo panna ridotta).</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di pollo</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~350 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🐔</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Vellutata di pollo"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pollo (già preparata)</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Panna fresca 35%"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Burro freddo (montatura finale)"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo (per montatura finale)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale e pepe bianco"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale e pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta la vellutata di pollo a bollore. Aggiungi la panna e riduci a fuoco medio-vivo finché la salsa vela bene il cucchiaio (circa 5–8 minuti).</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Togli dal fuoco. Incorpora il burro freddo a cubetti montando con frusta (monter au beurre) — dà lucentezza e corposità. Aggiusta di sale e pepe bianco. Servi immediatamente.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- SALSA AL VINO BIANCO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🐟</div>
+            <span class="recipe-photo-label">Da Vellutata di pesce</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Vellutata</p>
+            <h3>Salsa al <em>Vino Bianco</em></h3>
+            <p class="recipe-desc">Vellutata di pesce con riduzione di vino bianco, scalogno e fumetto. Classica per pesci interi al forno o in padella. La montatura finale con burro (beurre blanc integrato) la rende luminosa e setosa.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di pesce</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~350 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🐟</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Vellutata di pesce"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pesce (già preparata)</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco (Vermentino o Chablis)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Scalogno tritato"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato finemente</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Panna fresca"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Burro freddo a cubetti"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo a cubetti</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo tritato"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo tritato finemente</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci vino bianco e scalogno a fuoco vivo fino a 2 cucchiai di liquido. Aggiungi la vellutata di pesce e la panna. Riduci ancora del 30%.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Filtra, rimetti sul fuoco basso. Incorpora il burro freddo a cubetti montando con frusta. Aggiungi il prezzemolo. Aggiusta di sale. Servi subito.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine dalla vellutata -->
+
+<!-- Sottosezione: dalla Besciamella -->
+<div class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Dalla Besciamella</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- MORNAY -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🧀</div>
+            <span class="recipe-photo-label">Da Besciamella</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Besciamella</p>
+            <h3>Salsa <em>Mornay</em></h3>
+            <p class="recipe-desc">Besciamella arricchita con formaggio grattugiato (Gruyère e Parmigiano) e tuorli. La salsa per i gratin e le crepes. Il formaggio va aggiunto fuori dal fuoco per evitare di filare.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Besciamella</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~550 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Besciamella (già preparata, media densità)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Besciamella (già preparata, media densità)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Gruyère grattugiato"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Gruyère grattugiato</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Parmigiano Reggiano grattugiato"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Parmigiano Reggiano grattugiato</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Tuorli (2 tuorli)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~2 tuorli)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda la besciamella. Togli dal fuoco. Aggiungi i formaggi mescolando finché sciolti. Aggiungi i tuorli e il burro rimescolando energicamente.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Non riportare a bollore dopo i tuorli: si stracciano. Usa subito per gratin, cannelloni o crepes. Per la gratinatura: versa sopra il piatto, aggiungi altro Parmigiano e gratina a 220°C con grill.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- VILLEROY -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍳</div>
+            <span class="recipe-photo-label">Da Besciamella densa</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Besciamella</p>
+            <h3>Salsa <em>Villeroy</em></h3>
+            <p class="recipe-desc">Besciamella molto densa (quasi una farcia) con aggiunta di vellutata, usata per panare e friggere. L'ingrediente (petto di pollo, crocchette, animelle) viene immerso nella Villeroy, lasciato solidificare in frigo, poi impanato e fritto. Tecnica classica della cucina francese.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Besciamella densa + Vellutata</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Tecnica</span><span class="ref-value">Per impanatura</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Besciamella molto densa (60+60 per 500 ml latte)"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Besciamella molto densa</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Vellutata di pollo"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pollo</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Tuorli (2 tuorli)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~2 tuorli)</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Noce moscata e sale"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Noce moscata e sale</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Mescola besciamella densa e vellutata a fuoco basso. Aggiungi i tuorli fuori dal fuoco rimescolando. La salsa deve essere molto densa e coprire il dorso di un cucchiaio spesso.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Immergi gli ingredienti da panare (crocchette, cotolette, animelle) nella Villeroy calda. Posa su carta forno, lascia raffreddare completamente in frigo (almeno 2h). Impana in uovo e pangrattato, friggi a 180°C.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- NANTUA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🦞</div>
+            <span class="recipe-photo-label">Da Besciamella</span>
+            <span class="recipe-difficulty difficulty-difficile">Difficile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Besciamella</p>
+            <h3>Salsa <em>Nantua</em></h3>
+            <p class="recipe-desc">Besciamella con burro di gamberi (o astice) e panna. Colore arancio rosa, sapore di mare intenso. Classicamente usata per quenelles de brochet, vol-au-vent di pesce e uova in cocotte. Il burro di crostacei è la chiave: si prepara tostando le teste e i gusci con burro, poi setacciando.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Besciamella + burro di gamberi</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Besciamella media densità"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Besciamella (media densità)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Burro di gamberi (o di astice)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Burro di gamberi o astice*</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Panna fresca 35%"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Cognac o brandy"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Cognac o brandy</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale, pepe di Cayenna"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale, pepe di Cayenna q.b.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Burro di gamberi*:</strong> Tosta gusci e teste di gamberi in padella con burro. Frulla, setaccia premendo bene. Raccogli il burro colorato arancio. (In alternativa: pasta di gamberi + burro normale.)</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Scalda la besciamella con la panna. Aggiungi il cognac e fai evaporare. Fuori dal fuoco incorpora il burro di gamberi a cubetti montando con frusta. Aggiusta di sale e Cayenna.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- ALLA CREMA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥛</div>
+            <span class="recipe-photo-label">Da Besciamella</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Besciamella</p>
+            <h3>Salsa alla <em>Crema</em></h3>
+            <p class="recipe-desc">Besciamella alleggerita con panna. Più delicata e fluida, meno pesante. Si usa come salsa da accompagnamento, per pasta ripiena, vol-au-vent leggeri e verdure al gratin. La più semplice delle derivate dalla besciamella.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Besciamella</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="350" data-unit="g" data-name="Besciamella (già preparata)"><span class="ing-qty">350</span><span class="ing-unit">g</span><span class="ing-name">Besciamella (già preparata)</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Panna fresca 35%"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Burro"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale, noce moscata"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale e noce moscata</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Porta a bollore la besciamella. Aggiungi la panna e riduci leggermente (3–4 minuti) fino alla consistenza desiderata.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Incorpora il burro fuori dal fuoco montando con frusta. Aggiusta di sale e noce moscata. Filtra se necessario.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine dalla besciamella -->
+
+<!-- Sottosezione: dalla Spagnola -->
+<div class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Dalla Spagnola</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- DEMI-GLACE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍯</div>
+            <span class="recipe-photo-label">Da Spagnola</span>
+            <span class="recipe-difficulty difficulty-difficile">Difficile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dalla Spagnola</p>
+            <h3>Salsa <em>Demi-Glace</em></h3>
+            <p class="recipe-desc">Spagnola ridotta al 50% con fondo bruno fresco. Lucida, densa, intensa — il concentrato della cucina classica. Poche gocce bastano per nappare un piatto. Base per quasi tutte le salse brune composte: bordolese, barolo, cacciatora, bigarde.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Spagnola + fondo bruno</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml (ridotta da ~800)</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">1 settimana frigo / 3 mesi freezer</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍖</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Salsa spagnola (già preparata)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Salsa spagnola (già preparata)</span></li>
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Fondo bruno di vitello fresco"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Fondo bruno di vitello fresco</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Madeira o Marsala secco (opzionale)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Madeira o Marsala secco (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Mescola spagnola e fondo bruno in una casseruola. Porta a bollore schiumando costantemente. Abbassa il fuoco al minimo.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Riduci lentamente della metà (40–60 min), continuando a schiumare. La demi-glace è pronta quando è lucida, densa e nappa abbondantemente il cucchiaio.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Aggiungi il Madeira negli ultimi 5 minuti se vuoi. Filtra con colino fine. Conserva in porzioni piccole — bastano 2–3 cucchiai per piatto.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine dalla spagnola -->
+
+<!-- Sottosezione: dal Pomodoro -->
+<div class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Dal Pomodoro</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- RAGÙ BOLOGNESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍝</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Ragù</p>
+            <h3>Ragù <em>Bolognese</em></h3>
+            <p class="recipe-desc">Il ragù originale bolognese (ricetta depositata alla CCIAA di Bologna): carne mista macinata, soffritto, pomodoro moderato, latte, vino bianco. Cottura minima 2 ore. Accompagna tagliatelle all'uovo, lasagne e passatelli. Non è un sugo di pomodoro con carne — è il contrario.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~900 g</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Cottura min.</span><span class="ref-value">2 ore</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">4 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="50"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥩</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Manzo macinato (non troppo magro)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Manzo macinato (non troppo magro)</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Pancetta tesa (o macinato misto maiale)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Pancetta tesa (o macinato misto maiale)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cipolla"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cipolla dorata</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Carota"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Carota</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Sedano"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Sedano</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Olio EVO"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Pomodori pelati (quantità moderata)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Pomodori pelati (quantità moderata!)</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Latte intero"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Latte intero (aggiunto a fine cottura)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Sale"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Trita finemente cipolla, carota e sedano. Rosola nel burro + olio a fuoco basso per 10 minuti fino a soffritto dorato. Aggiungi la pancetta, rosola 5 minuti.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Alza la fiamma e aggiungi il macinato in 2–3 riprese rosolando bene ogni volta. La carne deve dorarsi, non stufarsi. Sfuma con il vino bianco, lascia evaporare completamente.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Aggiungi i pelati schiacciati (poca quantità: il bolognese non è rosso ma bruno). Mescola, abbassa il fuoco al minimo. Copri e cuoci per almeno 2 ore mescolando ogni tanto. Se asciuga, aggiungi poco brodo caldo.</p></div>
+                <div class="method-step"><div class="step-num">4</div><p class="step-text">Negli ultimi 15 minuti aggiungi il latte: ammorbidisce e bilancia l'acidità. Aggiusta di sale. Il ragù è pronto quando è denso, profumato e il grasso si separa leggermente in superficie.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- AMATRICIANA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥓</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Sugo</p>
+            <h3>Salsa all'<em>Amatriciana</em></h3>
+            <p class="recipe-desc">Guanciale, pecorino romano, pomodoro San Marzano e peperoncino. La ricetta originale di Amatrice (Rieti) non prevede cipolla, aglio o olio — solo guanciale. Accompagna rigatoni o bucatini. Il guanciale non si può sostituire con la pancetta: il sapore cambia completamente.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">25 minuti</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥓</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Guanciale (non pancetta)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Guanciale (non pancetta)</span></li>
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Pomodori San Marzano pelati"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Pomodori San Marzano pelati</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Pecorino Romano grattugiato"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Pecorino Romano grattugiato</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Peperoncino fresco o secco"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Peperoncino (fresco o secco)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Vino bianco secco (per sfumare il guanciale)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco (per sfumare)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Taglia il guanciale a listarelle o cubetti. Metti in padella fredda senza olio, a fuoco medio. Rosola finché croccante e il grasso è sciolto. Sfuma con vino bianco. Togli il guanciale e tieni il grasso in padella.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Nel grasso del guanciale, tosta il peperoncino 30 secondi. Aggiungi i pelati schiacciati. Cuoci 15–20 minuti a fuoco medio finché il sugo si addensa. Rimetti il guanciale.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Manta la pasta al dente con il sugo fuori dal fuoco. Aggiungi il pecorino romano grattugiato rimestando energicamente. Non usare parmigiano: altera il profilo di sapore.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- ARRABBIATA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌶️</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Sugo</p>
+            <h3>Salsa <em>Arrabbiata</em></h3>
+            <p class="recipe-desc">Pomodoro, aglio, olio EVO e tanto peperoncino. Nient'altro. La più semplice e la più schietta. Romana, piccante, velocissima. Accompagna penne rigate — la pasta deve essere ruvida per reggere la salsa densa. Senza cipolla, senza carne, senza prezzemolo durante la cottura.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Tempo</span><span class="ref-value">15 minuti</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍅</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Pomodori pelati San Marzano"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Pomodori pelati San Marzano</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Olio EVO"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (abbondante)</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Aglio (2–3 spicchi)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Aglio (2–3 spicchi, interi o tritati)</span></li>
+                        <li class="ingredient-row" data-base="6" data-unit="g" data-name="Peperoncino (abbondante)"><span class="ing-qty">6</span><span class="ing-unit">g</span><span class="ing-name">Peperoncino secco sbriciolato (abbondante)</span></li>
+                        <li class="ingredient-row" data-base="4" data-unit="g" data-name="Sale"><span class="ing-qty">4</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo fresco (solo a crudo, a fine piatto)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo fresco (solo a crudo, a piatto finito)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda l'olio con l'aglio e il peperoncino a fuoco medio. L'aglio deve diventare dorato — non bruciare. Togli l'aglio se lo vuoi intero, lascialo se lo vuoi tritato.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi i pelati schiacciati a mano. Aggiusta di sale. Cuoci a fuoco medio 12–15 minuti. Il sugo deve restringersi e intensificarsi. Manteca la pasta in padella aggiungendo poca acqua di cottura.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- PUTTANESCA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫒</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Sugo</p>
+            <h3>Sugo alla <em>Puttanesca</em></h3>
+            <p class="recipe-desc">Pomodoro, acciughe, olive nere, capperi, aglio e peperoncino. Sapore deciso, marino e pungente. Napoletana d'origine, velocissima e già saporitissima di suo — attenzione al sale aggiuntivo: acciughe, olive e capperi sono già salati.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Tempo</span><span class="ref-value">20 minuti</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍅</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Pomodori pelati (o pomodorini)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Pomodori pelati (o pomodorini)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Acciughe sotto sale (dissalate)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Acciughe sotto sale (dissalate)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Olive nere al naturale (denocciolate)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Olive nere al naturale (denocciolate)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Capperi sotto sale (dissalati)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Capperi sotto sale (dissalati)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Olio EVO"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Aglio (2 spicchi)"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Aglio (2 spicchi)</span></li>
+                        <li class="ingredient-row" data-base="4" data-unit="g" data-name="Peperoncino"><span class="ing-qty">4</span><span class="ing-unit">g</span><span class="ing-name">Peperoncino</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo fresco"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo fresco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Soffriggi aglio e peperoncino nell'olio. Aggiungi le acciughe e scioglile mescolando. Aggiungi capperi e olive.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Unisci i pomodori schiacciati. Cuoci 12–15 minuti a fuoco medio. Tasta prima di salare: le acciughe salgono molto. Prezzemolo fresco a crudo alla fine.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- RAGÙ PUGLIESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥩</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Ragù</p>
+            <h3>Ragù <em>Pugliese</em></h3>
+            <p class="recipe-desc">Braciole di carne di cavallo (o manzo) ripiene di formaggio, prezzemolo e uova sode, cotte lentamente in abbondante pomodoro. La carne rimane intera e si affetta, il sugo condisce le orecchiette. Cottura lunghissima — minimo 3 ore. Domenicale e solenne.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">3–4 ore</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Pasta</span><span class="ref-value">Orecchiette</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥩</span><span class="component-title">Braciole (involtini)</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="600" data-unit="g" data-name="Carne di manzo (fettine sottili per involtini)"><span class="ing-qty">600</span><span class="ing-unit">g</span><span class="ing-name">Manzo a fettine (o cavallo)</span></div></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Pecorino grattugiato (per ripieno)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Pecorino grattugiato (ripieno)</span></li>
+                        <li class="ingredient-row" data-base="15" data-unit="g" data-name="Prezzemolo tritato (per ripieno)"><span class="ing-qty">15</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo tritato (ripieno)</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Aglio tritato (per ripieno)"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Aglio tritato (ripieno)</span></li>
+                    </ul>
+                </div>
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍅</span><span class="component-title">Sugo</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="800" data-unit="g" data-name="Passata di pomodoro densa"><span class="ing-qty">800</span><span class="ing-unit">g</span><span class="ing-name">Passata di pomodoro densa</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Cipolla"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Cipolla</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Olio EVO"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Vino rosso"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Vino rosso</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Basilico fresco"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Basilico fresco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Stendi le fettine, distribuisci il ripieno (pecorino, prezzemolo, aglio). Arrotola e lega con spago da cucina.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Rosola le braciole in olio su tutti i lati finché dorate. Togli e tieni da parte. Nel fondo rosola la cipolla, sfuma con vino rosso.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Aggiungi la passata e le braciole. Porta a bollore, abbassa al minimo, copri. Cuoci 3–4 ore mescolando ogni 30 minuti. Il sugo deve diventare denso e scuro. Basilico a fine cottura.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- NORMA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍆</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Sugo</p>
+            <h3>Sugo alla <em>Norma</em></h3>
+            <p class="recipe-desc">Melanzane fritte, pomodoro, basilico e ricotta salata stagionata. Catanese, dedicata all'opera di Bellini. Le melanzane vanno fritte in olio abbondante — non al forno. La ricotta salata grattugiata grossa è insostituibile: dà il sapore caratteristico.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Pasta</span><span class="ref-value">Rigatoni o maccheroni</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍆</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="600" data-unit="g" data-name="Melanzane (tipo lungo, viola)"><span class="ing-qty">600</span><span class="ing-unit">g</span><span class="ing-name">Melanzane viola (tipo lungo)</span></li>
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Pomodori pelati (o passata)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Pomodori pelati (o passata)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Ricotta salata stagionata (grattugiata grossa)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Ricotta salata stagionata (grattugiata grossa)</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Olio EVO (per il sugo)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (per il sugo)</span></li>
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Olio di semi (per friggere le melanzane)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Olio di semi (per friggere le melanzane)</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Aglio (2 spicchi)"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Aglio (2 spicchi)</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Basilico fresco (abbondante)"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Basilico fresco (abbondante)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Taglia le melanzane a cubetti (1,5 cm), sala e lascia spurgare 30–60 minuti. Asciuga con carta. Friggi in olio profondo a 175°C finché dorate e morbide. Scola su carta.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">In padella con olio EVO, rosola l'aglio. Aggiungi i pelati, cuoci 15 minuti. Aggiusta di sale. Aggiungi le melanzane fritte e il basilico. Non mescolare troppo: le melanzane devono rimanere intere.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Manta la pasta con il sugo. Impiatta e grattugia la ricotta salata abbondante sopra — è il condimento finale, non un optional.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- RAGÙ NAPOLETANO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫕</div>
+            <span class="recipe-photo-label">Dal Pomodoro</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Derivata dal Pomodoro · Ragù</p>
+            <h3>Ragù <em>Napoletano</em></h3>
+            <p class="recipe-desc">Il "ragù 'e carne" napoletano: carni miste di manzo (gallinella, tracchia, costine di maiale) con lardo, cipolla e tanta passata. Cottura minima 4–6 ore, ideale 8. Il "pippiare" (il bollore minimo, quasi impercettibile) è essenziale. La domenica a Napoli comincia sabato sera.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Cottura</span><span class="ref-value">4–8 ore</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Pasta</span><span class="ref-value">Rigatoni, ziti spezzati</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="40"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥩</span><span class="component-title">Carni e base</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="500" data-unit="g" data-name="Gallinella di manzo (o muscolo)"><span class="ing-qty">500</span><span class="ing-unit">g</span><span class="ing-name">Gallinella di manzo (o muscolo)</span></li>
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Costine di maiale"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Costine di maiale</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Salsiccia napoletana a punta di coltello"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Salsiccia napoletana a punta di coltello</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Lardo (o sugna)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Lardo (o sugna)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Cipolla (abbondante)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Cipolla (abbondante)</span></li>
+                        <li class="ingredient-row" data-base="1200" data-unit="g" data-name="Passata di pomodoro densa"><span class="ing-qty">1200</span><span class="ing-unit">g</span><span class="ing-name">Passata di pomodoro densa</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Concentrato di pomodoro"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Concentrato di pomodoro</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Vino rosso (Aglianico)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Vino rosso (Aglianico)</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Basilico fresco"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Basilico fresco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Sciogli il lardo in casseruola di terracotta o ghisa. Rosola la cipolla lentissimamente per 20–30 minuti finché quasi sciolta. Aggiungi la carne e rosola su tutti i lati.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Sfuma con il vino rosso, aggiungi il concentrato di pomodoro. Mescola e cuoci 5 minuti (pinçage del pomodoro). Aggiungi la passata. Porta a bollore.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Abbassa al minimo assoluto: deve "pippiare" — bollore appena percettibile, pochissime bolle. Copri parzialmente. Cuoci 4–8 ore, girando la carne ogni ora. Il ragù è pronto quando è denso, scuro e la carne si sfibra al tatto. Basilico fresco a fine cottura.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine dal pomodoro -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     3. SALSE DI DERIVAZIONE (COMPOSTE)
+══════════════════════════════════════════════════════════ -->
+<div class="section-heading">
+    <h2>Salse di Derivazione</h2>
+    <span class="section-count">Composte — seconda e terza generazione</span>
+</div>
+
+<!-- Sottosezione: Bianche composte -->
+<div class="section-heading" style="margin-top: 1.5rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Bianche composte</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- BERCY -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍷</div>
+            <span class="recipe-photo-label">Bianca composta</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bianca</p>
+            <h3>Salsa <em>Bercy</em></h3>
+            <p class="recipe-desc">Vellutata di pesce con riduzione di vino bianco, scalogno e burro di prezzemolo. Classica per filetti di sogliola, branzino e orata al forno o in padella. Elegante, semplice, molto francese.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di pesce</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🐟</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Vellutata di pesce"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pesce</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Scalogno tritato"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato finemente</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Burro freddo"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo a cubetti</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Prezzemolo tritato"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo tritato finemente</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Succo di limone"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci vino bianco e scalogno a fuoco vivo fino a 2 cucchiai. Aggiungi la vellutata di pesce e riduci di 1/4.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Fuori dal fuoco monta il burro freddo a cubetti. Aggiungi prezzemolo e limone. Aggiusta di sale. Servi subito su filetti di pesce.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- CURRY -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍛</div>
+            <span class="recipe-photo-label">Bianca composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bianca</p>
+            <h3>Salsa al <em>Curry</em></h3>
+            <p class="recipe-desc">Vellutata o besciamella arricchita con curry e panna. Versione della cucina classica francese — diversa dal curry indiano. Delicata, speziata senza bruciare. Per pollo, gamberi, riso pilaf e vol-au-vent.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di pollo</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍗</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Vellutata di pollo"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pollo</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Panna fresca 35%"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca 35%</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Scalogno o cipolla (tritato)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Burro"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Curry in polvere (buona qualità)"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Curry in polvere (buona qualità)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Soffriggi lo scalogno nel burro. Aggiungi il curry e tosta 1 minuto mescolando (tostatura attiva gli aromi). Aggiungi la vellutata e la panna.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Riduci 5–8 minuti. Aggiusta di sale. Filtra se vuoi una salsa liscia. Per una versione più rustica, lascia lo scalogno.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- CAPPERI -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌿</div>
+            <span class="recipe-photo-label">Bianca composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bianca</p>
+            <h3>Salsa ai <em>Capperi</em></h3>
+            <p class="recipe-desc">Vellutata con capperi dissalati, panna e limone. Semplice e sapida. Per pesce bollito, lingua di vitello lessa, polpettone di carne. I capperi non vanno tritati: rimangono interi per dare bocconi di sapore.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata di vitello o pesce</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌿</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="350" data-unit="g" data-name="Vellutata (vitello o pesce)"><span class="ing-qty">350</span><span class="ing-unit">g</span><span class="ing-name">Vellutata (vitello o pesce)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Panna fresca"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Capperi sotto sale (dissalati, interi)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Capperi sotto sale (dissalati, interi)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Succo di limone"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo tritato"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo tritato</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda la vellutata con la panna. Riduci leggermente. Fuori dal fuoco monta il burro freddo.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi capperi interi, limone e prezzemolo. Aggiusta di sale (attenzione: i capperi salgono). Servi subito.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- AURORA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌅</div>
+            <span class="recipe-photo-label">Bianca composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bianca</p>
+            <h3>Salsa <em>Aurora</em></h3>
+            <p class="recipe-desc">Vellutata o besciamella con aggiunta di concentrato di pomodoro — colore rosa arancio da cui prende il nome. Leggera e colorata. Per uova in cocotte, pollo in crosta, timballi e vol-au-vent.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata o Besciamella</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥛</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="400" data-unit="g" data-name="Vellutata di pollo (o besciamella)"><span class="ing-qty">400</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di pollo (o besciamella)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Concentrato di pomodoro"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Concentrato di pomodoro</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Panna fresca"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Burro freddo"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale, pepe bianco"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale e pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda la vellutata. Aggiungi il concentrato di pomodoro e mescola bene — la salsa diventa rosa-arancio. Aggiungi la panna e riduci 3–4 minuti.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Fuori dal fuoco monta il burro freddo. Aggiusta di sale e pepe bianco. Filtra se necessario.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- RAFANO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌰</div>
+            <span class="recipe-photo-label">Bianca composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bianca</p>
+            <h3>Salsa al <em>Rafano</em></h3>
+            <p class="recipe-desc">Vellutata o panna con rafano grattugiato fresco (cren). Piccante e pungente. La salsa classica per il bollito di manzo, la lingua salmistrata e i pesci affumicati. Il rafano va aggiunto sempre fuori dal fuoco: il calore ne disperde l'aroma e la piccantezza.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Vellutata o panna</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Servire</span><span class="ref-value">Con bolliti</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌰</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Vellutata di vitello (o panna semi-ridotta)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Vellutata di vitello (o panna semi-ridotta)</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Rafano fresco grattugiato (cren)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Rafano fresco grattugiato (cren)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Panna fresca"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Succo di limone"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Zucchero (bilancia la piccantezza)"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Zucchero (bilancia la piccantezza)</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda (non bollire) la vellutata. Togli dal fuoco. Aggiungi il rafano grattugiato fresco, la panna, il limone e lo zucchero. Mescola bene.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Non riscaldare dopo aver aggiunto il rafano. Aggiusta di sale. Servi tiepida. Per versione fredda: sostituisci la vellutata con panna semi-montata e rafano.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine bianche composte -->
+
+<!-- Sottosezione: Brune composte -->
+<div class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Brune composte</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- BORDOLESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍷</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa <em>Bordolese</em></h3>
+            <p class="recipe-desc">Demi-glace con riduzione di vino rosso (Bordeaux) e scalogno. Arricchita con midollo di manzo a pezzetti. Intensa, vinosa, lussuosa. La salsa classica per la bistecca al sangue e il filetto di manzo. Il midollo si aggiunge alla fine.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍖</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Demi-glace"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Vino rosso secco (Bordeaux o Barolo)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Vino rosso secco (Bordeaux o Barolo)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Scalogno tritato finemente"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato finemente</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Midollo di manzo (a pezzetti)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Midollo di manzo (a pezzetti)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo tritato"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo tritato</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Timo e alloro"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Timo e alloro</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci vino rosso, scalogno, timo e alloro di 3/4. Aggiungi la demi-glace e riduci ancora di 1/3. Filtra.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Blanquizza il midollo in acqua salata 1–2 minuti. Incorpora nella salsa fuori dal fuoco insieme al burro freddo. Aggiungi prezzemolo. Non far bollire dopo il midollo.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BAROLO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫙</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa al <em>Barolo</em></h3>
+            <p class="recipe-desc">Variante italiana della bordolese con Barolo DOCG, tartufo (opzionale) e rosmarino. Piemontese, per brasato, filetto di fassona e cacciagione. La riduzione del Barolo da sola richiede 20–30 minuti: un vino così strutturato ha bisogno di tempo per perdere l'astringenza e sviluppare la dolcezza.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace + Barolo</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍷</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Demi-glace"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Barolo DOCG"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Barolo DOCG</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Scalogno"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Scalogno</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Rosmarino fresco"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Rosmarino fresco</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Tartufo nero grattugiato (opzionale)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Tartufo nero grattugiato (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci Barolo, scalogno e rosmarino di 3/4 a fuoco medio (20–25 min). Filtra. Aggiungi la demi-glace, riduci ancora 5–8 min.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Fuori dal fuoco monta il burro freddo. Aggiungi il tartufo. Aggiusta di sale. Servi immediatamente.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- CACCIATORA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍄</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa <em>Cacciatora</em></h3>
+            <p class="recipe-desc">Demi-glace con funghi, pomodoro, vino bianco e olive. Rustica e profumata. Per pollo, coniglio, cacciagione. La versione italiana dell'Hunter sauce francese — più saporita, con l'aglio e il rosmarino che la francese non prevede.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍄</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Demi-glace"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Funghi champignon (o misti)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Funghi champignon (o misti)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Pomodori pelati"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Pomodori pelati</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Olive nere al naturale"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Olive nere al naturale</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Scalogno o cipolla"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Scalogno o cipolla</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Olio EVO"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio, rosmarino, timo"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio, rosmarino, timo</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Soffriggi scalogno e aglio nell'olio. Aggiungi i funghi a pezzi e rosola a fuoco vivo finché dorati. Sfuma con vino bianco.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi pomodori, demi-glace, olive e aromi. Cuoci 15–20 minuti a fuoco medio finché la salsa è densa. Rimuovi gli aromi. Aggiusta di sale e pepe.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BIGARDE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍊</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa <em>Bigarde</em></h3>
+            <p class="recipe-desc">Demi-glace con succo e zeste di arancia amara (bigarde), caramello leggero e succo di limone. La salsa per l'anatra all'arancia — agrodolce, profumata, elegante. L'arancia amara è fondamentale: quella dolce rende la salsa troppo stucchevole.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Per</span><span class="ref-value">Anatra, cacciagione</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍊</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Demi-glace"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Succo di arancia amara (o misto arancia + limone)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Succo di arancia amara (o arancia + limone 2:1)</span></li>
+                        <li class="ingredient-row" data-base="15" data-unit="g" data-name="Zeste di arancia (julienne, sbollentate)"><span class="ing-qty">15</span><span class="ing-unit">g</span><span class="ing-name">Zeste di arancia (julienne, sbollentate 2 min)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Zucchero (per il caramello)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Zucchero (per il caramello)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Aceto di vino bianco"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino bianco</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Fai un caramello chiaro con lo zucchero. Decuoci con l'aceto (vapori forti — attenzione). Aggiungi il succo di arancia, porta a bollore.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi la demi-glace e le zeste sbollentate. Riduci 5–8 minuti. Monta il burro freddo fuori dal fuoco. Aggiusta il dolce-amaro con limone o zucchero.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- POIVRADE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌶️</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-medio">Medio</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa <em>Poivrade</em></h3>
+            <p class="recipe-desc">Demi-glace con abbondante pepe nero e verde in grani, riduzione di aceto e vino. Piccante, pungente, senza dolcezza. Classica per cinghiale, capriolo, lepre e cacciagione in genere. Il pepe verde in grani viene aggiunto intero alla fine per texture.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Per</span><span class="ref-value">Cacciagione</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌶️</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Demi-glace"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Vino rosso secco"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Vino rosso secco</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Aceto di vino rosso"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino rosso</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Scalogno"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Scalogno</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Pepe nero in grani (schiacciati)"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Pepe nero in grani (schiacciati)</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Pepe verde in grani (interi, in salamoia)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Pepe verde in grani (interi, in salamoia)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci aceto, vino, scalogno e pepe nero di 3/4. Aggiungi la demi-glace. Riduci ancora 5 minuti. Filtra schiacciando il pepe.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Fuori dal fuoco monta il burro freddo. Aggiungi il pepe verde intero. Aggiusta di sale. La salsa deve essere piccante — non correggere troppo.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- MADERA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫙</div>
+            <span class="recipe-photo-label">Bruna composta</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Composta Bruna</p>
+            <h3>Salsa al <em>Madeira</em></h3>
+            <p class="recipe-desc">Demi-glace con Madeira (o Marsala secco). Una delle derivate più semplici e nobili. Per tournedos Rossini, ris de veau, animelle. Il Madeira non va mai fatto bollire dopo l'aggiunta: perde i suoi aromi delicati.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Demi-glace</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍷</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Demi-glace"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Demi-glace</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Madeira (o Marsala secco)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Madeira (o Marsala secco di qualità)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Burro freddo"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Burro freddo</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale, pepe bianco"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale e pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scalda la demi-glace quasi a bollore. Togli dal fuoco. Aggiungi il Madeira.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Monta il burro freddo a cubetti. Aggiusta di sale. Non riscaldare dopo il Madeira. Servi subito.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine brune composte -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     4. SALSE EMULSIONATE
+══════════════════════════════════════════════════════════ -->
+<div class="section-heading">
+    <h2>Salse Emulsionate</h2>
+    <span class="section-count">Fredde e calde — emulsioni stabili e instabili</span>
+</div>
+
+<!-- Sottosezione: Fredde / Crude -->
+<div class="section-heading" style="margin-top: 1.5rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Fredde — Crude</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- MAIONESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥣</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda · Madre</p>
+            <h3><em>Maionese</em> e derivate</h3>
+            <p class="recipe-desc">Emulsione stabile di tuorli e olio, con aceto o limone e senape come emulsionante. La base di decine di derivate: tartara, rémoulade, cocktail, verde, andalusa. Il segreto è aggiungere l'olio lentissimamente all'inizio — poi si può accelerare.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🥚</span><span class="component-title">Ingredienti base</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Tuorli (2 tuorli, temperatura ambiente)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~2 tuorli, temperatura ambiente!)</span></li>
+                        <li class="ingredient-row" data-base="250" data-unit="g" data-name="Olio di semi di girasole (o olio EVO delicato)"><span class="ing-qty">250</span><span class="ing-unit">g</span><span class="ing-name">Olio di semi (o EVO delicato)</span></li>
+                        <li class="ingredient-row" data-base="15" data-unit="g" data-name="Succo di limone (o aceto bianco)"><span class="ing-qty">15</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone (o aceto bianco)</span></li>
+                        <li class="ingredient-row" data-base="8" data-unit="g" data-name="Senape di Digione"><span class="ing-qty">8</span><span class="ing-unit">g</span><span class="ing-name">Senape di Digione</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Pepe bianco"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Pepe bianco</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Tutti gli ingredienti devono essere a temperatura ambiente. In una ciotola mescola tuorli, senape, sale, pepe e metà del limone.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi l'olio goccia a goccia all'inizio, montando continuamente con fruste. Quando la maionese "prende" (si addensa) puoi aggiungere l'olio a filo più velocemente. Incorpora il restante limone alla fine.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Con il frullatore a immersione: metti tutti gli ingredienti nel bicchiere, olio per ultimo. Inserisci il frullatore sul fondo, aziona senza muoverlo. Quando la maionese si forma dal basso, alza lentamente il frullatore.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+            <div class="recipe-notes">
+                <p class="recipe-notes-title">💡 Derivate principali</p>
+                <p><strong>Tartara</strong>: + cetriolini tritati + capperi + prezzemolo + scalogno. <strong>Rémoulade</strong>: + senape in grani + erbe aromatiche + acciughe. <strong>Cocktail (Marie Rose)</strong>: + ketchup + brandy + tabasco. <strong>Verde</strong>: + basilico/prezzemolo/erba cipollina frullati. <strong>Aioli</strong>: con aglio pestato (da 2 spicchi), olio EVO, senza senape.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- VINAIGRETTE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🥗</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda</p>
+            <h3><em>Vinaigrette</em> e Citronette</h3>
+            <p class="recipe-desc">Emulsione instabile di olio e aceto (3:1). La base per tutti i condimenti insalata. La citronette è la versione con succo di limone invece dell'aceto. La senape aiuta a stabilizzare l'emulsione temporaneamente. Si riscuote prima di ogni uso.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~100 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">1 settimana frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🫒</span><span class="component-title">Vinaigrette classica</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="75" data-unit="g" data-name="Olio EVO (o olio di noci)"><span class="ing-qty">75</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (o olio di noci per variante)</span></li>
+                        <li class="ingredient-row" data-base="25" data-unit="g" data-name="Aceto di vino rosso (o bianco)"><span class="ing-qty">25</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino (rosso o bianco)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Senape di Digione"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Senape di Digione (emulsionante)</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Sale"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Pepe nero macinato"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Pepe nero macinato</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Scalogno o erba cipollina (opzionale)"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato o erba cipollina (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Scioglie il sale nell'aceto (il sale si scioglie nell'aceto, non nell'olio). Aggiungi la senape e mescola. Incorpora l'olio a filo montando con una forchetta o frusta.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text"><strong>Citronette</strong>: sostituisci l'aceto con succo di limone fresco — proporzione 1:2 (limone:olio invece di 1:3). Più delicata, per insalate di mare e verdure delicate.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- PESTO GENOVESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌿</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda</p>
+            <h3>Pesto alla <em>Genovese</em></h3>
+            <p class="recipe-desc">Basilico DOP di Pra (piccole foglie), pinoli, aglio, Parmigiano, Pecorino sardo, olio EVO ligure e sale grosso. Pestato al mortaio — non frullato. Il frullatore scalda e ossida il basilico rendendolo nero e amaro. Con il mortaio il colore rimane verde brillante.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 giorni frigo (coperto di olio)</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌿</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Basilico fresco (foglie piccole, asciutte)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Basilico fresco (foglie piccole, asciutte)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Pinoli"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Pinoli</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio (1 spicchio piccolo)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (1 spicchio piccolo)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Parmigiano Reggiano grattugiato finemente"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Parmigiano Reggiano (grattugiato finemente)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Pecorino Sardo grattugiato"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Pecorino Sardo grattugiato</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Olio EVO ligure (delicato, fruttato leggero)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO ligure (delicato, fruttato leggero)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale grosso (per il mortaio)"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale grosso (per abrasione nel mortaio)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text"><strong>Al mortaio</strong>: pesta l'aglio con il sale grosso fino a crema. Aggiungi i pinoli, pesta. Aggiungi le foglie di basilico in 3–4 riprese, pestando con movimento rotatorio — non colpendo.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Aggiungi i formaggi grattugiati, mescola. Incorpora l'olio a filo mescolando con il pestello. Il pesto deve essere cremoso, non troppo liquido. Aggiusta di sale.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text"><strong>Al frullatore</strong> (se non hai il mortaio): frulla brevemente a impulsi, con il bicchiere freddo di freezer. Aggiungi olio a filo. Il colore sarà meno brillante ma il sapore resta buono.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BAGNET VERD -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌿</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda</p>
+            <h3><em>Bagnet Verd</em></h3>
+            <p class="recipe-desc">La salsa verde piemontese per il bollito misto: prezzemolo, acciughe, aglio, mollica di pane, aceto e olio. Sapida, erbacea, con la punta dell'aceto. Non va cotta — è una salsa cruda. Accompagna tutti i tagli del Gran Bollito Misto Piemontese.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">5 giorni frigo coperta d'olio</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌿</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Prezzemolo fresco (solo foglie)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo fresco (solo foglie)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Acciughe sotto sale (dissalate)"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Acciughe sotto sale (dissalate)</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Mollica di pane raffermo"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Mollica di pane raffermo</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Aceto di vino rosso"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino rosso</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Olio EVO"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio (1 spicchio)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (1 spicchio)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Capperi dissalati (opzionale)"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Capperi dissalati (opzionale)</span></li>
+                        <li class="ingredient-row" data-base="1" data-unit="g" data-name="Tuorlo sodo (opzionale, per texture)"><span class="ing-qty">1</span><span class="ing-unit">g</span><span class="ing-name">Tuorlo sodo (opzionale, per corposità)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Ammolla la mollica di pane nell'aceto per 5 minuti, poi strizza leggermente. Trita finemente prezzemolo, acciughe, aglio e capperi insieme — tradizionalmente al coltello, non al mixer per mantenere la texture.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Mescola il trito con la mollica ammollata. Aggiungi olio EVO a filo mescolando. Deve risultare una salsa densa e cremosa. Aggiusta di sale e aceto. Riposa in frigo 1 ora prima di servire.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- SALMORIGLIO -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍋</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda · Siciliana</p>
+            <h3><em>Salmoriglio</em></h3>
+            <p class="recipe-desc">Olio EVO, succo di limone, origano selvatico siciliano, aglio e sale — emulsionati a mano. La salsa siciliana per il pesce alla griglia: spada, tonno, cernia. Si applica durante e dopo la cottura. L'origano secco siciliano è fondamentale per il profumo autentico.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~100 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Per</span><span class="ref-value">Pesce alla griglia</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍋</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Olio EVO (siciliano o calabrese, fruttato intenso)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (fruttato intenso)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Succo di limone fresco"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone fresco</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Origano selvatico secco siciliano"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Origano selvatico secco (siciliano)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio (1 spicchio, tritato o pestato)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (1 spicchio, tritato)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale fino"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale fino</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Prezzemolo fresco (opzionale)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Prezzemolo fresco (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Emulsiona a mano olio e succo di limone in una ciotola con una forchetta. Aggiungi origano, aglio, sale e prezzemolo. Mescola bene.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Usa a pennello durante la cottura del pesce (spennella ogni 2–3 minuti). Versa il rimanente sul pesce appena impiattato, a crudo. Non cuocere mai: l'origano cotto perde l'aroma.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- SALSA DI NOCI -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌰</div>
+            <span class="recipe-photo-label">Emulsionata fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Fredda · Ligure</p>
+            <h3>Salsa di <em>Noci</em></h3>
+            <p class="recipe-desc">Noci, mollica di pane, aglio, Parmigiano e panna — pestata o frullata. Ligure, per i pansoti (pasta ripiena di erbette). Cremosa, ricca, con la leggera amarezza della noce. La mollica ammollata nel latte rende la salsa soffice.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">per 400 g pasta</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Per</span><span class="ref-value">Pansoti, trofie</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌰</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="120" data-unit="g" data-name="Gherigli di noce (freschi, non rancidi)"><span class="ing-qty">120</span><span class="ing-unit">g</span><span class="ing-name">Gherigli di noce (freschi, non rancidi)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Mollica di pane raffermo"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Mollica di pane raffermo</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Latte intero (per ammollare la mollica)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Latte intero (per la mollica)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Parmigiano Reggiano grattugiato"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Parmigiano Reggiano grattugiato</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio (mezzo spicchio)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (mezzo spicchio)</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Olio EVO delicato"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (delicato, ligure)</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Panna fresca (opzionale, per cremosità)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Panna fresca (opzionale, per cremosità)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Ammolla la mollica nel latte. Pela i gherigli di noce sbollentandoli 1 minuto (rimuove l'amaro eccessivo della pellicina). Asciuga.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Frulla noci, mollica strizzata, aglio, Parmigiano. Incorpora l'olio a filo fino a pasta densa. Allarga con la panna se vuoi. Aggiusta di sale. Usa fredda: scalda la pasta con l'acqua di cottura nella ciotola, poi aggiungi la salsa di noci.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine emulsionate fredde -->
+
+<!-- Sottosezione: Calde / Cotte -->
+<div class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem;">
+    <h2 style="font-size: 0.9rem; color: var(--muted); border-bottom: none; padding-bottom: 0; margin-bottom: 0;">Calde — Cotte</h2>
+</div>
+
+<div class="recipes-grid">
+
+    <!-- BERNESE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🌿</div>
+            <span class="recipe-photo-label">Emulsionata calda</span>
+            <span class="recipe-difficulty difficulty-difficile">Difficile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Calda · Da Olandese</p>
+            <h3>Salsa <em>Bernese</em></h3>
+            <p class="recipe-desc">Variante dell'olandese con riduzione di aceto al dragoncello invece della semplice riduzione di aceto. Il dragoncello è il sapore caratterizzante. Per bistecche, filetto di manzo, asparagi e carciofi. Derivate: Choron (+ concentrato di pomodoro), Rachel (+ glace de viande).</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Base</span><span class="ref-value">Tecnica Olandese</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🌿</span><span class="component-title">Riduzione al dragoncello</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Aceto di vino bianco"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino bianco</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Vino bianco secco"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Vino bianco secco</span></li>
+                        <li class="ingredient-row" data-base="40" data-unit="g" data-name="Scalogno tritato"><span class="ing-qty">40</span><span class="ing-unit">g</span><span class="ing-name">Scalogno tritato</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Dragoncello fresco (abbondante)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Dragoncello fresco (abbondante)</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Pepe in grani schiacciati"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Pepe in grani schiacciati</span></li>
+                    </ul>
+                </div>
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🧈</span><span class="component-title">Emulsione (come Olandese)</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Tuorli (4 tuorli)"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Tuorli (~4 tuorli)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Burro chiarificato tiepido"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Burro chiarificato tiepido</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Dragoncello fresco tritato (aggiunto a fine)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Dragoncello fresco tritato (a fine)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Riduci aceto, vino, scalogno, pepe e dragoncello a 2 cucchiai. Filtra. Segui la tecnica identica alla salsa olandese (sabayon di tuorli su bagnomaria, poi burro a filo).</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Alla fine incorpora il dragoncello fresco tritato. Aggiusta di sale. <strong>Choron</strong>: aggiungi 30 g concentrato di pomodoro ridotto — colore rosa-arancio, per con filetto e pesce. <strong>Rachel</strong>: aggiungi 1 cucchiaio glace de viande — sapore più ricco.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BAGNA CAUDA -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫕</div>
+            <span class="recipe-photo-label">Emulsionata calda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Calda · Piemontese</p>
+            <h3><em>Bagna Càuda</em></h3>
+            <p class="recipe-desc">Fonduta piemontese di aglio e acciughe in olio EVO e burro. Servita calda in piccoli tegami di terracotta, per intingere verdure crude e cotte. L'aglio va bollito nel latte per addolcirne il sapore — o in acqua per 3–4 volte. Nessuna addensante: è tutto emulsione di grassi.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~400 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Servire</span><span class="ref-value">Calda, in tegame</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🧄</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Aglio (circa 3 teste)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Aglio pelato (~3 teste)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Acciughe sotto sale (dissalate, pulite)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Acciughe sotto sale (dissalate, pulite)</span></li>
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Olio EVO (o olio di oliva delicato)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (o olio di oliva delicato)</span></li>
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Burro"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Burro</span></li>
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Latte intero (per bollire l'aglio)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Latte intero (per bollire l'aglio)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Sbollenta l'aglio nel latte per 15–20 minuti a fuoco basso finché molto tenero. Scola e schiaccia a pasta con una forchetta (o lascia interi per versione più rustica).</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">In un tegame di terracotta, scalda l'olio a fuoco basso con l'aglio. Aggiungi le acciughe dissalate e scioglile mescolando (5–8 minuti). Aggiungi il burro. Non deve bollire — deve solo sciogliersi e amalgamarsi.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Porta in tavola nel tegame su un fornellino. Si serve calda per intingere: cardi, peperoni crudi, cavolfiore, cavolo, topinambur, cipollotti, patate lesse, pane.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- AGRODOLCE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="4">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🍬</div>
+            <span class="recipe-photo-label">Emulsionata calda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Calda</p>
+            <h3>Salsa <em>Agrodolce</em></h3>
+            <p class="recipe-desc">Zucchero, aceto, brodo e aromi. Classica della cucina italiana e internazionale. Per coniglio, maiale, cipollotti, verdure in carpione. Il bilanciamento dolce-acido è l'esercizio fondamentale: si aggiusta alla fine con aceto o zucchero fino al gusto desiderato.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~300 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">1 settimana frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="4" min="1" max="20"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍬</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="80" data-unit="g" data-name="Zucchero semolato"><span class="ing-qty">80</span><span class="ing-unit">g</span><span class="ing-name">Zucchero semolato</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Aceto di vino rosso"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino rosso</span></li>
+                        <li class="ingredient-row" data-base="150" data-unit="g" data-name="Brodo di carne (o di verdure)"><span class="ing-qty">150</span><span class="ing-unit">g</span><span class="ing-name">Brodo di carne (o di verdure)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Pinoli tostati (opzionale)"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Pinoli tostati (opzionale)</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Uvetta ammollata (opzionale)"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Uvetta ammollata (opzionale)</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Amido di mais (per addensare, opzionale)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Amido di mais disciolto in acqua fredda (se serve addensare)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Caramellizza lo zucchero a secco finché ambra chiaro. Decuoci con l'aceto (attenzione agli schizzi). Aggiungi il brodo e porta a bollore.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Riduci 5–8 minuti. Aggiungi pinoli e uvetta se usi. Se troppo liquida, addensa con pochissimo amido di mais disciolto. Aggiusta il bilanciamento dolce-acido con aceto o zucchero.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- BARBECUE -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🔥</div>
+            <span class="recipe-photo-label">Emulsionata calda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Calda</p>
+            <h3>Salsa <em>Barbecue</em></h3>
+            <p class="recipe-desc">La BBQ sauce americana di base: ketchup, melassa, aceto di mele, Worcestershire, senape, aglio e spezie affumicate. Dolce, acida, affumicata. Per ribs, pulled pork, pollo alla griglia. Questa è la Kansas City style — la più diffusa e bilanciata.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 ml</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">3 settimane frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="40"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🍅</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="200" data-unit="g" data-name="Ketchup (di qualità)"><span class="ing-qty">200</span><span class="ing-unit">g</span><span class="ing-name">Ketchup (di qualità)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Melassa (o miele scuro)"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Melassa (o miele scuro)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Aceto di mele"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Aceto di mele</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Salsa Worcestershire"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Salsa Worcestershire</span></li>
+                        <li class="ingredient-row" data-base="20" data-unit="g" data-name="Senape di Digione"><span class="ing-qty">20</span><span class="ing-unit">g</span><span class="ing-name">Senape di Digione</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Zucchero di canna (brown sugar)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Zucchero di canna (brown sugar)</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Aglio in polvere (o fresco tritato)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Aglio in polvere (o 2 spicchi tritati)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Paprica affumicata"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Paprica affumicata (smoked paprika)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Pepe nero macinato"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Pepe nero macinato</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Peperoncino di Cayenna (facoltativo)"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Peperoncino di Cayenna (facoltativo)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Metti tutti gli ingredienti in una casseruola. Mescola bene. Porta a bollore lento mescolando.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Abbassa il fuoco e cuoci senza coperchio per 15–20 minuti mescolando spesso. La salsa si addensa e gli aromi si fondono. Assaggia e bilancia dolce/acido/piccante a gusto. Lascia raffreddare prima di usare.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- HUMMUS -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="6">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫘</div>
+            <span class="recipe-photo-label">Emulsionata calda-fredda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata · Mediorientale</p>
+            <h3><em>Hummus</em></h3>
+            <p class="recipe-desc">Crema di ceci, tahina, limone e aglio. Mediorientale. I ceci devono essere cotti in casa (non in scatola) per la texture perfetta — o, se in scatola, pelati uno ad uno. L'aglio va ridotto al minimo: è aromatizzante, non protagonista. La tahina è il 30–40% del peso dei ceci.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~500 g</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">5 giorni frigo</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="6" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🫘</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Ceci lessati (o in scatola, pelati)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Ceci lessati (o in scatola, pelati)</span></li>
+                        <li class="ingredient-row" data-base="100" data-unit="g" data-name="Tahina (crema di sesamo)"><span class="ing-qty">100</span><span class="ing-unit">g</span><span class="ing-name">Tahina (crema di sesamo, mescolata bene)</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Succo di limone fresco"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Succo di limone fresco</span></li>
+                        <li class="ingredient-row" data-base="30" data-unit="g" data-name="Olio EVO (+ altro per servire)"><span class="ing-qty">30</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO (+ altro a filo per servire)</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Aglio (1 piccolo spicchio)"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Aglio (1 piccolo spicchio)</span></li>
+                        <li class="ingredient-row" data-base="50" data-unit="g" data-name="Acqua fredda (per la consistenza)"><span class="ing-qty">50</span><span class="ing-unit">g</span><span class="ing-name">Acqua fredda (per la consistenza)</span></li>
+                        <li class="ingredient-row" data-base="3" data-unit="g" data-name="Sale"><span class="ing-qty">3</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Cumino in polvere"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Cumino in polvere</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Se usi i ceci secchi: metti in ammollo 24h, cuoci 1,5–2h con sale e bicarbonato. Scola, tieni l'acqua di cottura. Per ceci in scatola: scola, sciacqua, pela uno ad uno (facoltativo ma dà una consistenza molto più liscia).</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Prima frulla aglio, limone e tahina fino a crema bianca e spumosa (2 min). Poi aggiungi i ceci caldi (se cotti in casa) o a temperatura ambiente. Frulla aggiungendo l'acqua fredda a filo fino alla consistenza desiderata.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Aggiusta di sale, limone e cumino. Servi con un incavo al centro riempito di olio EVO, paprica affumicata e prezzemolo. Si serve a temperatura ambiente o appena tiepido.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+    <!-- AJVAR -->
+    <article class="recipe-card" data-ref-type="porzioni" data-ref-val="8">
+        <div class="recipe-photo">
+            <div class="recipe-photo-inner">🫑</div>
+            <span class="recipe-photo-label">Emulsionata calda</span>
+            <span class="recipe-difficulty difficulty-facile">Facile</span>
+        </div>
+        <div class="recipe-card-body">
+            <p class="recipe-category-tag">Emulsionata Calda · Balcanica</p>
+            <h3><em>Ajvar</em></h3>
+            <p class="recipe-desc">Crema di peperoni rossi arrosto e melanzane (opzionale), originaria dei Balcani. I peperoni si arrostiscono sulla fiamma diretta, si pelano, poi si frullano con aglio e olio. Dolce, affumicato, vellutato. Come condimento, antipasto, salsa per grigliata.</p>
+            <div class="recipe-ref">
+                <div class="recipe-ref-item"><span class="ref-label">Resa</span><span class="ref-value">~600 g</span></div>
+                <div class="recipe-ref-item"><span class="ref-label">Conserva</span><span class="ref-value">1 settimana frigo (in vaso sterilizzato)</span></div>
+            </div>
+        </div>
+        <button class="recipe-toggle">Ingredienti e procedimento <span class="toggle-icon">▼</span></button>
+        <div class="recipe-detail">
+            <div class="card-scale"><span class="card-scale-label">Porzioni</span><div class="card-scale-group"><input type="number" class="card-scale-input" data-dim="1" value="8" min="1" max="30"><label>pz</label></div></div>
+            <div class="recipe-components">
+                <div class="component">
+                    <div class="component-header"><span class="component-icon">🫑</span><span class="component-title">Ingredienti</span></div>
+                    <ul class="ingredient-list">
+                        <li class="ingredient-row" data-base="800" data-unit="g" data-name="Peperoni rossi maturi (carnosi)"><span class="ing-qty">800</span><span class="ing-unit">g</span><span class="ing-name">Peperoni rossi maturi e carnosi</span></li>
+                        <li class="ingredient-row" data-base="300" data-unit="g" data-name="Melanzana (opzionale)"><span class="ing-qty">300</span><span class="ing-unit">g</span><span class="ing-name">Melanzana (opzionale)</span></li>
+                        <li class="ingredient-row" data-base="60" data-unit="g" data-name="Olio EVO"><span class="ing-qty">60</span><span class="ing-unit">g</span><span class="ing-name">Olio EVO</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Aglio (2–3 spicchi)"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Aglio (2–3 spicchi)</span></li>
+                        <li class="ingredient-row" data-base="10" data-unit="g" data-name="Aceto di vino bianco"><span class="ing-qty">10</span><span class="ing-unit">g</span><span class="ing-name">Aceto di vino bianco</span></li>
+                        <li class="ingredient-row" data-base="5" data-unit="g" data-name="Sale"><span class="ing-qty">5</span><span class="ing-unit">g</span><span class="ing-name">Sale</span></li>
+                        <li class="ingredient-row" data-base="2" data-unit="g" data-name="Peperoncino (opzionale, per versione piccante)"><span class="ing-qty">2</span><span class="ing-unit">g</span><span class="ing-name">Peperoncino (opzionale)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="method-steps" style="padding: 0 20px 16px;">
+                <div class="method-step"><div class="step-num">1</div><p class="step-text">Arrostisci i peperoni (e la melanzana se usi) direttamente sulla fiamma del gas o sotto il grill finché la pelle è completamente carbonizzata. Metti in una ciotola coperta 15 minuti — il vapore facilita la pelatura.</p></div>
+                <div class="method-step"><div class="step-num">2</div><p class="step-text">Pela, elimina semi e acqua di vegetazione. Frulla con aglio, olio, aceto e sale. La consistenza può essere liscia o grossolana a preferenza.</p></div>
+                <div class="method-step"><div class="step-num">3</div><p class="step-text">Per ajvar cotto (versione da conserva): trasferisci in padella con olio e cuoci a fuoco basso 20–30 minuti mescolando. Si concentra, si addensa e si conserva meglio.</p></div>
+            </div>
+            <div class="shopping-summary"><div class="shopping-header"><span>🛒 Lista della spesa</span><button class="shopping-copy">Copia</button></div><div class="shopping-list"></div></div>
+        </div>
+    </article>
+
+</div><!-- fine emulsionate calde -->
+
+</main>
+
+<script src="ricettario-engine.js"></script>
+</body>
+</html>
