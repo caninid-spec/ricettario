@@ -14,22 +14,80 @@
         <nav class="back-nav"><a href="index.html">← Home</a></nav>
         <header>
             <h1>🍕 Calcolapizza</h1>
-            <p class="subtitle">Inserisci i parametri per calcolare le dosi del tuo impasto perfetto.</p>
+            <p class="subtitle">Seleziona il tipo di pizza e calcola le dosi precise per il tuo impasto.</p>
             <div class="divider"></div>
         </header>
+
+        <!-- Selettore tipo pizza -->
+        <div class="type-selector-card">
+            <h2><span class="icon">🍕</span> Tipo di Pizza</h2>
+            <div class="type-grid">
+                <div class="type-card active" data-pizza-type="napoletana">
+                    <span class="type-icon">🔥</span>
+                    <span class="type-name">Napoletana</span>
+                    <span class="type-desc">Alta idratazione, forno a legna</span>
+                </div>
+                <div class="type-card" data-pizza-type="teglia">
+                    <span class="type-icon">🟫</span>
+                    <span class="type-name">In Teglia</span>
+                    <span class="type-desc">Alta idratazione, soffice e alveolata</span>
+                </div>
+                <div class="type-card" data-pizza-type="pinsa">
+                    <span class="type-icon">🫙</span>
+                    <span class="type-name">Pinsa Romana</span>
+                    <span class="type-desc">Mix farine speciali, ovale, leggera</span>
+                </div>
+                <div class="type-card" data-pizza-type="pala">
+                    <span class="type-icon">🍽️</span>
+                    <span class="type-name">Pizza alla Pala</span>
+                    <span class="type-desc">Lunga, ad alta idratazione, su pala</span>
+                </div>
+                <div class="type-card" data-pizza-type="padellino">
+                    <span class="type-icon">🫕</span>
+                    <span class="type-name">Al Padellino</span>
+                    <span class="type-desc">Torinese, bordi alti e croccanti</span>
+                </div>
+                <div class="type-card" data-pizza-type="scrocchiarella">
+                    <span class="type-icon">🫓</span>
+                    <span class="type-name">Romana Scrocchiarella</span>
+                    <span class="type-desc">Sottile, croccante, bassa idratazione</span>
+                </div>
+                <div class="type-card" data-pizza-type="spontini">
+                    <span class="type-icon">🍕</span>
+                    <span class="type-name">Spontini Style</span>
+                    <span class="type-desc">Alta, soffice, taglio milanese</span>
+                </div>
+                <div class="type-card" data-pizza-type="deepdish">
+                    <span class="type-icon">🏙️</span>
+                    <span class="type-name">Chicago Deep Dish</span>
+                    <span class="type-desc">Teglia alta, farcitura rovesciata</span>
+                </div>
+                <div class="type-card" data-pizza-type="detroit">
+                    <span class="type-icon">🟥</span>
+                    <span class="type-name">Detroit Style</span>
+                    <span class="type-desc">Rettangolare, bordi caramellati</span>
+                </div>
+                <div class="type-card" data-pizza-type="newyork">
+                    <span class="type-icon">🗽</span>
+                    <span class="type-name">New York Style</span>
+                    <span class="type-desc">Foldable slice, grande e sottile</span>
+                </div>
+            </div>
+            <p class="type-description" id="pizza-type-description"></p>
+        </div>
 
         <div class="calculator-body">
             <!-- Colonna Input -->
             <div class="input-section">
-                <h2><span class="icon">📝</span> Dati Impasto</h2>
+                <h2><span class="icon">📝</span> Parametri</h2>
                 
                 <div class="form-grid">
                     <div class="input-group">
-                        <label for="panielli">Numero Panetti</label>
+                        <label for="panielli" id="label-panielli">Numero Panetti</label>
                         <input type="number" id="panielli" value="4">
                     </div>
                     <div class="input-group">
-                        <label for="peso">Peso per Panetto (g)</label>
+                        <label for="peso" id="label-peso">Peso per Panetto (g)</label>
                         <input type="number" id="peso" value="250">
                     </div>
                     <div class="input-group">
@@ -59,11 +117,6 @@
                 </div>
 
                 <div class="advanced-options">
-                    <div class="input-group checkbox-group">
-                        <input type="checkbox" id="teglia">
-                        <label for="teglia">È un impasto per teglia?</label>
-                    </div>
-
                     <div class="input-group radio-group">
                         <label>Tipo di Lievito Madre (se usato)</label>
                         <div class="radio-buttons">
@@ -85,6 +138,9 @@
                         <label for="solo-lm">Usa solo Lievito Madre (azzera Lievito di Birra)</label>
                     </div>
                 </div>
+
+                <!-- Timeline processo -->
+                <div id="pizza-timeline" class="timeline-section" style="margin-top: 1.5rem;"></div>
             </div>
 
             <!-- Colonna Risultati -->
@@ -129,6 +185,9 @@
                 <div id="error-message"></div>
             </div>
         </div>
+
+        <!-- Tips sezione -->
+        <div id="pizza-tips-section" class="tips-section" style="margin-top: 1.5rem;"></div>
     </div>
 
     <script src="script_pizza.js"></script>
