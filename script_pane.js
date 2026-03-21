@@ -570,13 +570,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 steps.push({ icon: '🔪', label: 'Incisione', duration: '2 min', note: 'Incidi la superficie con lama affilata (grignette o rasoio). Permette all\'impasto di espandersi in modo controllato.' });
             }
             const bakeInfo = {
-                'bianco':       '250°C + vapore 15 min → 210°C 20–25 min',
-                'semola':       '230°C + vapore 20 min → 200°C 30–35 min',
-                'farine-varie': '220°C + vapore 15 min → 200°C 25–30 min',
-                'rosette':      '240°C + vapore 10 min → 220°C 10–12 min',
-                'baguette':     '250°C + vapore 12 min → 230°C 10–12 min',
+                'bianco':       '250°C (+ vapore) 15 min<br>210°C 20–25 min',
+                'semola':       '230°C (+ vapore) 20 min<br>200°C 30–35 min',
+                'farine-varie': '220°C (+ vapore) 15 min<br>200°C 25–30 min',
+                'rosette':      '240°C (+ vapore) 10 min<br>220°C 10–12 min',
+                'baguette':     '250°C (+ vapore) 12 min<br>230°C 10–12 min',
                 'panbauletto':  '180°C statico 30–35 min (no vapore)',
-                'pane-carre':   '175°C statico 35–40 min con coperchio chiuso',
+                'pane-carre':   '175°C statico 35–40 min<br>coperchio chiuso',
                 'burger-bun':   '190°C statico 14–16 min (no vapore)',
             };
             steps.push({ icon: '🔥', label: 'Cottura', duration: bakeInfo[type] || '—', note: 'Forno statico. Il pane è pronto quando suona vuoto battendo il fondo.' });
