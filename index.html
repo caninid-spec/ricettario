@@ -18,6 +18,16 @@
         <h1>Ricettario Danilo</h1>
         <p class="subtitle">Calcolatori, ricettari e ricette per bakery, pasticceria e cucina.<br>Scegli la sezione.</p>
         <div class="divider"></div>
+
+        <!-- Barra di ricerca -->
+        <div class="search-wrapper">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Cerca una sezione, un prodotto, una tecnica…" autocomplete="off" spellcheck="false">
+                <button class="search-clear" id="search-clear" aria-label="Cancella ricerca">✕</button>
+            </div>
+            <p class="search-status" id="search-status"></p>
+        </div>
     </header>
 
     <main>
@@ -29,7 +39,7 @@
         </div>
 
         <div class="cards-grid">
-            <a href="pane.html" class="calc-card">
+            <a href="pane.html" class="calc-card" data-search="pane bianco semola integrale rosette baguette bauletto pancarré burger bun brezel biga lievito madre impasto farina lievitazione">
                 <div class="card-icon">🍞</div>
                 <div class="card-body">
                     <h2>Calcolapane</h2>
@@ -44,7 +54,7 @@
                 <div class="card-cta">Apri calcolatore <span class="arrow">→</span></div>
             </a>
 
-            <a href="pizza.html" class="calc-card">
+            <a href="pizza.html" class="calc-card" data-search="pizza napoletana teglia padellino scrocchiarella romana pinsa pala spontini chicago deep dish detroit new york style impasto farina lievitazione idratazione cornicione">
                 <div class="card-icon">🍕</div>
                 <div class="card-body">
                     <h2>Calcolapizza</h2>
@@ -59,7 +69,7 @@
                 <div class="card-cta">Apri calcolatore <span class="arrow">→</span></div>
             </a>
 
-            <a href="focacce.html" class="calc-card">
+            <a href="focacce.html" class="calc-card" data-search="focaccia genovese recco schiacciata toscana pugliese barese messinese alta idratazione cooker girl fuckin focaccia pomodori patate tuma acciughe salamoia impasto lievitazione">
                 <div class="card-icon">🫓</div>
                 <div class="card-body">
                     <h2>Calcolafocacce</h2>
@@ -73,8 +83,8 @@
                 </div>
                 <div class="card-cta">Apri calcolatore <span class="arrow">→</span></div>
             </a>
-            
-            <a href="brioche.html" class="calc-card">
+
+            <a href="brioche.html" class="calc-card" data-search="brioche classica siciliana col nodo veneziana pangoccioli kardemummabullar burger bun potato bun bauletto pancarré cinnamon roll graffe napoletane maritozzi impasto burro uova lievitazione">
                 <div class="card-icon">🥐</div>
                 <div class="card-body">
                     <h2>Calcolabrioche</h2>
@@ -89,7 +99,7 @@
                 <div class="card-cta">Apri calcolatore <span class="arrow">→</span></div>
             </a>
 
-            <a href="lievitati.html" class="calc-card">
+            <a href="lievitati.html" class="calc-card" data-search="panettone pandoro grande lievitato lievito madre solido rinfreschi biga giorilli regola 55 impasto ricco burro uova canditi uvetta">
                 <div class="card-icon">🎄</div>
                 <div class="card-body">
                     <h2>Calcolalievitati</h2>
@@ -104,7 +114,7 @@
                 <div class="card-cta">Apri calcolatore <span class="arrow">→</span></div>
             </a>
 
-            <a href="laminati.html" class="calc-card">
+            <a href="laminati.html" class="calc-card" data-search="croissant cornetti sfoglia laminata tourage burro impasto fagottini ciavattoni strati pieghe sfogliatura">
                 <div class="card-icon">🧈</div>
                 <div class="card-body">
                     <h2>Calcolalaminati</h2>
@@ -127,7 +137,7 @@
         </div>
 
         <div class="cards-grid">
-            <a href="impasti-base.html" class="calc-card calc-card--recipe">
+            <a href="impasti-base.html" class="calc-card calc-card--recipe" data-search="frolla brisée biscuit rotolo pan di spagna pate choux baba napoletano chiffon cake pasta frolla impasto base pasticceria dolci">
                 <div class="card-icon">🥧</div>
                 <div class="card-body">
                     <h2>Impasti Base</h2>
@@ -142,7 +152,7 @@
                 <div class="card-cta">Apri ricettario <span class="arrow">→</span></div>
             </a>
 
-            <a href="creme-base.html" class="calc-card calc-card--recipe">
+            <a href="creme-base.html" class="calc-card calc-card--recipe" data-search="crema pasticcera chantilly diplomatica ricotta ganache caramello salato mascarpone zabaione lemon curd inglese crema al burro salse dolci pasticceria">
                 <div class="card-icon">🍮</div>
                 <div class="card-body">
                     <h2>Creme Base</h2>
@@ -157,7 +167,7 @@
                 <div class="card-cta">Apri ricettario <span class="arrow">→</span></div>
             </a>
 
-            <a href="ricette-pasticceria.html" class="calc-card calc-card--recipe">
+            <a href="ricette-pasticceria.html" class="calc-card calc-card--recipe" data-search="cassata siciliana napoletana tiramisu sacher torta mimosa diplomatica pastiera zuppa inglese torte dolci pasticceria ricette composte">
                 <div class="card-icon">🎂</div>
                 <div class="card-body">
                     <h2>Ricette di Pasticceria</h2>
@@ -180,7 +190,7 @@
         </div>
 
         <div class="cards-grid">
-            <a href="cucina-antipasti.html" class="calc-card calc-card--cucina">
+            <a href="cucina-antipasti.html" class="calc-card calc-card--cucina" data-search="antipasti bruschette fritti affettati antipasto tradizione regionale italiana stuzzichini">
                 <div class="card-icon">🧀</div>
                 <div class="card-body">
                     <h2>Antipasti</h2>
@@ -192,7 +202,7 @@
                 <div class="card-cta">Apri sezione <span class="arrow">→</span></div>
             </a>
 
-            <a href="cucina-primi.html" class="calc-card calc-card--cucina">
+            <a href="cucina-primi.html" class="calc-card calc-card--cucina" data-search="pasta fresca secca risotto gnocchi zuppe minestre impasto uovo semola condimenti amatriciana carbonara cacio pepe pesto bolognese regionali primo piatto">
                 <div class="card-icon">🍝</div>
                 <div class="card-body">
                     <h2>Primi</h2>
@@ -207,7 +217,7 @@
                 <div class="card-cta">Apri sezione <span class="arrow">→</span></div>
             </a>
 
-            <a href="cucina-secondi.html" class="calc-card calc-card--cucina">
+            <a href="cucina-secondi.html" class="calc-card calc-card--cucina" data-search="secondi carne pesce vegetariani scaloppine baccalà parmigiana frittata pollo vitello agnello secondo piatto cucina italiana">
                 <div class="card-icon">🥩</div>
                 <div class="card-body">
                     <h2>Secondi</h2>
@@ -221,7 +231,7 @@
                 <div class="card-cta">Apri sezione <span class="arrow">→</span></div>
             </a>
 
-            <a href="cucina-bbq.html" class="calc-card calc-card--cucina">
+            <a href="cucina-bbq.html" class="calc-card calc-card--cucina" data-search="bbq grill grigliate texano argentino coreano tagli cottura marinature salse brace affumicatura costine pulled pork brisket burger">
                 <div class="card-icon">🔥</div>
                 <div class="card-body">
                     <h2>BBQ &amp; Grill</h2>
@@ -235,7 +245,7 @@
                 <div class="card-cta">Apri sezione <span class="arrow">→</span></div>
             </a>
 
-            <a href="cucina-contorni.html" class="calc-card calc-card--cucina">
+            <a href="cucina-contorni.html" class="calc-card calc-card--cucina" data-search="contorni verdure patate insalate carciofi giudia patate al forno stagionalità cucina italiana vegetali">
                 <div class="card-icon">🥦</div>
                 <div class="card-body">
                     <h2>Contorni</h2>
@@ -249,7 +259,7 @@
                 <div class="card-cta">Apri sezione <span class="arrow">→</span></div>
             </a>
 
-            <a href="cucina-extra.html" class="calc-card calc-card--cucina">
+            <a href="cucina-extra.html" class="calc-card calc-card--cucina" data-search="besciamella brodo soffritto salse basi cucina fondi sugo pomodoro ragù fondo di cottura">
                 <div class="card-icon">🧂</div>
                 <div class="card-body">
                     <h2>Extra</h2>
@@ -271,6 +281,109 @@
     </footer>
 
 </div>
+
+<script>
+(function () {
+    const input   = document.getElementById('search-input');
+    const clearBtn = document.getElementById('search-clear');
+    const status  = document.getElementById('search-status');
+    const allCards = Array.from(document.querySelectorAll('.calc-card'));
+    const sections = Array.from(document.querySelectorAll('.section-label'));
+    const grids    = Array.from(document.querySelectorAll('.cards-grid'));
+
+    function normalize(str) {
+        return str.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // rimuove accenti
+            .replace(/[&;]/g, ' ');
+    }
+
+    function getCardText(card) {
+        const title   = card.querySelector('h2')?.textContent || '';
+        const desc    = card.querySelector('.card-desc')?.textContent || '';
+        const features = Array.from(card.querySelectorAll('.card-features li')).map(li => li.textContent).join(' ');
+        const dataset = card.dataset.search || '';
+        return normalize([title, desc, features, dataset].join(' '));
+    }
+
+    function search(query) {
+        const q = normalize(query.trim());
+
+        if (!q) {
+            // Reset: mostra tutto
+            allCards.forEach(c => {
+                c.style.display = '';
+                c.classList.remove('search-match');
+            });
+            sections.forEach(s => s.style.display = '');
+            grids.forEach(g => g.style.display = '');
+            status.textContent = '';
+            clearBtn.style.display = 'none';
+            return;
+        }
+
+        clearBtn.style.display = 'flex';
+
+        // Suddividi query in token — ogni token deve matchare
+        const tokens = q.split(/\s+/).filter(Boolean);
+
+        let matchCount = 0;
+
+        allCards.forEach(card => {
+            const text = getCardText(card);
+            const matches = tokens.every(token => text.includes(token));
+            if (matches) {
+                card.style.display = '';
+                card.classList.add('search-match');
+                matchCount++;
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('search-match');
+            }
+        });
+
+        // Nascondi i section-label e grids vuoti
+        grids.forEach(grid => {
+            const visible = Array.from(grid.querySelectorAll('.calc-card')).some(c => c.style.display !== 'none');
+            grid.style.display = visible ? '' : 'none';
+        });
+
+        // Nascondi section-label se il grid successivo è nascosto
+        sections.forEach(section => {
+            let next = section.nextElementSibling;
+            while (next && !next.classList.contains('cards-grid')) next = next.nextElementSibling;
+            section.style.display = (next && next.style.display !== 'none') ? '' : 'none';
+        });
+
+        status.textContent = matchCount === 0
+            ? 'Nessun risultato trovato.'
+            : matchCount === 1
+                ? '1 sezione trovata'
+                : `${matchCount} sezioni trovate`;
+    }
+
+    input.addEventListener('input', () => search(input.value));
+
+    clearBtn.addEventListener('click', () => {
+        input.value = '';
+        input.focus();
+        search('');
+    });
+
+    // Keyboard shortcut: / per aprire la ricerca
+    document.addEventListener('keydown', e => {
+        if (e.key === '/' && document.activeElement !== input) {
+            e.preventDefault();
+            input.focus();
+            input.select();
+        }
+        if (e.key === 'Escape' && document.activeElement === input) {
+            input.value = '';
+            search('');
+            input.blur();
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
