@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         napoletana: {
             label: 'Pizza Napoletana',
             description: 'Impasto a bassa percentuale di lievito, alta idratazione, maturazione lunga in frigo. Cottura ad altissima temperatura (450–500°C) per 60–90 secondi. Cornicione pronunciato, alveolatura aperta, centro morbido.',
-            preset: { panielli: 4, peso: 280, idro: 65, salePerc: 2.8, grassiPerc: 0, liev: 24, frigo: 18, gradi: 20 },
+            preset: { panielli: 4, peso: 260, idro: 70, salePerc: 2.8, grassiPerc: 0, liev: 24, frigo: 18, gradi: 18 },
             isTeglia: false,
             labelPanielli: 'Numero Panetti',
             labelPeso: 'Peso per Panetto (g)',
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         teglia: {
             label: 'Pizza in Teglia',
             description: 'Alta idratazione (75–85%), impasto molto morbido e appiccicoso. Lievitazione lunga direttamente in teglia unta. Struttura soffice e alveolata, fondo croccante. Tipica della tradizione romana e delle pizzerie al taglio.',
-            preset: { panielli: 1, peso: 800, idro: 78, salePerc: 2.5, grassiPerc: 3, liev: 24, frigo: 18, gradi: 20 },
+            preset: { panielli: 1, peso: 620, idro: 80, salePerc: 2.5, grassiPerc: 3, liev: 24, frigo: 18, gradi: 18 },
             isTeglia: true,
             labelPanielli: 'Numero Teglie',
             labelPeso: 'Peso Impasto per Teglia (g)',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pinsa: {
             label: 'Pinsa Romana',
             description: 'La pinsa è un impasto romano antico rivisitato in chiave moderna: forma ovale, alveolatura aperta e irregolare, crosta croccante fuori e soffice dentro. La particolarità è il blend di farine (frumento + soia + riso) e l\'idratazione elevatissima (80–85%) con lunghissima maturazione in frigo (48–72h). Risultato: leggerissima e altamente digeribile.',
-            preset: { panielli: 4, peso: 250, idro: 82, salePerc: 2.5, grassiPerc: 2, liev: 72, frigo: 68, gradi: 20 },
+            preset: { panielli: 4, peso: 250, idro: 82, salePerc: 2.5, grassiPerc: 2, liev: 72, frigo: 68, gradi: 18 },
             isTeglia: false,
             labelPanielli: 'Numero Pinse',
             labelPeso: 'Peso per Pinsa (g)',
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pala: {
             label: 'Pizza alla Pala',
             description: 'La pizza alla pala è la versione "da banco" delle pizzerie romane: lunga e stretta (forma a canoa), ad alta idratazione (75–80%), cotta direttamente sul piano del forno a legna o su pietra refrattaria. Crosta sottile e croccante, mollica soffice e irregolare. Si stende a mano con gesto lungo e si inforna su pala di legno.',
-            preset: { panielli: 4, peso: 300, idro: 76, salePerc: 2.5, grassiPerc: 2.5, liev: 24, frigo: 18, gradi: 20 },
+            preset: { panielli: 4, peso: 300, idro: 76, salePerc: 2.5, grassiPerc: 2.5, liev: 24, frigo: 18, gradi: 18 },
             isTeglia: false,
             labelPanielli: 'Numero Pale',
             labelPeso: 'Peso per Pala (g)',
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         padellino: {
             label: 'Pizza al Padellino',
             description: 'Specialità torinese. Impasto arricchito con olio, cotto in padellini individuali in ghisa o alluminio con abbondante olio sul fondo. Risultato: bordi alti e croccanti quasi fritti, mollica soffice e ariosa.',
-            preset: { panielli: 4, peso: 180, idro: 70, salePerc: 2.5, grassiPerc: 5, liev: 18, frigo: 12, gradi: 20 },
+            preset: { panielli: 4, peso: 180, idro: 70, salePerc: 2.5, grassiPerc: 5, liev: 18, frigo: 12, gradi: 18 },
             isTeglia: true,
             labelPanielli: 'Numero Padellini',
             labelPeso: 'Peso Impasto per Padellino (g)',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrocchiarella: {
             label: 'Romana Scrocchiarella',
             description: 'La pizza romana per eccellenza: sottilissima, croccante e rigida, senza cornicione. Idratazione bassa (55–62%), impasto steso con mattarello fino a 2–3 mm. Si spezza con le mani. L\'opposto della napoletana: zero alveolatura, tutto croccantezza.',
-            preset: { panielli: 4, peso: 200, idro: 58, salePerc: 2.5, grassiPerc: 4, liev: 12, frigo: 8, gradi: 20 },
+            preset: { panielli: 4, peso: 200, idro: 58, salePerc: 2.5, grassiPerc: 4, liev: 12, frigo: 8, gradi: 18 },
             isTeglia: false,
             labelPanielli: 'Numero Panetti',
             labelPeso: 'Peso per Panetto (g)',
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spontini: {
             label: 'Pizza Spontini Style',
             description: 'Ispirata alla leggendaria pizzeria Spontini di Milano: pizza al taglio alta, soffice e filante, venduta a tranci verticali. Impasto in teglia con idratazione medio-alta, cottura prolungata per una base leggermente croccante e una mollica ariosa. Mozzarella abbondante, pomodoro denso, acciughe opzionali.',
-            preset: { panielli: 1, peso: 900, idro: 72, salePerc: 2.5, grassiPerc: 3, liev: 20, frigo: 14, gradi: 20 },
+            preset: { panielli: 1, peso: 900, idro: 72, salePerc: 2.5, grassiPerc: 3, liev: 20, frigo: 14, gradi: 18 },
             isTeglia: true,
             labelPanielli: 'Numero Teglie',
             labelPeso: 'Peso Impasto per Teglia (g)',
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deepdish: {
             label: 'Chicago Deep Dish',
             description: 'La torta-pizza di Chicago: cotta in teglie alte e unte con abbondante olio di mais o burro, con una farcitura rovesciata (formaggio sul fondo, carne/verdure nel mezzo, pomodoro crudo in cima). Impasto burroso, quasi brisée. Alta 4–5 cm, si taglia e si serve come una torta.',
-            preset: { panielli: 1, peso: 700, idro: 55, salePerc: 2.0, grassiPerc: 8, liev: 6, frigo: 0, gradi: 20 },
+            preset: { panielli: 1, peso: 700, idro: 55, salePerc: 2.0, grassiPerc: 8, liev: 6, frigo: 0, gradi: 18 },
             isTeglia: true,
             labelPanielli: 'Numero Teglie (ø 30 cm)',
             labelPeso: 'Peso Impasto per Teglia (g)',
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detroit: {
             label: 'Detroit Style',
             description: 'Pizza rettangolare cotta in teglie d\'acciaio blu profonde, con bordi croccanti e caramellati dal formaggio (Wisconsin brick cheese) che cola sulle pareti e si brucia leggermente. Impasto ad alta idratazione e soffice, con il condimento applicato in ordine inverso.',
-            preset: { panielli: 1, peso: 750, idro: 75, salePerc: 2.3, grassiPerc: 4, liev: 20, frigo: 14, gradi: 20 },
+            preset: { panielli: 1, peso: 750, idro: 75, salePerc: 2.3, grassiPerc: 4, liev: 20, frigo: 14, gradi: 18 },
             isTeglia: true,
             labelPanielli: 'Numero Teglie (25×35 cm)',
             labelPeso: 'Peso Impasto per Teglia (g)',
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newyork: {
             label: 'New York Style',
             description: 'La pizza americana per eccellenza: grande, sottile al centro e con un cornicione leggero, abbastanza flessibile da piegarsi a metà (the fold). Venduta a slice grandi. Impasto con un tocco di olio e zucchero, cottura su pietra o teglia in forno a 280–300°C. Mozzarella low-moisture, salsa semplice.',
-            preset: { panielli: 3, peso: 320, idro: 62, salePerc: 2.3, grassiPerc: 3, liev: 24, frigo: 18, gradi: 20 },
+            preset: { panielli: 3, peso: 320, idro: 62, salePerc: 2.3, grassiPerc: 3, liev: 24, frigo: 18, gradi: 18 },
             isTeglia: false,
             labelPanielli: 'Numero Panetti (ø ~40 cm)',
             labelPeso: 'Peso per Panetto (g)',
