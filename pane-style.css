@@ -7,6 +7,19 @@
    Tutti gli stili (form, results, type-selector, timeline, tips)
    sono già definiti in components.css — nessun override necessario.
 */
-@media (max-width: 480px) {
-    .type-icon { font-size: 1.4rem; }
+
+
+/* Forza il testo delle note della timeline ad andare a capo */
+.step-note {
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: anywhere; /* Forza il break anche su stringhe complesse come 250°C */
+    line-height: 1.4;
+}
+
+/* Evita che l'header dello step (Titolo + Durata) spinga fuori il layout */
+.step-header {
+    display: flex;
+    flex-wrap: wrap; /* Se il titolo e la durata non ci stanno, la durata va sotto */
+    gap: 5px;
 }

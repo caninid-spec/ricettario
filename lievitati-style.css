@@ -15,10 +15,7 @@
 /* Header leggermente più compatto */
 header { padding: 36px 0 28px; }
 
-/* Il gold usato in lievitati ha una tonalità diversa */
-:root {
-    --gold: #b8860b;
-}
+
 
 /* Responsive aggiuntivo tablet */
 @media (max-width: 768px) {

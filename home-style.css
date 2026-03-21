@@ -38,19 +38,19 @@ h1 {
 }
 
 /* ── Card cucina (variante colore verde) ── */
-.calc-card--cucina {
-    border-color: rgba(74,124,89,0.2);
-    background: linear-gradient(160deg, #fdfff9 0%, #f2f7ef 100%);
-}
+/*.calc-card--cucina {
+/*    border-color: rgba(74,124,89,0.2);
+    background: linear-gradient(160deg, #fdfff9 0%, #f2f7ef 100%);*/
+/*}
 
-.calc-card--cucina::before {
-    background: linear-gradient(90deg, #4a7c59, #7ab88a, #4a7c59);
-}
-
-.calc-card--cucina .card-cta { color: #4a7c59; }
-.calc-card--cucina:hover { border-color: rgba(74,124,89,0.4); }
-.calc-card--cucina .card-body h2 { color: #2a4a34; }
-.calc-card--cucina .card-features li::before { color: #4a7c59; }
+/*.calc-card--cucina::before {
+/*    background: linear-gradient(90deg, #4a7c59, #7ab88a, #4a7c59);
+/*}
+/*
+/*.calc-card--cucina .card-cta { color: #4a7c59; }
+/*.calc-card--cucina:hover { border-color: rgba(74,124,89,0.4); }
+/*.calc-card--cucina .card-body h2 { color: #2a4a34; }
+/*.calc-card--cucina .card-features li::before { color: #4a7c59; }
 
 /* ── Footer ── */
 footer {
