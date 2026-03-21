@@ -133,61 +133,66 @@
                     L'impasto è una sfoglia senza lievitazione. I parametri lievito e frigo non sono applicabili.
                     Il calcolo mostra solo farina, acqua, olio e sale.
                 </div>
+        </div>
 
-                <!-- Timeline processo -->
-                <div id="focaccia-timeline" class="timeline-section" style="margin-top: 1.5rem;"></div>
+
+        <!-- Colonna Risultati -->
+        <div class="results-section">
+            <h2><span class="icon">⚖️</span> Risultati</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <span class="label">Farina</span>
+                    <span class="value" id="farina">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Acqua</span>
+                    <span class="value" id="acqua">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Sale</span>
+                    <span class="value" id="sale">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Olio EVO / Grassi</span>
+                    <span class="value" id="grassi">-</span>
+                </div>
+                <div class="result-item" id="result-patate" style="display:none">
+                    <span class="label">Patate lesse</span>
+                    <span class="value" id="patate-res">-</span>
+                </div>
+                <div class="result-item" id="result-pdr">
+                    <span class="label">Lievito Madre</span>
+                    <span class="value" id="pdr">-</span>
+                </div>
+                <div class="result-item" id="result-lievito">
+                    <span class="label">Lievito di Birra Fresco</span>
+                    <span class="value" id="lievito">-</span>
+                </div>
             </div>
+            <div class="extra-results">
+                <div class="result-item-extra">
+                    <span class="label">Impasto Totale:</span>
+                    <span class="value" id="impasto-totale">-</span>
+                </div>
+                <div class="result-item-extra" id="extra-forza">
+                    <span class="label">Forza Farina (W) Consigliata:</span>
+                    <span class="value" id="forza">-</span>
+                </div>
+                <div class="result-item-extra" id="extra-salamoia" style="display:none">
+                    <span class="label">Salamoia (acqua + olio):</span>
+                    <span class="value" id="salamoia-res">-</span>
+                </div>
+            </div>
+            <div id="error-message"></div>
 
-            <!-- Colonna Risultati -->
-            <div class="results-section">
-                <h2><span class="icon">⚖️</span> Risultati</h2>
-                <div class="results-grid">
-                    <div class="result-item">
-                        <span class="label">Farina</span>
-                        <span class="value" id="farina">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Acqua</span>
-                        <span class="value" id="acqua">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Sale</span>
-                        <span class="value" id="sale">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="label">Olio EVO / Grassi</span>
-                        <span class="value" id="grassi">-</span>
-                    </div>
-                    <div class="result-item" id="result-patate" style="display:none">
-                        <span class="label">Patate lesse</span>
-                        <span class="value" id="patate-res">-</span>
-                    </div>
-                    <div class="result-item" id="result-pdr">
-                        <span class="label">Lievito Madre</span>
-                        <span class="value" id="pdr">-</span>
-                    </div>
-                    <div class="result-item" id="result-lievito">
-                        <span class="label">Lievito di Birra Fresco</span>
-                        <span class="value" id="lievito">-</span>
-                    </div>
+            <!-- Timeline processo -->
+            <div class="times-section">
+                <div id="focaccia-timeline" class="timeline-section" style="margin-top: 1.5rem;">
                 </div>
-                <div class="extra-results">
-                    <div class="result-item-extra">
-                        <span class="label">Impasto Totale:</span>
-                        <span class="value" id="impasto-totale">-</span>
-                    </div>
-                    <div class="result-item-extra" id="extra-forza">
-                        <span class="label">Forza Farina (W) Consigliata:</span>
-                        <span class="value" id="forza">-</span>
-                    </div>
-                    <div class="result-item-extra" id="extra-salamoia" style="display:none">
-                        <span class="label">Salamoia (acqua + olio):</span>
-                        <span class="value" id="salamoia-res">-</span>
-                    </div>
-                </div>
-                <div id="error-message"></div>
             </div>
         </div>
+
+
 
         <!-- Tips sezione -->
         <div id="focaccia-tips-section" class="tips-section" style="margin-top: 1.5rem;"></div>
