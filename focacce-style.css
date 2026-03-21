@@ -1,0 +1,20 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   focacce-style.css  –  Stili specifici SOLO per focacce.html
+   Richiede: core.css → components.css → focacce-style.css
+══════════════════════════════════════════════════════════════════════════ */
+
+#pdrp-group {
+    display: none;
+}
+
+#pdrp-group small,
+#patate-group small {
+    font-size: 0.76rem;
+    color: var(--muted);
+    margin-top: 4px;
+    display: block;
+}
+
+#solo-lm-group {
+    display: none;
+}

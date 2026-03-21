@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolafocacce</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="focacce-style.css">
+</head>
+<body class="calc-page">
+
+    <div class="container">
+        <nav class="back-nav"><a href="index.html">← Home</a></nav>
+        <header>
+            <h1>🫓 Calcolafocacce</h1>
+            <p class="subtitle">Seleziona il tipo di focaccia e calcola le dosi precise per il tuo impasto.</p>
+            <div class="divider"></div>
+        </header>
+
+        <!-- Selettore tipo focaccia -->
+        <div class="type-selector-card">
+            <h2><span class="icon">🫓</span> Tipo di Focaccia</h2>
+            <div class="type-grid">
+                <div class="type-card active" data-focaccia-type="altaidro">
+                    <span class="type-icon">💧</span>
+                    <span class="type-name">Alta Idratazione</span>
+                    <span class="type-desc">Fucking Focaccia style, open crumb</span>
+                </div>
+                <div class="type-card" data-focaccia-type="genovese">
+                    <span class="type-icon">🌿</span>
+                    <span class="type-name">Genovese</span>
+                    <span class="type-desc">Soffice, salamoia, classica ligure</span>
+                </div>
+                <div class="type-card" data-focaccia-type="recco">
+                    <span class="type-icon">🧀</span>
+                    <span class="type-name">di Recco</span>
+                    <span class="type-desc">Sfoglia sottile, formaggio, senza lievito</span>
+                </div>
+                <div class="type-card" data-focaccia-type="schiacciata">
+                    <span class="type-icon">🍇</span>
+                    <span class="type-name">Schiacciata Toscana</span>
+                    <span class="type-desc">Sottile, olio EVO, sale grosso</span>
+                </div>
+                <div class="type-card" data-focaccia-type="pugliese">
+                    <span class="type-icon">🍅</span>
+                    <span class="type-name">Pugliese</span>
+                    <span class="type-desc">Pomodorini, senza patate</span>
+                </div>
+                <div class="type-card" data-focaccia-type="barese">
+                    <span class="type-icon">🥔</span>
+                    <span class="type-name">Barese</span>
+                    <span class="type-desc">Pomodorini, con patate nell'impasto</span>
+                </div>
+                <div class="type-card" data-focaccia-type="messinese">
+                    <span class="type-icon">🐟</span>
+                    <span class="type-name">Messinese</span>
+                    <span class="type-desc">Tuma, acciughe, pomodoro</span>
+                </div>
+            </div>
+            <p class="type-description" id="focaccia-type-description"></p>
+        </div>
+
+        <div class="calculator-body">
+            <!-- Colonna Input -->
+            <div class="input-section">
+                <h2><span class="icon">📝</span> Parametri</h2>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="pezzi" id="label-pezzi">Numero Teglie</label>
+                        <input type="number" id="pezzi" value="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="peso" id="label-peso">Peso Impasto per Teglia (g)</label>
+                        <input type="number" id="peso" value="600">
+                    </div>
+                    <div class="input-group">
+                        <label for="idro">Idratazione (%)</label>
+                        <input type="number" id="idro" value="75" min="45" max="100">
+                    </div>
+                    <div class="input-group">
+                        <label for="salePerc">Sale (% sulla Farina)</label>
+                        <input type="number" id="salePerc" value="2.5" min="0" max="4" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="grassiPerc">Grassi / Olio EVO (% sulla Farina)</label>
+                        <input type="number" id="grassiPerc" value="5" min="0" max="20" step="0.5">
+                    </div>
+                    <div class="input-group" id="patate-group" style="display:none">
+                        <label for="patatePerc">Patate lesse (% sulla Farina)</label>
+                        <input type="number" id="patatePerc" value="30" min="0" max="60" step="5">
+                        <small>Patate lesse passate, fredde. Riducono l'acqua da aggiungere.</small>
+                    </div>
+                    <div class="input-group" id="liev-group">
+                        <label for="liev">Ore di Lievitazione Totali</label>
+                        <input type="number" id="liev" value="18" min="1" max="96">
+                    </div>
+                    <div class="input-group" id="frigo-group">
+                        <label for="frigo">Ore di Frigo</label>
+                        <input type="number" id="frigo" value="12" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label for="gradi">Temperatura Ambiente (°C)</label>
+                        <input type="number" id="gradi" value="20" min="15" max="35">
+                    </div>
+                </div>
+
+                <div class="advanced-options" id="lm-options">
+                    <div class="input-group radio-group">
+                        <label>Tipo di Lievito Madre (se usato)</label>
+                        <div class="radio-buttons">
+                           <input type="radio" id="pdrt0" name="pdrt" value="0" checked><label for="pdrt0">Nessuno</label>
+                           <input type="radio" id="pdrt1" name="pdrt" value="1"><label for="pdrt1">Liquido</label>
+                           <input type="radio" id="pdrt2" name="pdrt" value="2"><label for="pdrt2">Solido</label>
+                           <input type="radio" id="pdrt3" name="pdrt" value="3"><label for="pdrt3">Altro</label>
+                        </div>
+                    </div>
+                    <div class="input-group" id="pdrp-group">
+                        <label for="pdrp">% Lievito Madre sulla Farina</label>
+                        <input type="number" id="pdrp" value="0" min="0" max="50">
+                        <small id="pdrp-hint">Percentuale del lievito madre rispetto al peso della farina.</small>
+                    </div>
+                    <div class="input-group checkbox-group" id="solo-lm-group">
+                        <input type="checkbox" id="solo-lm">
+                        <label for="solo-lm">Usa solo Lievito Madre (azzera Lievito di Birra)</label>
+                    </div>
+                </div>
+
+                <!-- Nota Recco (senza lievito) -->
+                <div id="recco-note" style="display:none; margin-top:1rem; padding:12px 16px; background:var(--accent-pale); border-left:3px solid var(--accent); border-radius:0 var(--radius) var(--radius) 0; font-size:0.85rem; color:var(--text2); line-height:1.6;">
+                    <strong>⚠️ Focaccia di Recco — nessun lievito.</strong><br>
+                    L'impasto è una sfoglia senza lievitazione. I parametri lievito e frigo non sono applicabili.
+                    Il calcolo mostra solo farina, acqua, olio e sale.
+                </div>
+
+                <!-- Timeline processo -->
+                <div id="focaccia-timeline" class="timeline-section" style="margin-top: 1.5rem;"></div>
+            </div>
+
+            <!-- Colonna Risultati -->
+            <div class="results-section">
+                <h2><span class="icon">⚖️</span> Risultati</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <span class="label">Farina</span>
+                        <span class="value" id="farina">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Acqua</span>
+                        <span class="value" id="acqua">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sale</span>
+                        <span class="value" id="sale">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Olio EVO / Grassi</span>
+                        <span class="value" id="grassi">-</span>
+                    </div>
+                    <div class="result-item" id="result-patate" style="display:none">
+                        <span class="label">Patate lesse</span>
+                        <span class="value" id="patate-res">-</span>
+                    </div>
+                    <div class="result-item" id="result-pdr">
+                        <span class="label">Lievito Madre</span>
+                        <span class="value" id="pdr">-</span>
+                    </div>
+                    <div class="result-item" id="result-lievito">
+                        <span class="label">Lievito di Birra Fresco</span>
+                        <span class="value" id="lievito">-</span>
+                    </div>
+                </div>
+                <div class="extra-results">
+                    <div class="result-item-extra">
+                        <span class="label">Impasto Totale:</span>
+                        <span class="value" id="impasto-totale">-</span>
+                    </div>
+                    <div class="result-item-extra" id="extra-forza">
+                        <span class="label">Forza Farina (W) Consigliata:</span>
+                        <span class="value" id="forza">-</span>
+                    </div>
+                    <div class="result-item-extra" id="extra-salamoia" style="display:none">
+                        <span class="label">Salamoia (acqua + olio):</span>
+                        <span class="value" id="salamoia-res">-</span>
+                    </div>
+                </div>
+                <div id="error-message"></div>
+            </div>
+        </div>
+
+        <!-- Tips sezione -->
+        <div id="focaccia-tips-section" class="tips-section" style="margin-top: 1.5rem;"></div>
+    </div>
+
+    <script src="script_focacce.js"></script>
+</body>
+</html>
