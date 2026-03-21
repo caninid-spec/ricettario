@@ -122,6 +122,57 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Cuoci a 175–180°C per 30–35 min (stampo 500g) o 40–45 min (stampo 1 kg). T° cuore 95°C.',
                 'Farina consigliata: W 240–280 (farina 00 o 0 normale).'
             ]
+        },
+        cinnamonroll: {
+            label: 'Cinnamon Roll (Bakery Style)',
+            description: 'Cinnamon roll stile bakery professionale — ispirati a Brotique di Stoccarda. Impasto brioche semi-ricco, laminato con ripieno di burro pomato, zucchero muscovado e cannella in abbondanza. Soffici, stratificati e glassati con cream cheese frosting. Il segreto è il ripieno generoso e la cottura appena prima del caramello.',
+            burro: 18, uova: 15, zucchero: 8, latte: 48, sale: 1.8,
+            extra: { label: 'Ripieno (totale)', key: 'ripieno', perc: null, icon: '🌀',
+                     hint: 'Il ripieno è calcolato automaticamente: burro pomato + zucchero muscovado + cannella + sale.' },
+            fillingRatio: { burro: 22, zucchero: 20, cannella: 3.5, sale: 0.3 },
+            tips: [
+                'Usa cannella Ceylon (non cassia) per un sapore più delicato e floreale — la differenza si sente.',
+                'Stendi l\'impasto in un rettangolo di 40×60 cm, spessore 4 mm. Il ripieno deve arrivare fino ai bordi su tre lati, lascia 1 cm libero sul bordo lungo finale per sigillare.',
+                'Arrotola stretto e con tensione costante dal lato lungo. Taglia rotoli da 4–5 cm con filo da cucina (non coltello) per non schiacciare la spirale.',
+                'Cottura in teglia profonda ravvicinati: i rolls si sostengono a vicenda e crescono in altezza invece che allargarsi.',
+                'Cream cheese frosting: 200 g cream cheese + 80 g burro pomato + 150 g zucchero a velo + 1 cucchiaino vaniglia. Applica sui rolls ancora caldi (non bollenti) per una glassa che cola leggermente nella spirale.',
+                'Per rolls ancora più soffici, usa un poolish (50% farina + acqua uguale + lievito) la sera prima.',
+                'Farina consigliata: W 300–330 (farina di forza o mix 60% 00 forte + 40% manitoba).'
+            ]
+        },
+        graffe: {
+            label: 'Graffe Napoletane (Ciambelle Fritte)',
+            description: 'Le graffe sono le ciambelle fritte tipiche della tradizione napoletana: morbide, profumate di limone e vaniglia, con patate nell\'impasto per una texture leggera e asciutta dopo la frittura. Si mangiano calde, ricoperte di zucchero semolato. La versione professionale prevede un impasto indiretto per massima leggerezza e digeribilità.',
+            burro: 10, uova: 20, zucchero: 12, latte: 20, sale: 1.5,
+            extra: { label: 'Patate lesse (% sulla farina)', key: 'patate', perc: 30, icon: '🥔',
+                     hint: 'Patate lesse passate al setaccio, fredde. Le patate sostituiscono parte del liquido e rendono la graffa leggera e asciutta dopo la frittura.' },
+            tips: [
+                'Le patate vanno passate al setaccio (non al mixer) mentre sono ancora calde, poi lasciate raffreddare completamente prima di aggiungerle all\'impasto.',
+                'Aggiungi scorza grattugiata di 1 limone e 1 arancia, e i semi di mezza bacca di vaniglia: la profumatura è fondamentale nelle graffe napoletane.',
+                'L\'impasto deve risultare morbido ma lavorabile. Non aggiungere farina extra: la consistenza appiccicosa è normale con le patate.',
+                'Forma un salsicciotto, congiungilo a ciambella e lascia il buco grande (il doppio rispetto al risultato finale voluto): si restringe in frittura.',
+                'Friggi in olio di arachidi a 170°C (non oltre): temperatura troppo alta brucia l\'esterno prima che l\'interno cuocia. Gira una volta sola.',
+                'Scola su carta assorbente e passa immediatamente nello zucchero semolato mentre sono ancora calde e umide: lo zucchero aderisce perfettamente.',
+                'Per graffe ripiene: dopo la frittura, farcisci con crema pasticcera o Nutella usando una sac à poche con beccuccio a siringa.',
+                'Farina consigliata: W 260–300 (farina 00 di media forza).'
+            ]
+        },
+        maritozzi: {
+            label: 'Maritozzi Romani',
+            description: 'Il maritozzo è il dolce da colazione romano per eccellenza: un panino morbido, dolce e profumato di arancio, tagliato a metà e riempito generosamente di panna montata fresca. L\'impasto è una brioche arricchita con miele, scorza d\'arancia e vaniglia. La versione professionale prevede una notte di maturazione in frigo per sviluppare la complessità aromatica.',
+            burro: 22, uova: 18, zucchero: 14, latte: 35, sale: 1.5,
+            extra: { label: 'Miele (% sulla farina)', key: 'miele', perc: 4, icon: '🍯',
+                     hint: 'Il miele aggiunge profumo, umidità e favorisce la doratura. Usa miele di acacia (neutro) o millefiori.' },
+            tips: [
+                'Aggiungi miele, scorza grattugiata di arancia e semi di vaniglia direttamente nell\'impasto — questi aromi sono la firma del maritozzo romano autentico.',
+                'L\'impasto deve risultare liscio, lucido e leggermente appiccicoso. Incorpora il burro a temperatura ambiente (non pomato) in più riprese, aspettando che ogni aggiunta sia assorbita.',
+                'Maturazione in frigo 12–16 ore: porta i maritozzi a un livello superiore in termini di aroma e leggerezza. Tira fuori 2 ore prima di formare.',
+                'Forma dei filoncini ovali da 60–70 g, non sfere: la forma allungata è caratteristica del maritozzo tradizionale.',
+                'Prima della cottura, lucida con uovo intero sbattuto per una superficie mogano. Appena usciti dal forno, spennella con sciroppo di zucchero 1:1 per la lucentezza tipica delle vetrine romane.',
+                'La panna montata va inserita solo al momento del servizio, mai prima. Usa panna al 35% di grassi, poco zucchero (5–6%) e nessun addensante artificiale.',
+                'Il taglio classico: incidi il maritozzo per 2/3 della sua lunghezza partendo dall\'alto, non completamente. Riempi con una spatola passata in modo da creare una "gobba" di panna abbondante e scenografica.',
+                'Farina consigliata: W 300–330 (farina di forza o manitoba).'
+            ]
         }
     };
 
@@ -308,24 +359,48 @@ document.addEventListener('DOMContentLoaded', () => {
             el.resExtra.textContent   = fmt(gocce) + ' g';
             el.fillingBox.style.display = 'none';
         } else if (tDef.fillingRatio) {
-            // Kardamom knots: ripieno
             el.extraRow.style.display = 'none';
             const fr = tDef.fillingRatio;
-            const fBurro     = farina * fr.burro / 100;
-            const fZucchero  = farina * fr.zucchero / 100;
-            const fCardamomo = farina * fr.cardamomo / 100;
-            const fCannella  = farina * fr.cannella / 100;
+            const fBurro    = farina * fr.burro / 100;
+            const fZucchero = farina * fr.zucchero / 100;
             el.fillingBox.style.display = 'block';
-            el.fillingBox.innerHTML = `
-                <h3><span class="icon">🌿</span> Ripieno</h3>
-                <div class="filling-grid">
-                    <div class="filling-item"><span class="f-label">Burro pomato</span><span class="f-value">${fmt(fBurro)} g</span></div>
-                    <div class="filling-item"><span class="f-label">Zucchero muscovado</span><span class="f-value">${fmt(fZucchero)} g</span></div>
-                    <div class="filling-item"><span class="f-label">Cardamomo macinato</span><span class="f-value">${fmtDec(fCardamomo)} g</span></div>
-                    <div class="filling-item"><span class="f-label">Cannella</span><span class="f-value">${fmtDec(fCannella)} g</span></div>
-                </div>
-                <p class="filling-note">Mescola burro + zucchero + spezie fino a ottenere un composto cremoso. Spalma sull'impasto steso.</p>
-            `;
+
+            if (currentType === 'cinnamonroll') {
+                const fCannella = farina * fr.cannella / 100;
+                const fSale     = farina * fr.sale / 100;
+                el.fillingBox.innerHTML = `
+                    <h3><span class="icon">🌀</span> Ripieno Cinnamon Roll</h3>
+                    <div class="filling-grid">
+                        <div class="filling-item"><span class="f-label">Burro pomato</span><span class="f-value">${fmt(fBurro)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Zucchero muscovado</span><span class="f-value">${fmt(fZucchero)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Cannella Ceylon</span><span class="f-value">${fmtDec(fCannella)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Sale fino</span><span class="f-value">${fmtDec(fSale)} g</span></div>
+                    </div>
+                    <p class="filling-note">Mescola fino a crema spalmabile. Il ripieno deve essere a temperatura ambiente — né freddo né sciolto. Ricopri tutta la superficie dell'impasto steso fino ai bordi.</p>
+                    <h3 style="margin-top:1rem"><span class="icon">🍦</span> Cream Cheese Frosting</h3>
+                    <div class="filling-grid">
+                        <div class="filling-item"><span class="f-label">Cream cheese</span><span class="f-value">${fmt(farina * 0.2)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Burro pomato</span><span class="f-value">${fmt(farina * 0.08)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Zucchero a velo</span><span class="f-value">${fmt(farina * 0.15)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Estratto vaniglia</span><span class="f-value">1 cucchiaino</span></div>
+                    </div>
+                    <p class="filling-note">Monta cream cheese + burro, poi aggiungi zucchero a velo setacciato e vaniglia. Applica sui rolls ancora caldi (non bollenti).</p>
+                `;
+            } else {
+                // Kardamom knots
+                const fCardamomo = farina * fr.cardamomo / 100;
+                const fCannella  = farina * fr.cannella / 100;
+                el.fillingBox.innerHTML = `
+                    <h3><span class="icon">🌿</span> Ripieno</h3>
+                    <div class="filling-grid">
+                        <div class="filling-item"><span class="f-label">Burro pomato</span><span class="f-value">${fmt(fBurro)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Zucchero muscovado</span><span class="f-value">${fmt(fZucchero)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Cardamomo macinato</span><span class="f-value">${fmtDec(fCardamomo)} g</span></div>
+                        <div class="filling-item"><span class="f-label">Cannella</span><span class="f-value">${fmtDec(fCannella)} g</span></div>
+                    </div>
+                    <p class="filling-note">Mescola burro + zucchero + spezie fino a ottenere un composto cremoso. Spalma sull'impasto steso.</p>
+                `;
+            }
         } else {
             el.extraRow.style.display = 'none';
             el.fillingBox.style.display = 'none';
@@ -346,6 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const isPango   = type === 'pangoccioli';
         const isBun     = (type === 'burgerbun' || type === 'potatobun');
         const isBauletto = type === 'bauletto';
+        const isCinnamon = type === 'cinnamonroll';
+        const isGraffa   = type === 'graffe';
+        const isMaritozzо = type === 'maritozzi';
         const lmSlow    = lievTipo === 'madre';
 
         const tFactor = temp >= 26 ? 0.75 : temp >= 22 ? 1 : temp >= 18 ? 1.3 : 1.6;
@@ -363,6 +441,14 @@ document.addEventListener('DOMContentLoaded', () => {
             steps.push({ icon: '🍳', label: 'Impastamento', duration: '12–18 min', note: 'Aggiungi le patate fredde insieme alla farina. L\'impasto sarà più appiccicoso del normale — non aggiungere farina extra. Usa la planetaria o mani umide.' });
         } else if (isBauletto) {
             steps.push({ icon: '🍳', label: 'Impastamento', duration: '10–15 min', note: 'Impasto semplice: mescola tutto insieme e lavora finché è liscio ed omogeneo. Non richiede incordatura lunga.' });
+        } else if (isCinnamon) {
+            steps.push({ icon: '🍳', label: 'Impastamento', duration: '15–20 min', note: 'Incorda prima la parte asciutta, poi aggiungi il burro a temperatura ambiente in 3–4 riprese. Finisci quando l\'impasto è liscio, lucido e si stacca dalla ciotola.' });
+            steps.push({ icon: '🧈', label: 'Prepara il Ripieno', duration: '5 min', note: 'Mescola burro pomato, zucchero muscovado, cannella (abbondante) e pizzico di sale. Deve avere consistenza di pasta spalmabile. Tieni a temperatura ambiente.' });
+        } else if (isGraffa) {
+            steps.push({ icon: '🥔', label: 'Prepara le patate', duration: '25 min', note: 'Lessa le patate con la buccia, pelale e passale al setaccio finché sono ancora calde. Stendi su un vassoio e lascia raffreddare completamente.' });
+            steps.push({ icon: '🍳', label: 'Impastamento', duration: '15–20 min', note: 'Inserisci le patate fredde con la farina. Aggiungi scorza di agrumi e vaniglia. Incorpora il burro morbido a pezzi solo a impasto incordato. Deve risultare morbido e leggermente appiccicoso.' });
+        } else if (isMaritozzо) {
+            steps.push({ icon: '🍳', label: 'Impastamento', duration: '20–25 min', note: 'Aggiungi miele, scorza d\'arancia e vaniglia all\'impasto. Incorpora il burro a temperatura ambiente in 4–5 riprese, aspettando che ogni aggiunta sia assorbita. L\'impasto finale è liscio, elastico e profumatissimo.' });
         } else {
             steps.push({ icon: '🍳', label: 'Impastamento', duration: isRich ? '20–30 min' : '12–18 min', note: isRich ? 'Planetaria: prima incorda la parte asciutta, poi aggiungi burro a freddo in più riprese.' : isPango ? 'Incorda bene l\'impasto, poi aggiungi le gocce di cioccolato congelate negli ultimi 2 min.' : 'A mano o planetaria, finché l\'impasto è liscio ed elastico.' });
         }
@@ -387,6 +473,14 @@ document.addEventListener('DOMContentLoaded', () => {
             steps.push({ icon: '⚖️', label: 'Porzionatura e Formatura', duration: '10–15 min', note: type === 'potatobun' ? 'Pesa 90–100 g per bun. Forma palline tese, poi schiaccia ogni pezzo a circa 2 cm di altezza con il palmo della mano.' : 'Pesa 80–90 g (classico) o 110–120 g (large). Forma sfere tese e schiaccia leggermente il top.' });
         } else if (isBauletto) {
             steps.push({ icon: '📦', label: 'Formatura in stampo', duration: '10 min', note: 'Stendi l\'impasto a rettangolo largo quanto lo stampo, arrotolalo su se stesso e ponilo nello stampo imburrato. Per il pancarré, riempi a 3/4 e chiudi con il coperchio.' });
+        } else if (isCinnamon) {
+            steps.push({ icon: '📐', label: 'Stendi e Farcisci', duration: '10 min', note: 'Stendi l\'impasto in un rettangolo di 40×60 cm, spessore 4 mm. Spalma il ripieno abbondantemente su tutta la superficie, fino ai bordi su 3 lati. Lascia 1 cm libero sul bordo lungo finale per sigillare.' });
+            steps.push({ icon: '🌀', label: 'Arrotola e Taglia', duration: '10 min', note: 'Arrotola stretto dal lato lungo con tensione costante. Taglia rolls da 4–5 cm usando un filo da cucina (non un coltello): posiziona il filo sotto il rotolo, incrocia le estremità e tira — la spirale resterà intatta.' });
+            steps.push({ icon: '🫙', label: 'Disponi in teglia', duration: '5 min', note: 'Posiziona i rolls in una teglia profonda imburrata, ravvicinati ma non a contatto. In lievitazione si toccheranno: si sostengono a vicenda e crescono in altezza.' });
+        } else if (isGraffa) {
+            steps.push({ icon: '⭕', label: 'Formatura a ciambella', duration: '15–20 min', note: 'Pesa pezzi da 80–90 g. Forma un salsicciotto di 20–22 cm e congiungilo a ciambella lasciando il buco generoso (5–6 cm di diametro): in frittura si restringe. Posa su quadrati di carta forno.' });
+        } else if (isMaritozzо) {
+            steps.push({ icon: '🫓', label: 'Formatura ovale', duration: '10–15 min', note: 'Pesa pezzi da 60–70 g. Forma filoncini ovali (non sfere): la forma allungata è la firma del maritozzo romano. Ponili sulla teglia con carta forno, ben distanziati.' });
         } else {
             steps.push({ icon: '✋', label: 'Formatura', duration: '10–20 min', note: 'Sgonfia delicatamente, forma i pezzi e disponili nello stampo o sulla teglia.' });
         }
@@ -396,6 +490,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const rise2note = isBauletto
             ? 'L\'impasto deve arrivare al bordo dello stampo (bauletto) o a 1 cm dal bordo (pancarré con coperchio).'
             : isKnot ? 'Copri con un canovaccio e lascia lievitare: i knots devono gonfiarsi sensibilmente.'
+            : isCinnamon ? 'I rolls devono gonfiarsi visibilmente e toccarsi tra loro nella teglia. Se premi leggermente con un dito, l\'impronta deve tornare lentamente su.'
+            : isGraffa ? 'Le graffe devono gonfiare e diventare leggere al tatto. Non sovra-lievitare: si sgonfiano in frittura.'
+            : isMaritozzо ? 'I maritozzi devono raddoppiare e apparire gonfi e soffici. Una lievitazione ottimale garantisce la texture caratteristica "a nuvola".'
             : 'Copri e lascia lievitare fino a quando i pezzi sono gonfi e soffici al tatto.';
         steps.push({ icon: '🌤️', label: 'Seconda Lievitazione', duration: rise2, note: rise2note });
 
@@ -415,6 +512,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (isBauletto) {
             steps.push({ icon: '🖌️', label: 'Lucidatura', duration: '3 min', note: 'Spennella con latte intero o uovo sbattuto allungato con latte per una crosta dorata.' });
             steps.push({ icon: '🔥', label: 'Cottura a 175–180°C', duration: '30–45 min', note: 'Forno statico. 30–35 min per stampo da 500 g, 40–45 min per 1 kg. T° cuore 95°C. Il pancarré cuoce col coperchio per tutta la durata.' });
+        } else if (isCinnamon) {
+            steps.push({ icon: '🔥', label: 'Cottura a 185°C', duration: '18–22 min', note: 'Forno statico, griglia bassa. I rolls sono pronti quando sono dorati in superficie e il caramello del ripieno bolle ai lati. Non aprire il forno nei primi 15 min.' });
+            steps.push({ icon: '🍦', label: 'Cream Cheese Frosting', duration: '5 min', note: 'Applica il frosting (cream cheese + burro pomato + zucchero a velo + vaniglia) sui rolls ancora caldi ma non bollenti: deve colare leggermente nelle spirali. Servi entro 30 minuti.' });
+        } else if (isGraffa) {
+            steps.push({ icon: '🛢️', label: 'Frittura a 170°C', duration: '3–4 min per lato', note: 'Olio di arachidi profondo a 170°C (termometro obbligatorio). Immergi le graffe con la carta forno (si staccherà da sola), friggi 3–4 min per lato girando una volta sola. Non sovraffollare il tegame.' });
+            steps.push({ icon: '🍬', label: 'Zucchero finale', duration: '2 min', note: 'Scola su carta assorbente 30 secondi, poi passa immediatamente nello zucchero semolato mentre sono ancora calde. Lo zucchero aderisce grazie all\'umidità superficiale.' });
+        } else if (isMaritozzо) {
+            steps.push({ icon: '🖌️', label: 'Lucidatura', duration: '3 min', note: 'Spennella con uovo intero sbattuto per una superficie mogano lucida. Non usare solo tuorlo: l\'albumina garantisce la lucentezza caratteristica.' });
+            steps.push({ icon: '🔥', label: 'Cottura a 180°C', duration: '14–18 min', note: 'Forno statico, griglia a metà. Devono risultare belli dorati e profumati. T° cuore 93°C.' });
+            steps.push({ icon: '🍯', label: 'Sciroppo finale', duration: '2 min', note: 'Appena sfornati, spennella con sciroppo di zucchero 1:1 caldo: dà la lucentezza tipica delle vetrine romane e mantiene l\'umidità.' });
+            steps.push({ icon: '🍦', label: 'Farcitura con panna', duration: '5 min (al momento)', note: 'Solo al momento del servizio: incidi il maritozzo per 2/3 dall\'alto, farcisci abbondantemente con panna montata al 35% (poco zucchero, nessun addensante). La gobba di panna deve essere generosa e scenografica.' });
         } else {
             steps.push({ icon: '🖌️', label: 'Lucidatura', duration: '5 min', note: isPango ? 'Spennella con latte intero per una superficie dorata e morbida.' : 'Spennella con tuorlo d\'uovo + latte. Aggiungi granella di zucchero se desiderato.' });
             const bakeTemp = isRich ? '170–175°C' : '180–185°C';
@@ -422,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
             steps.push({ icon: '🔥', label: `Cottura a ${bakeTemp}`, duration: bakeTime, note: 'Forno statico, griglia a metà altezza. La brioche è pronta quando è dorata e suona vuota.' });
         }
 
-        steps.push({ icon: '💨', label: 'Raffreddamento', duration: isBauletto ? '1–2 ore' : '20–30 min', note: isBauletto ? 'Sforna, lascia riposare 10 min nello stampo, poi togli e fai raffreddare completamente su una griglia prima di affettare.' : 'Sforna e lascia raffreddare su una griglia. Non coprire subito per non ammorbidire la crosta.' });
+        steps.push({ icon: '💨', label: 'Raffreddamento', duration: isBauletto ? '1–2 ore' : isGraffa ? '5 min' : isCinnamon ? '10 min' : '20–30 min', note: isBauletto ? 'Sforna, lascia riposare 10 min nello stampo, poi togli e fai raffreddare completamente su una griglia prima di affettare.' : isGraffa ? 'Le graffe si mangiano calde. Se avanzano, riscaldare brevemente in forno a 150°C per 5 min prima di servire.' : isCinnamon ? 'Lascia riposare 10 min prima del frosting. Servire tiepidi — non aspettare che si freddino del tutto.' : isMaritozzо ? 'Raffredda completamente su una griglia prima di farcire. Il maritozzo non va farcito caldo: la panna si scioglierebbe.' : 'Sforna e lascia raffreddare su una griglia. Non coprire subito per non ammorbidire la crosta.' });
 
         el.timeline.innerHTML = steps.map(s => `
             <div class="timeline-step">
