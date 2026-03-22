@@ -158,3 +158,132 @@ footer p {
     h1 { font-size: 2.2rem; }
     .logo { font-size: 2.4rem; }
 }
+
+/* ═══════════════════════════════════════════
+   Autocomplete Dropdown
+═══════════════════════════════════════════ */
+.search-wrapper { position: relative; }
+
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+    z-index: 200;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+/* Scrollbar sottile */
+.search-dropdown::-webkit-scrollbar { width: 4px; }
+.search-dropdown::-webkit-scrollbar-track { background: transparent; }
+.search-dropdown::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* Riga "Tutti i risultati" */
+.sd-all-results {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    background: var(--accent-pale);
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 0.85rem;
+    color: var(--text2);
+}
+
+.sd-all-results:hover, .sd-all-results.sd-active {
+    background: rgba(201,106,16,0.12);
+}
+
+.sd-all-icon { font-size: 0.9rem; opacity: 0.7; flex-shrink: 0; }
+
+.sd-all-label { flex: 1; }
+.sd-all-label strong { color: var(--accent); }
+
+.sd-all-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(201,106,16,0.12);
+    border-radius: 20px;
+    padding: 2px 8px;
+}
+
+/* Header sottosezione */
+.sd-group-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 6px;
+    cursor: pointer;
+    border-top: 1px solid var(--border-soft);
+    transition: background 0.15s;
+}
+
+.sd-group-header:first-of-type { border-top: none; }
+
+.sd-group-header:hover, .sd-group-header.sd-active {
+    background: var(--surface2);
+}
+
+.sd-group-icon { font-size: 0.9rem; flex-shrink: 0; }
+
+.sd-group-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text2);
+    flex: 1;
+}
+
+.sd-group-count {
+    font-size: 0.73rem;
+    color: var(--accent);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Singola ricetta */
+.sd-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 16px 7px 36px;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+.sd-item:hover, .sd-item.sd-active {
+    background: var(--surface2);
+}
+
+.sd-item-emoji { font-size: 0.95rem; flex-shrink: 0; }
+
+.sd-item-title {
+    flex: 1;
+    font-size: 0.87rem;
+    color: var(--text);
+    font-family: var(--font-display-alt);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sd-item-diff {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--muted);
+    background: var(--surface2);
+    border-radius: 20px;
+    padding: 1px 7px;
+    flex-shrink: 0;
+}
+
