@@ -191,7 +191,7 @@
         const card = e.target.closest('.result-card');
         if (card) {
             e.preventDefault();
-            location.replace(card.href);
+            window.location.href = card.href;
         }
     });
 
@@ -199,7 +199,7 @@
     function doSearch() {
         const q = document.getElementById('search-input').value.trim();
         if (!q) return;
-        location.replace('search-results.html?q=' + encodeURIComponent(q));
+        window.location.href = 'search-results.html?q=' + encodeURIComponent(q);
     }
 
     document.getElementById('search-btn').addEventListener('click', doSearch);

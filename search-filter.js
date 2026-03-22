@@ -50,12 +50,12 @@
 
         document.getElementById('sfb-results-link').addEventListener('click', e => {
             e.preventDefault();
-            location.replace('search-results.html?q=' + encodeURIComponent(rawQuery));
+            window.location.href = 'search-results.html?q=' + encodeURIComponent(rawQuery);
         });
 
         document.getElementById('sfb-clear-btn').addEventListener('click', () => {
-            // Torna alla home pulita (replace: non aggiunge voce in history)
-            location.replace('index.html');
+            // history.back() = premi indietro: torna da dove si è venuti (risultati o home)
+            history.back();
         });
     }
 
