@@ -43,24 +43,19 @@
             <div class="sfb-inner">
                 <span class="sfb-icon">🔍</span>
                 <span class="sfb-text">Risultati per <strong>"${rawQuery}"</strong></span>
-                <a href="search-results.html?q=${encodeURIComponent(rawQuery)}" class="sfb-link">Tutti i risultati →</a>
+                <a href="#" class="sfb-link" id="sfb-results-link">Tutti i risultati →</a>
                 <button class="sfb-clear" id="sfb-clear-btn">✕ Mostra tutto</button>
             </div>`;
         document.body.insertBefore(banner, document.body.firstChild);
 
+        document.getElementById('sfb-results-link').addEventListener('click', e => {
+            e.preventDefault();
+            location.replace('search-results.html?q=' + encodeURIComponent(rawQuery));
+        });
+
         document.getElementById('sfb-clear-btn').addEventListener('click', () => {
-            // Rimuovi ?search dall'URL senza ricaricare
-            const url = new URL(location.href);
-            url.searchParams.delete('search');
-            history.pushState({}, '', url);
-            // Ripristina tutto
-            document.querySelectorAll('article.recipe-card').forEach(a => {
-                a.classList.remove('sf-match', 'sf-nomatch');
-            });
-            document.querySelectorAll('.recipes-section, .section-heading-block').forEach(s => {
-                s.style.opacity = '';
-            });
-            banner.remove();
+            // Torna alla home pulita (replace: non aggiunge voce in history)
+            location.replace('index.html');
         });
     }
 

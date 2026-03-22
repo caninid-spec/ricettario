@@ -35,20 +35,20 @@
 <script>
 (function () {
 
-    /* ── Utility: normalizza testo per confronto ── */
+    /* ── Normalizzazione ── */
     function norm(s) {
         return (s || '').toLowerCase()
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/[^a-z0-9\s]/g, ' ');
     }
 
-    /* ── Leggi query dall'URL ── */
-    const params = new URLSearchParams(location.search);
+    /* ── Query dall'URL ── */
+    const params   = new URLSearchParams(location.search);
     const rawQuery = params.get('q') || '';
     document.getElementById('query-display').textContent = rawQuery;
     document.getElementById('search-input').value = rawQuery;
 
-    /* ── Configurazione sezioni ── */
+    /* ── Config sezioni ── */
     const SECTION_CONFIG = {
         pasticceria: {
             label: '🍰 Pasticceria',
@@ -60,33 +60,32 @@
         cucina: {
             label: '🍝 Cucina',
             subsections: {
-                'Antipasti':  { label: 'Antipasti',   emoji: '🫒' },
-                'Primi':      { label: 'Primi',        emoji: '🍝' },
-                'Secondi':    { label: 'Secondi',      emoji: '🥩' },
-                'BBQ & Grill':{ label: 'BBQ & Grill',  emoji: '🔥' },
-                'Contorni':   { label: 'Contorni',     emoji: '🥦' },
-                'Salse':      { label: 'Salse',        emoji: '🫕' }
+                'Antipasti':   { label: 'Antipasti',    emoji: '🫒' },
+                'Primi':       { label: 'Primi',         emoji: '🍝' },
+                'Secondi':     { label: 'Secondi',       emoji: '🥩' },
+                'BBQ & Grill': { label: 'BBQ & Grill',   emoji: '🔥' },
+                'Contorni':    { label: 'Contorni',      emoji: '🥦' },
+                'Salse':       { label: 'Salse',         emoji: '🫕' }
             }
         }
     };
 
-    /* ── Calcola score di rilevanza ── */
+    /* ── Score ricetta ── */
     function scoreRecipe(recipe, tokens) {
         const titleN = norm(recipe.title);
         const descN  = norm(recipe.desc);
         const kwN    = norm(recipe.keywords);
-
         let score = 0;
         for (const tok of tokens) {
-            if (titleN.includes(tok))      score += 10;
-            else if (descN.includes(tok))  score += 4;
-            else if (kwN.includes(tok))    score += 2;
-            else return -1; // token mancante → escludi
+            if (titleN.includes(tok))     score += 10;
+            else if (descN.includes(tok)) score += 4;
+            else if (kwN.includes(tok))   score += 2;
+            else return -1;
         }
         return score;
     }
 
-    /* ── Rendering difficoltà ── */
+    /* ── Classe difficoltà ── */
     function diffClass(d) {
         if (!d) return '';
         const l = d.toLowerCase();
@@ -95,22 +94,13 @@
         return 'result-diff--medio';
     }
 
-    /* ── Render una singola card risultato ── */
+    /* ── Render card singola ── */
     function renderCard(recipe) {
         const url = recipe.subsection_url + '?search=' + encodeURIComponent(rawQuery);
-
-        const diffHtml = recipe.difficulty
-            ? `<span class="result-diff ${diffClass(recipe.difficulty)}">${recipe.difficulty}</span>`
-            : '';
-
-        const regionHtml = recipe.region
-            ? `<span class="result-tag">${recipe.region}</span>`
-            : '';
-
-        const catHtml = recipe.category && recipe.category !== recipe.subsection.toLowerCase()
-            ? `<span class="result-tag">${recipe.category}</span>`
-            : '';
-
+        const diffHtml   = recipe.difficulty ? `<span class="result-diff ${diffClass(recipe.difficulty)}">${recipe.difficulty}</span>` : '';
+        const regionHtml = recipe.region     ? `<span class="result-tag">${recipe.region}</span>` : '';
+        const catHtml    = (recipe.category && recipe.category !== recipe.subsection.toLowerCase())
+                         ? `<span class="result-tag">${recipe.category}</span>` : '';
         return `
         <a class="result-card" href="${url}">
             <div class="result-emoji">${recipe.emoji}</div>
@@ -118,9 +108,7 @@
                 <div class="result-title">${recipe.title}</div>
                 <div class="result-meta">
                     <span class="result-tag result-tag--section">${recipe.subsection}</span>
-                    ${regionHtml}
-                    ${catHtml}
-                    ${diffHtml}
+                    ${regionHtml}${catHtml}${diffHtml}
                 </div>
                 <p class="result-desc">${recipe.desc}</p>
             </div>
@@ -128,89 +116,61 @@
         </a>`;
     }
 
-    /* ── Render un gruppo (sezione > sottosezione) ── */
-    function renderGroup(label, emoji, recipes) {
-        const count = recipes.length;
-        const cards = recipes.map(renderCard).join('');
+    /* ── Render gruppo sottosezione ── */
+    function renderGroup(label, emoji, list) {
+        const count = list.length;
         return `
         <div class="results-section">
             <div class="results-section-header">
                 <div class="results-section-label">${emoji} ${label}</div>
                 <span class="results-section-count">${count} ${count === 1 ? 'ricetta' : 'ricette'}</span>
             </div>
-            ${cards}
+            ${list.map(renderCard).join('')}
         </div>`;
     }
 
-    /* ── Ricerca e render completo ── */
+    /* ── Ricerca principale ── */
     function runSearch(index, query) {
         const main = document.getElementById('results-main');
         const meta = document.getElementById('results-meta');
 
         if (!query.trim()) {
-            main.innerHTML = `
-            <div class="results-empty">
-                <div class="empty-icon">🔍</div>
-                <h2>Cosa stai cercando?</h2>
-                <p>Inserisci un ingrediente, una tecnica o il nome di una ricetta.</p>
-            </div>`;
+            main.innerHTML = `<div class="results-empty"><div class="empty-icon">🔍</div><h2>Cosa stai cercando?</h2><p>Inserisci un ingrediente, una tecnica o il nome di una ricetta.</p></div>`;
             meta.textContent = '';
             return;
         }
 
         const tokens = norm(query).split(/\s+/).filter(Boolean);
-
-        // Score e filtra
         const scored = index
             .map(r => ({ recipe: r, score: scoreRecipe(r, tokens) }))
             .filter(x => x.score > 0)
             .sort((a, b) => b.score - a.score);
 
-        const total = scored.length;
-
-        if (total === 0) {
-            main.innerHTML = `
-            <div class="results-empty">
-                <div class="empty-icon">🤷</div>
-                <h2>Nessuna ricetta trovata</h2>
-                <p>Nessun risultato per "<strong>${query}</strong>".<br>Prova con un termine diverso o più generico.</p>
-            </div>`;
+        if (scored.length === 0) {
+            main.innerHTML = `<div class="results-empty"><div class="empty-icon">🤷</div><h2>Nessuna ricetta trovata</h2><p>Nessun risultato per "<strong>${query}</strong>".<br>Prova con un termine diverso o più generico.</p></div>`;
             meta.textContent = `0 risultati per "${query}"`;
             return;
         }
 
-        // Raggruppa per sezione principale, poi sottosezione
-        // Ordine fisso: Pasticceria prima, poi Cucina (per sottosezione nell'ordine config)
-        const groups = {}; // key: "section|subsection"
-
+        /* Raggruppa */
+        const groups = {};
         for (const { recipe } of scored) {
             const key = recipe.section + '|' + recipe.subsection;
-            if (!groups[key]) groups[key] = { recipe, list: [] };
-            groups[key].list.push(recipe);
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(recipe);
         }
 
         let html = '';
-        let totalRendered = 0;
-
-        // Ordine definito: prima pasticceria, poi cucina
-        const sectionOrder = ['pasticceria', 'cucina'];
-
-        for (const sec of sectionOrder) {
+        for (const sec of ['pasticceria', 'cucina']) {
             const cfg = SECTION_CONFIG[sec];
             if (!cfg) continue;
-
-            const subsOrder = Object.keys(cfg.subsections);
             let secHtml = '';
-
-            for (const sub of subsOrder) {
+            for (const sub of Object.keys(cfg.subsections)) {
                 const key = sec + '|' + sub;
                 if (!groups[key]) continue;
-                const { list } = groups[key];
                 const subCfg = cfg.subsections[sub];
-                secHtml += renderGroup(subCfg.label, subCfg.emoji, list);
-                totalRendered += list.length;
+                secHtml += renderGroup(subCfg.label, subCfg.emoji, groups[key]);
             }
-
             if (secHtml) {
                 html += `<div style="margin-bottom:8px">
                     <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-left:2px">${cfg.label}</div>
@@ -222,15 +182,24 @@
         main.innerHTML = html;
 
         const secCount = Object.keys(groups).length;
+        const total    = scored.length;
         meta.textContent = `${total} ${total === 1 ? 'ricetta trovata' : 'ricette trovate'} in ${secCount} ${secCount === 1 ? 'sezione' : 'sezioni'}`;
     }
 
-    /* ── Navigazione ricerca dalla pagina risultati ── */
+    /* ── Click su card risultato → replace() ── */
+    document.getElementById('results-main').addEventListener('click', e => {
+        const card = e.target.closest('.result-card');
+        if (card) {
+            e.preventDefault();
+            location.replace(card.href);
+        }
+    });
+
+    /* ── Nuova ricerca dalla pagina risultati ── */
     function doSearch() {
         const q = document.getElementById('search-input').value.trim();
         if (!q) return;
-        const url = 'search-results.html?q=' + encodeURIComponent(q);
-        window.location.href = url;
+        location.replace('search-results.html?q=' + encodeURIComponent(q));
     }
 
     document.getElementById('search-btn').addEventListener('click', doSearch);
@@ -238,7 +207,7 @@
         if (e.key === 'Enter') doSearch();
     });
 
-    /* ── Usa indice globale (caricato da search-index.js) ── */
+    /* ── Avvia con indice globale ── */
     const index = window.RICETTARIO_INDEX || [];
     if (!index.length) {
         document.getElementById('results-main').innerHTML = `

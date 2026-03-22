@@ -469,7 +469,8 @@
         if (item.type === 'all') {
             navigateToResults(input.value);
         } else {
-            window.location.href = item.url;
+            // replace() — non aggiunge voce in history, "indietro" torna alla home pulita
+            location.replace(item.url);
         }
     }
 
@@ -482,7 +483,9 @@
 
     function navigateToResults(query) {
         if (!query.trim()) return;
-        window.location.href = 'search-results.html?q=' + encodeURIComponent(query.trim());
+        // replace() evita di accumulare voci in history:
+        // premendo "indietro" dalla pagina risultati si torna direttamente qui, pulita.
+        location.replace('search-results.html?q=' + encodeURIComponent(query.trim()));
     }
 
     /* ── Event listeners ── */
@@ -556,6 +559,13 @@
             input.focus();
             input.select();
         }
+    });
+
+    // Quando si torna indietro (anche da bfcache), pulisce la ricerca
+    window.addEventListener('pageshow', () => {
+        input.value = '';
+        searchHomeCards('');
+        closeDropdown();
     });
 
 })();
