@@ -2,7 +2,7 @@
   "name": "Ricettario Danilo",
   "short_name": "Ricettario",
   "description": "Calcolatori, ricettari e ricette per bakery, pasticceria e cucina artigianale.",
-  "start_url": "./index.html",
+  "start_url": "./ricettario/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#faf7f2",
