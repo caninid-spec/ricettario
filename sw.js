@@ -61,12 +61,9 @@ const PRECACHE_ASSETS = [
 
   // Manifest & icons
   'manifest.json',
-  'icons/icon-192x192.png',
-  'icons/icon-512x512.png',
-  'icons/maskable-512x512.png',
-  'icons/apple-touch-icon.png',
-  'icons/favicon-32x32.png',
-  'icons/favicon-16x16.png',
+  'icon.ico',
+  'icon192.png',
+  'icon512.png',
 ];
 
 /* ── INSTALL: pre-caching ── */
