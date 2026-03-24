@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.ico" type="image/x-icon">
     <title> Ricettario Danilo</title>
     <link rel="stylesheet" href="core.css">
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="home-style.css">
     <script src="search-index.js"></script>
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Theme color per Android Chrome e Safari -->
+    <meta name="theme-color" content="#faf7f2">
+    <meta name="msapplication-TileColor" content="#faf7f2">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+
+    <!-- Apple PWA meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Ricettario">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="icons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+
+    <!-- Service Worker registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js')
+            .then(function(reg) { console.log('[PWA] SW registered:', reg.scope); })
+            .catch(function(err) { console.warn('[PWA] SW registration failed:', err); });
+        });
+      }
+    </script>
 </head>
 <body>
 
@@ -568,6 +599,103 @@
         closeDropdown();
     });
 
+})();
+</script>
+
+<!-- ── PWA: Banner installazione ── -->
+<div id="pwa-install-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999;
+     background:#fff; border-top:1px solid rgba(201,106,16,0.2); padding:1rem 1.25rem;
+     box-shadow:0 -4px 24px rgba(0,0,0,0.1); display:none; align-items:center; gap:0.75rem;
+     font-family: var(--font-body, 'DM Sans', sans-serif);">
+    <span style="font-size:1.8rem; flex-shrink:0;">🌾</span>
+    <div style="flex:1; min-width:0;">
+        <div style="font-weight:600; color:#1f1a14; font-size:0.9rem;">Installa Ricettario Danilo</div>
+        <div style="color:#8a7d6b; font-size:0.8rem;">Accedi offline, sempre a portata di mano</div>
+    </div>
+    <button id="pwa-install-btn" style="background:#c96a10; color:#fff; border:none; border-radius:7px;
+            padding:0.5rem 1.1rem; font-size:0.85rem; font-weight:600; cursor:pointer; flex-shrink:0;
+            font-family: inherit;">Installa</button>
+    <button id="pwa-dismiss-btn" style="background:none; border:none; color:#8a7d6b; cursor:pointer;
+            font-size:1.2rem; padding:0 0.25rem; flex-shrink:0; line-height:1;">✕</button>
+</div>
+
+<!-- ── PWA: Toast aggiornamento disponibile ── -->
+<div id="pwa-update-toast" style="display:none; position:fixed; top:1rem; left:50%; transform:translateX(-50%);
+     z-index:9999; background:#1f1a14; color:#faf7f2; border-radius:10px; padding:0.75rem 1.25rem;
+     box-shadow:0 8px 32px rgba(0,0,0,0.2); font-family: var(--font-body, 'DM Sans', sans-serif);
+     font-size:0.88rem; display:none; align-items:center; gap:0.75rem; white-space:nowrap;">
+    <span>🔄 Aggiornamento disponibile</span>
+    <button id="pwa-update-btn" style="background:#c96a10; color:#fff; border:none; border-radius:5px;
+            padding:0.3rem 0.8rem; font-size:0.82rem; font-weight:600; cursor:pointer; font-family:inherit;">
+        Aggiorna
+    </button>
+    <button id="pwa-update-dismiss" style="background:none;border:none;color:#8a7d6b;cursor:pointer;font-size:1rem;">✕</button>
+</div>
+
+<script>
+/* ── PWA Install Prompt ── */
+(function() {
+    let deferredPrompt = null;
+    const banner  = document.getElementById('pwa-install-banner');
+    const installBtn = document.getElementById('pwa-install-btn');
+    const dismissBtn = document.getElementById('pwa-dismiss-btn');
+
+    // Non mostrare se già installata o se dismissed di recente
+    const dismissed = localStorage.getItem('pwa-install-dismissed');
+    if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 3600 * 1000) return;
+
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+        banner.style.display = 'flex';
+    });
+
+    installBtn?.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        banner.style.display = 'none';
+    });
+
+    dismissBtn?.addEventListener('click', () => {
+        banner.style.display = 'none';
+        localStorage.setItem('pwa-install-dismissed', Date.now().toString());
+    });
+
+    window.addEventListener('appinstalled', () => {
+        banner.style.display = 'none';
+        deferredPrompt = null;
+    });
+
+    /* ── Aggiornamento SW ── */
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.ready.then(reg => {
+            reg.addEventListener('updatefound', () => {
+                const newWorker = reg.installing;
+                newWorker?.addEventListener('statechange', () => {
+                    if (newWorker.statechange === 'installed' && navigator.serviceWorker.controller) {
+                        showUpdateToast(newWorker);
+                    }
+                });
+            });
+        });
+    }
+
+    function showUpdateToast(worker) {
+        const toast = document.getElementById('pwa-update-toast');
+        const updateBtn = document.getElementById('pwa-update-btn');
+        const dismissU = document.getElementById('pwa-update-dismiss');
+        if (!toast) return;
+        toast.style.display = 'flex';
+        updateBtn?.addEventListener('click', () => {
+            worker.postMessage({ type: 'SKIP_WAITING' });
+            window.location.reload();
+        });
+        dismissU?.addEventListener('click', () => {
+            toast.style.display = 'none';
+        });
+    }
 })();
 </script>
 

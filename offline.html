@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline – Ricettario Danilo</title>
+    <meta name="theme-color" content="#faf7f2">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #faf7f2;
+            color: #1f1a14;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 420px;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1f1a14;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: #8a7d6b;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #c96a10;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #b55e0e; }
+
+        .hint {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #8a7d6b;
+        }
+
+        .hint strong {
+            color: #c96a10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="icon">🌾</span>
+        <h1>Sei offline</h1>
+        <p>Non c'è connessione a Internet in questo momento. Le pagine già visitate sono disponibili offline.</p>
+        <button class="btn" onclick="window.location.href='index.html'">Vai alla home</button>
+        <p class="hint">
+            Oppure premi <strong>indietro</strong> per tornare a una pagina già caricata.
+        </p>
+    </div>
+</body>
+</html>
