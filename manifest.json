@@ -33,7 +33,7 @@
       "name": "Calcolapane",
       "short_name": "Pane",
       "description": "Calcola dosi per 8 tipi di pane",
-      "url": "/pane.html",
+      "url": "/ricettario/pane.html",
       "icons": [
         {
           "src": "icon192.png",
@@ -45,7 +45,7 @@
       "name": "Calcolapizza",
       "short_name": "Pizza",
       "description": "Calcola dosi per impasto pizza",
-      "url": "/pizza.html",
+      "url": "/ricettario/pizza.html",
       "icons": [
         {
           "src": "icon192.png",
@@ -57,7 +57,7 @@
       "name": "Creme Base",
       "short_name": "Creme",
       "description": "13 creme fondamentali scalabili",
-      "url": "/creme-base.html",
+      "url": "/ricettario/creme-base.html",
       "icons": [
         {
           "src": "icon192.png",
@@ -66,5 +66,5 @@
       ]
     }
   ],
-  "scope": "/"
+  "scope": "/ricettario/"
 }

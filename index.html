@@ -669,7 +669,7 @@
             reg.addEventListener('updatefound', () => {
                 const newWorker = reg.installing;
                 newWorker?.addEventListener('statechange', () => {
-                    if (newWorker.statechange === 'installed' && navigator.serviceWorker.controller) {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                         showUpdateToast(newWorker);
                     }
                 });

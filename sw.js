@@ -8,7 +8,6 @@ const OFFLINE_PAGE = 'offline.html';
 
 // Tutti gli asset da pre-cachare all'installazione
 const PRECACHE_ASSETS = [
-  '/',
   'index.html',
   'offline.html',
 
@@ -61,6 +60,7 @@ const PRECACHE_ASSETS = [
 
   // Manifest & icons
   'manifest.json',
+  'browserconfig.xml',
   'icon.ico',
   'icon192.png',
   'icon512.png',
@@ -160,6 +160,13 @@ async function networkFirstHTML(request) {
 
   const cached = await caches.match(request);
   if (cached) return cached;
+
+  // Fallback: se è una richiesta di directory (es. /ricettario/), prova index.html
+  const url = new URL(request.url);
+  if (url.pathname.endsWith('/')) {
+    const indexCached = await caches.match(new Request(url.origin + url.pathname + 'index.html'));
+    if (indexCached) return indexCached;
+  }
 
   // Ultimo fallback: pagina offline
   const offlinePage = await caches.match(OFFLINE_PAGE);
